@@ -148,11 +148,39 @@ footer{padding:0 var(--pad) 30px;color:var(--muted);font-size:12px;max-width:70c
 .pop-a{color:var(--muted);font-size:12.5px}
 .pop-l{display:inline-block;margin-top:7px;font-weight:600;font-size:12.5px;color:var(--sg)}
 .mk{
+  position:relative;
   width:26px;height:26px;border-radius:50% 50% 50% 2px;transform:rotate(45deg);
   border:2px solid var(--card);box-shadow:0 3px 10px -3px rgba(22,33,31,.6);
   display:grid;place-items:center;
 }
 .mk b{transform:rotate(-45deg);font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;color:#fff;line-height:1}
+/* ---------- tap a place to find its pin ---------- */
+.item.haspin{cursor:pointer;border-radius:7px;transition:background .18s}
+.item.haspin:hover{background:rgba(15,118,110,.06)}
+.day.wed .item.haspin:hover{background:rgba(179,43,55,.06)}
+.item.haspin:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+.item.haspin.on{background:rgba(15,118,110,.10)}
+.item.haspin.on .what{color:var(--sg)}
+.day.wed .item.haspin.on{background:rgba(179,43,55,.10)}
+.day.wed .item.haspin.on .what{color:var(--wed)}
+
+@keyframes mkpulse{
+  0%{transform:rotate(45deg) scale(1)}
+  20%{transform:rotate(45deg) scale(1.5)}
+  40%{transform:rotate(45deg) scale(.9)}
+  60%{transform:rotate(45deg) scale(1.28)}
+  80%{transform:rotate(45deg) scale(.97)}
+  100%{transform:rotate(45deg) scale(1)}
+}
+@keyframes mkring{
+  0%{opacity:.65;transform:scale(.65)}
+  100%{opacity:0;transform:scale(3.4)}
+}
+.mk.flash{animation:mkpulse .8s cubic-bezier(.34,1.4,.64,1) 2 both}
+.mk.flash::after{
+  content:"";position:absolute;inset:-3px;border-radius:inherit;
+  border:2px solid var(--ring,#0F766E);animation:mkring 1s ease-out 2 both;
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -387,7 +415,7 @@ DAYS.forEach((day,i)=>{
     <div class="card">
       ${day.items.map(it=>{
         const p = it.p ? P[it.p] : null;
-        return `<div class="item">
+        return `<div class="item${p?' haspin':''}"${p?` data-pin="${it.p}" data-day="${i}" role="button" tabindex="0" aria-label="Show ${p.n} on the map"`:''}>
           <div class="t">${it.t||'—'}</div>
           <div>
             <div class="what">${it.w}</div>
@@ -398,19 +426,53 @@ DAYS.forEach((day,i)=>{
         </div>`;
       }).join('')}
     </div>`;
-  btn.addEventListener('click',()=>select(i));
+  const activate = e => {
+    const row = e.target.closest('.item.haspin');
+    if(row && !e.target.closest('.pinlink')){
+      markRow(row);
+      select(i,row.dataset.pin);
+      flashPin(row.dataset.pin, day.wed ? COL.wed : COL[day.leg]);
+      return;
+    }
+    markRow(null);
+    select(i);
+  };
+  btn.addEventListener('click',activate);
+  btn.addEventListener('keydown',e=>{
+    if((e.key==='Enter'||e.key===' ') && e.target.closest('.item.haspin')){
+      e.preventDefault(); activate(e);
+    }
+  });
   rail.appendChild(btn);
 });
 
 const buttons = [...document.querySelectorAll('.day')];
-function select(i){
+function select(i,pinKey){
   const day = DAYS[i];
   buttons.forEach((b,j)=>b.setAttribute('aria-current', j===i?'true':'false'));
   const color = day.wed ? COL.wed : COL[day.leg];
   tint(day.focus,color);
+  if(pinKey){ map.flyTo(P[pinKey].ll,16,{duration:.6}); return; }
   const pts = day.focus.map(k=>P[k].ll);
   if(pts.length===1) map.flyTo(pts[0],15,{duration:.7});
   else map.flyToBounds(L.latLngBounds(pts).pad(.35),{duration:.7,maxZoom:15});
+}
+
+/* Pull one pin to the front and pulse it, so tapping a place shows you where
+   it is. tint() has already rewritten every icon by this point, so this runs
+   last and wins. */
+function flashPin(key,color){
+  const m = markers[key]; if(!m) return;
+  m.setIcon(L.divIcon({className:'',iconSize:[30,30],iconAnchor:[15,30],popupAnchor:[0,-24],
+    html:`<div class="mk flash" style="background:${color};--ring:${color};width:30px;height:30px"><b>●</b></div>`}));
+  m.setZIndexOffset(2000);
+  m.openPopup();
+  if(navigator.vibrate) navigator.vibrate(18);
+}
+
+function markRow(row){
+  document.querySelectorAll('.item.on').forEach(el=>el.classList.remove('on'));
+  if(row) row.classList.add('on');
 }
 
 const checks = document.getElementById('checks');
