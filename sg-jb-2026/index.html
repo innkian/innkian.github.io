@@ -207,15 +207,15 @@ const P = {
 
   // --- food ---
   liangseah:{n:"Liang Seah Street",          a:"Liang Seah Street, Singapore",                     ll:[1.2985,103.8562]},
-  soupexp: {n:"The Soup Expert",             a:"The Soup Expert, Suntec City, 3 Temasek Boulevard, Singapore 038983", ll:[1.2956,103.8577]},
-  linkus:  {n:"LINKUS",                      a:"LINKUS, Suntec City, 3 Temasek Boulevard, Singapore 038983", ll:[1.2952,103.8582]},
-  imperial:{n:"Imperial Sky Pavilion",       a:"2 Boon Leat Terrace #01-01, Singapore 119844",     ll:[1.2748,103.8008]},
+  soupexp: {n:"The Soup Expert",             a:"3 Temasek Boulevard, #03-315 Suntec City, Singapore 038983", ll:[1.2956,103.8577]},
+  linkus:  {n:"LINKUS",                      a:"3 Temasek Boulevard, #01-436 Suntec City, Singapore 038983", ll:[1.2952,103.8582]},
+  imperial:{n:"Imperial Sky Pavilion",       a:"2 Boon Leat Terrace, Harbourside Building 2 #01-01, Singapore 119844", ll:[1.2748,103.8008]},
   dcrab:   {n:"Dancing Crab",                a:"1 HarbourFront Walk #03-10, VivoCity, Singapore 098585", ll:[1.2644,103.8222]},
-  zhuguang:{n:"Zhu Guang Yu",                a:"Zhu Guang Yu, Johor Bahru",                        ll:[1.4655,103.7625]},
-  kushiro: {n:"Kushiro BBQ",                 a:"Kushiro BBQ, Johor Bahru",                         ll:[1.4700,103.7580]},
-  jombali: {n:"Jombali Village",             a:"Jombali Village, Johor Bahru",                     ll:[1.4780,103.7490]},
-  kopisrwk:{n:"Kopi Sarawak",                a:"Kopi Sarawak, Johor Bahru",                        ll:[1.4720,103.7635]},
-  gaodeng: {n:"Gao Deng",                    a:"Gao Deng, Johor Bahru",                            ll:[1.4665,103.7690]},
+  zhuguang:{n:"Zhu Guang Yu",                a:"G02-G03B, 15 Jalan Dato Abdullah Tahir, Taman Abad, 80300 Johor Bahru", ll:[1.4820,103.7600]},
+  kushiro: {n:"Kushiro BBQ",                 a:"93 Jalan Serampang, Taman Sri Tebrau, 80500 Johor Bahru", ll:[1.4830,103.7690]},
+  jombali: {n:"Jombali Village",             a:"39A/39B Jalan Perang, Taman Pelangi, 80400 Johor Bahru", ll:[1.4880,103.7660]},
+  kopisrwk:{n:"Kopi Sarawak",                a:"Jalan Setia 3/3, Taman Setia Indah, 81100 Johor Bahru", ll:[1.5290,103.7960]},
+  gaodeng: {n:"Gao Deng",                    a:"1 & 2 Jalan Kilang Nenas, Taman Sutera Utama, 81300 Skudai, Johor", ll:[1.5350,103.6520]},
 };
 
 /* ---------------- days ---------------- */
@@ -270,15 +270,15 @@ const DAYS = [
   {d:"Thu 8 Oct", t:"Down to Johor Bahru", leg:"my", focus:["batu","sheraton"], items:[
     {t:"", w:"Batu Pahat to JB", p:"batu"},
     {t:"", w:"Check in — Sheraton Johor Bahru", p:"sheraton", note:"Nights 9–10. Return the hire car to Wahdah while you're near JB Sentral."},
-    {t:"", w:"Zhu Guang Yu", p:"zhuguang"},
-    {t:"", w:"Kushiro BBQ", p:"kushiro"},
+    {t:"", w:"Zhu Guang Yu", p:"zhuguang", note:"12:00–02:00. Taman Abad."},
+    {t:"", w:"Kushiro BBQ", p:"kushiro", note:"Dinner only, from 17:30. Taman Sri Tebrau."},
   ]},
 
   {d:"Fri 9 Oct", t:"Johor Bahru", leg:"my", focus:["sheraton"], items:[
     {t:"", w:"Johor Bahru", p:"sheraton"},
-    {t:"", w:"Jombali Village", p:"jombali"},
-    {t:"", w:"Kopi Sarawak", p:"kopisrwk"},
-    {t:"", w:"Gao Deng", p:"gaodeng"},
+    {t:"", w:"Gao Deng", p:"gaodeng", note:"Breakfast, from 05:15 — closed Thursdays, so today and not the 8th. Skudai, west of JB."},
+    {t:"", w:"Kopi Sarawak", p:"kopisrwk", note:"Kopitiam — closes 19:00. Taman Setia Indah, east side."},
+    {t:"", w:"Jombali Village", p:"jombali", note:"13:00–22:00. Taman Pelangi."},
   ]},
 
   {d:"Sat 10 Oct", t:"Back to Singapore · F1", leg:"sg", focus:["sheraton","furama","f1"], items:[
