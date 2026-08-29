@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ong Family · Singapore &amp; Johor · October 2026</title>
+<meta name="description" content="Day-by-day plan and map for the Ong family trip to Singapore and Johor, 1–12 October 2026.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --shell:#E5E9E2;
+  --card:#FBFAF7;
+  --ink:#16211F;
+  --muted:#5F6E6A;
+  --line:#CDD5CD;
+  --sg:#0F766E;
+  --my:#A85B10;
+  --wed:#B32B37;
+  --focus:#0F766E;
+  --r:14px;
+  --pad:clamp(14px,3vw,22px);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--shell);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  font-size:15px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+header{
+  padding:var(--pad) var(--pad) 14px;
+  border-bottom:1px solid var(--line);
+  background:var(--shell);
+}
+.kicker{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 6px;
+}
+h1{
+  font-family:"Bricolage Grotesque",sans-serif;
+  font-weight:800;
+  font-size:clamp(26px,5.2vw,40px);
+  line-height:1.02;
+  letter-spacing:-.022em;
+  margin:0 0 8px;
+}
+h1 em{font-style:normal;color:var(--wed)}
+.subhead{color:var(--muted);font-size:14px;margin:0;max-width:62ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;font-size:12px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:9px;height:9px;border-radius:50%;flex:none}
+
+/* ---------- layout ---------- */
+.wrap{display:grid;grid-template-columns:1fr;gap:0}
+#map{height:52vh;min-height:300px;background:#DCE2DA;z-index:0}
+.rail{padding:var(--pad);display:flex;flex-direction:column;gap:0}
+
+@media (min-width:900px){
+  .wrap{grid-template-columns:minmax(380px,44%) 1fr;align-items:start}
+  .rail{max-height:calc(100vh - 150px);overflow-y:auto;order:1}
+  .mapwrap{position:sticky;top:0;order:2}
+  #map{height:calc(100vh - 150px);min-height:520px}
+}
+
+/* ---------- day spine ---------- */
+.day{
+  position:relative;
+  padding:0 0 4px 30px;
+  border:0;background:none;
+  text-align:left;width:100%;
+  font:inherit;color:inherit;
+  cursor:pointer;
+  display:block;
+}
+.day::before{ /* the border spine */
+  content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;
+  background:var(--legcolor,var(--sg));opacity:.35;
+}
+.day:first-of-type::before{top:14px}
+.day:last-of-type::before{bottom:auto;height:14px}
+.day .pip{
+  position:absolute;left:2px;top:9px;width:12px;height:12px;border-radius:50%;
+  background:var(--shell);border:2px solid var(--legcolor,var(--sg));
+}
+.day[aria-current="true"] .pip{background:var(--legcolor,var(--sg));transform:scale(1.25)}
+.day.wed .pip{border-color:var(--wed)}
+.day.wed[aria-current="true"] .pip{background:var(--wed)}
+.day:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:6px}
+
+.dayhead{display:flex;align-items:baseline;gap:10px;padding:4px 0 2px}
+.date{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);flex:none}
+.dtitle{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:16px;letter-spacing:-.012em}
+.day.wed .dtitle{color:var(--wed)}
+.badge{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid currentColor;border-radius:99px;padding:1px 7px;flex:none;opacity:.85;
+}
+
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:12px 14px;margin:6px 0 14px;
+}
+.day[aria-current="true"] .card{border-color:var(--legcolor,var(--sg));box-shadow:0 1px 0 var(--line),0 6px 22px -14px rgba(22,33,31,.5)}
+.day.wed[aria-current="true"] .card{border-color:var(--wed)}
+
+.item{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:6px 0;border-top:1px solid var(--line)}
+.item:first-child{border-top:0;padding-top:2px}
+.t{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;color:var(--muted);padding-top:2px}
+.what{font-weight:600;font-size:14px}
+.where{color:var(--muted);font-size:13px}
+.note{color:var(--muted);font-size:12.5px;margin-top:3px}
+.pinlink{
+  display:inline-block;margin-top:4px;font-size:12px;font-weight:600;
+  color:var(--sg);text-decoration:none;border-bottom:1px solid currentColor;
+}
+.day.wed .pinlink{color:var(--wed)}
+.pinlink:hover{opacity:.7}
+.flag{color:var(--wed);font-weight:600}
+
+/* ---------- checklist ---------- */
+.panel{margin:0 var(--pad) calc(var(--pad) + 20px);border-top:1px solid var(--line);padding-top:var(--pad)}
+.panel h2{font-family:"Bricolage Grotesque",sans-serif;font-size:20px;font-weight:700;letter-spacing:-.015em;margin:0 0 4px}
+.panel p.lede{color:var(--muted);font-size:13.5px;margin:0 0 14px;max-width:70ch}
+.checks{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));list-style:none;padding:0;margin:0}
+.checks li{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:11px 13px}
+.checks b{display:block;font-size:13.5px;margin-bottom:2px}
+.checks span{color:var(--muted);font-size:12.5px}
+.when{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--my);display:block;margin-top:5px;font-weight:600}
+
+footer{padding:0 var(--pad) 30px;color:var(--muted);font-size:12px;max-width:70ch}
+
+/* ---------- map bits ---------- */
+.leaflet-container{font-family:"IBM Plex Sans",sans-serif;background:#DCE2DA}
+.leaflet-popup-content-wrapper{border-radius:12px;box-shadow:0 10px 30px -12px rgba(22,33,31,.55)}
+.leaflet-popup-content{margin:12px 14px;font-size:13px;line-height:1.45}
+.pop-t{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:15px;margin-bottom:2px}
+.pop-a{color:var(--muted);font-size:12.5px}
+.pop-l{display:inline-block;margin-top:7px;font-weight:600;font-size:12.5px;color:var(--sg)}
+.mk{
+  width:26px;height:26px;border-radius:50% 50% 50% 2px;transform:rotate(45deg);
+  border:2px solid var(--card);box-shadow:0 3px 10px -3px rgba(22,33,31,.6);
+  display:grid;place-items:center;
+}
+.mk b{transform:rotate(-45deg);font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;color:#fff;line-height:1}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <p class="kicker">1 – 12 October 2026 · 2 adults, 5 children</p>
+  <h1>Singapore &amp; Johor<br>for <em>Inn Chao's wedding</em></h1>
+  <p class="subhead">Tap any day to move the map. Every pin opens in Google Maps for directions.</p>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--sg)"></i>Singapore</span>
+    <span><i class="dot" style="background:var(--my)"></i>Malaysia</span>
+    <span><i class="dot" style="background:var(--wed)"></i>Wedding day</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="rail" id="rail"></div>
+  <div class="mapwrap"><div id="map"></div></div>
+</div>
+
+<section class="panel">
+  <h2>Before you go</h2>
+  <p class="lede">Three separate rounds of digital arrival cards, one per person each time. The windows open mid-trip, so these can't all be done from Perth.</p>
+  <ul class="checks" id="checks"></ul>
+</section>
+
+<footer>
+  Pin positions are approximate — always use the Google Maps link in each pin for directions.
+  Map tiles © OpenStreetMap contributors.
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+/* ---------------- places ---------------- */
+const P = {
+  perth:   {n:"Perth Airport T1",            a:"Perth Airport Terminal 1, WA",                     ll:[-31.9385,115.9672]},
+  changi:  {n:"Changi Airport T3",           a:"Changi Airport Terminal 3, Singapore",             ll:[1.3560,103.9865]},
+  frasers: {n:"Frasers House",               a:"80 Middle Road, Singapore 188966",                 ll:[1.2985,103.8545]},
+  jw:      {n:"JW Marriott South Beach",     a:"30 Beach Road, Singapore 189763",                  ll:[1.2952,103.8570]},
+  house:   {n:"Inn Chao's home",             a:"25A Saint Georges Lane, Singapore 321025",         ll:[1.3210,103.8600]},
+  edition: {n:"The Singapore EDITION",       a:"38 Cuscaden Road, Singapore 249731",               ll:[1.3055,103.8250]},
+  laurus:  {n:"The Laurus, Sentosa",         a:"28 Sentosa Gateway, Singapore 098139",             ll:[1.2565,103.8195]},
+  wahdah:  {n:"Wahdah Car Rent",             a:"Wahdah Car Rent, JB Sentral, Johor Bahru",         ll:[1.4640,103.7650]},
+  batu:    {n:"Batu Pahat",                  a:"Batu Pahat, Johor, Malaysia",                      ll:[1.8548,102.9325]},
+  sheraton:{n:"Sheraton Johor Bahru",        a:"Jalan Storey, Johor Bahru 80300",                  ll:[1.4610,103.7590]},
+  furama:  {n:"Furama RiverFront",           a:"405 Havelock Road, Singapore 169633",              ll:[1.2905,103.8340]},
+  waka:    {n:"Waka Waka playground",        a:"Annex@Furama, 407 Havelock Road #05-01, Singapore 169634", ll:[1.2901,103.8336]},
+  f1:      {n:"Marina Bay Street Circuit",   a:"F1 Pit Building, 1 Republic Boulevard, Singapore", ll:[1.2915,103.8635]},
+  aloft:   {n:"Aloft Novena",                a:"16 Ah Hood Road, Singapore 329982"  ,              ll:[1.3245,103.8430]},
+  great:   {n:"Great World",                 a:"1 Kim Seng Promenade, Singapore 237994",           ll:[1.2940,103.8320]},
+};
+
+/* ---------------- days ---------------- */
+const DAYS = [
+  {d:"Thu 1 Oct", t:"Fly out", leg:"sg", focus:["changi","frasers"], items:[
+    {t:"16:55", w:"SQ214 to Singapore", p:"perth", note:"Airbus A350-900 · Economy · Perth T1"},
+    {t:"22:10", w:"Land at Changi", p:"changi", note:"Same time zone as Perth — no jet lag."},
+    {t:"", w:"Check in — Frasers House", p:"frasers", note:"Nights 1–2"},
+  ]},
+
+  {d:"Fri 2 Oct", t:"Haircuts, then move hotels", leg:"sg", focus:["frasers","jw"], items:[
+    {t:"", w:"Check out of Frasers House, bags held", p:"frasers"},
+    {t:"13:00", w:"Salon", note:"Ladies cut + perm · 1 men's cut · 2 kids' cuts. The perm runs long — expect 3–4 hours."},
+    {t:"", w:"Check in — JW Marriott South Beach", p:"jw", note:"Nights 3–4. A few minutes from Frasers on Beach Road."},
+  ]},
+
+  {d:"Sat 3 Oct", t:"Inn Chao's wedding", leg:"sg", wed:true, focus:["jw","house","edition"], items:[
+    {t:"05:30", w:"Wake the girls"},
+    {t:"06:10", w:"Leave the JW Marriott", note:"Girls' dresses travel on hangers — change after their hair is done, not before."},
+    {t:"06:30", w:"Girls' hair at Inn Chao's home", p:"house", note:"28th floor — allow for lift queues."},
+    {t:"08:00", w:"Boys arrive for car door duty", p:"house", note:"Both in wedding clothes from the hotel. Ang baos ready."},
+    {t:"08:30", w:"Tea ceremony", p:"house"},
+    {t:"12:00", w:"Registration — EDITION Ballroom, LG", p:"edition", note:"About 20 minutes from the house."},
+    {t:"12:30", w:"Wedding lunch", p:"edition", note:"Girls are flower girls. Feed the little ones early — this is a long sit."},
+  ]},
+
+  {d:"Sun 4 Oct", t:"Move to Sentosa", leg:"sg", focus:["jw","laurus"], items:[
+    {t:"", w:"Check out — JW Marriott", p:"jw"},
+    {t:"", w:"Check in — The Laurus, Sentosa", p:"laurus", note:"Nights 5–6"},
+  ]},
+
+  {d:"Mon 5 Oct", t:"Sentosa", leg:"sg", focus:["laurus"], items:[
+    {t:"", w:"Sentosa day", p:"laurus", note:"Adventure Cove is on the doorstep. Swim cap for the fresh perm."},
+  ]},
+
+  {d:"Tue 6 Oct", t:"Cross to Johor", leg:"my", focus:["laurus","wahdah","batu"], items:[
+    {t:"12:00", w:"Transfer to JB Sentral", p:"laurus", note:"Alphard 8-seater · 7 pax · SGD 150 cash · booked as Ms Kitty Leong. Tuesday is the best crossing day of the week."},
+    {t:"", w:"Collect hire car — Wahdah", p:"wahdah", note:"Confirm child seats are on the booking. Bring the IDP."},
+    {t:"", w:"Drive to Batu Pahat", p:"batu", note:"About 130 km, 1.5–2 hours. Nights 7–8."},
+  ]},
+
+  {d:"Wed 7 Oct", t:"Batu Pahat", leg:"my", focus:["batu"], items:[
+    {t:"", w:"Batu Pahat", p:"batu"},
+  ]},
+
+  {d:"Thu 8 Oct", t:"Down to Johor Bahru", leg:"my", focus:["batu","sheraton"], items:[
+    {t:"", w:"Batu Pahat to JB", p:"batu"},
+    {t:"", w:"Check in — Sheraton Johor Bahru", p:"sheraton", note:"Nights 9–10. Return the hire car to Wahdah while you're near JB Sentral."},
+  ]},
+
+  {d:"Fri 9 Oct", t:"Johor Bahru", leg:"my", focus:["sheraton"], items:[
+    {t:"", w:"Johor Bahru", p:"sheraton"},
+  ]},
+
+  {d:"Sat 10 Oct", t:"Back to Singapore · F1", leg:"sg", focus:["sheraton","furama","f1"], items:[
+    {t:"08:00", w:"Transfer to Singapore", p:"sheraton", note:"Currently booked for 12:00 — move it earlier. Saturday midday at Woodlands is the worst crossing of the week, and it's F1 weekend. Ask for the Second Link at Tuas. SGD 120 cash."},
+    {t:"", w:"Check in — Furama RiverFront", p:"furama", note:"Night 11"},
+    {t:"", w:"Hair and nails", p:"great", note:"Kitty and the three girls. Great World is one stop from Havelock."},
+    {t:"16:30", w:"Into the circuit — Zone 1", p:"f1", note:"Collect the daily wristband on arrival, or you can't cross into the other zones. Singapore Flyer is free with Zone 1."},
+    {t:"17:00", w:"Sprint race", p:"f1", note:"Singapore's first ever. Roughly half an hour of running."},
+    {t:"21:00", w:"Qualifying", p:"f1", note:"Optional with a 4 and 6 year old — the Sprint is the part you came for."},
+  ]},
+
+  {d:"Sun 11 Oct", t:"Last day", leg:"sg", focus:["waka","aloft","changi"], items:[
+    {t:"", w:"Late checkout at Furama", p:"furama", note:"Waka Waka is in the annex next door — don't move to Novena first."},
+    {t:"14:00", w:"Waka Waka playground", p:"waka", note:"3 children + 1 adult. Slot only — tickets still to be bought. Closed-toe socks for adults too."},
+    {t:"15:45", w:"Out of the playground", p:"waka"},
+    {t:"", w:"Aloft Novena", p:"aloft", note:"Shower and regroup before the flight."},
+    {t:"21:00", w:"Leave for Changi", p:"changi", note:"Race day. Go while everyone's still inside the circuit, not after it empties."},
+  ]},
+
+  {d:"Mon 12 Oct", t:"Fly home", leg:"sg", focus:["changi","perth"], items:[
+    {t:"00:10", w:"SQ225 to Perth", p:"changi", note:"Boeing 787-10 · Economy · Changi T3"},
+    {t:"05:10", w:"Land in Perth", p:"perth"},
+  ]},
+];
+
+const CHECKS = [
+  {b:"Singapore Arrival Card ×7", s:"Every person, including the children. Free at the ICA site.", w:"From 28 Sep"},
+  {b:"Malaysia Digital Arrival Card ×7", s:"Mandatory for Australian passports, land crossings included. Free — ignore sites that charge.", w:"From 3 Oct, at the JW Marriott"},
+  {b:"Singapore Arrival Card ×7, again", s:"Coming back from Johor is a fresh entry, not a continuation.", w:"From 7 Oct, at the Sheraton"},
+  {b:"Singapore GP app", s:"Zone 1 tickets are delivered in-app. Screenshots and PDFs get turned away at the gate.", w:"Install before leaving Perth"},
+  {b:"Ear defenders for the boys", s:"Proper kids' sets. Adult foam plugs won't seal on a 4-year-old.", w:"Buy in Perth"},
+  {b:"International Driving Permit", s:"RAC issues them. Some Malaysian rental desks insist.", w:"Buy in Perth"},
+  {b:"Child seats with Wahdah", s:"Malaysia requires restraints under 135 cm. Get it in writing on the booking.", w:"Call ahead"},
+  {b:"Ang baos", s:"The boys will receive for the car door. You'll be giving as the groom's brother.", w:"Before 3 Oct"},
+  {b:"Grip socks ×5", s:"Waka Waka requires closed-toe socks for adults and children alike.", w:"Pack them"},
+  {b:"Cash: SGD 150 + SGD 120", s:"Both cross-border transfers are cash on the day.", w:"Before 6 Oct"},
+];
+
+/* ---------------- map ---------------- */
+const COL = {sg:"#0F766E", my:"#A85B10", wed:"#B32B37"};
+const map = L.map('map',{scrollWheelZoom:false,zoomControl:true}).setView([1.35,103.5],9);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{
+  maxZoom:19, attribution:'&copy; OpenStreetMap &copy; CARTO'
+}).addTo(map);
+
+const gmap = a => 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(a);
+const markers = {};
+
+Object.entries(P).forEach(([k,p])=>{
+  const icon = L.divIcon({className:'',iconSize:[26,26],iconAnchor:[13,26],popupAnchor:[0,-24],
+    html:`<div class="mk" style="background:${COL.sg}"><b>●</b></div>`});
+  const m = L.marker(p.ll,{icon,title:p.n,alt:p.n}).addTo(map);
+  m.bindPopup(`<div class="pop-t">${p.n}</div><div class="pop-a">${p.a}</div><a class="pop-l" href="${gmap(p.a)}" target="_blank" rel="noopener">Open in Google Maps →</a>`);
+  markers[k]=m;
+});
+
+function tint(keys,color){
+  Object.entries(markers).forEach(([k,m])=>{
+    const on = keys.includes(k);
+    m.setIcon(L.divIcon({className:'',iconSize:on?[30,30]:[20,20],iconAnchor:on?[15,30]:[10,20],popupAnchor:[0,-24],
+      html:`<div class="mk" style="background:${on?color:'#9AA8A3'};width:${on?30:20}px;height:${on?30:20}px;opacity:${on?1:.55}"><b>${on?'●':''}</b></div>`}));
+    m.setZIndexOffset(on?1000:0);
+  });
+}
+
+/* ---------------- render ---------------- */
+const rail = document.getElementById('rail');
+DAYS.forEach((day,i)=>{
+  const color = day.wed ? COL.wed : COL[day.leg];
+  const btn = document.createElement('button');
+  btn.className = 'day'+(day.wed?' wed':'');
+  btn.style.setProperty('--legcolor', COL[day.leg]);
+  btn.setAttribute('aria-current','false');
+  btn.innerHTML = `
+    <span class="pip"></span>
+    <div class="dayhead">
+      <span class="date">${day.d}</span>
+      <span class="dtitle">${day.t}</span>
+      ${day.wed?'<span class="badge" style="color:var(--wed)">Wedding</span>':''}
+    </div>
+    <div class="card">
+      ${day.items.map(it=>{
+        const p = it.p ? P[it.p] : null;
+        return `<div class="item">
+          <div class="t">${it.t||'—'}</div>
+          <div>
+            <div class="what">${it.w}</div>
+            ${p?`<div class="where">${p.a}</div>`:''}
+            ${it.note?`<div class="note">${it.note}</div>`:''}
+            ${p?`<a class="pinlink" href="${gmap(p.a)}" target="_blank" rel="noopener">Directions</a>`:''}
+          </div>
+        </div>`;
+      }).join('')}
+    </div>`;
+  btn.addEventListener('click',()=>select(i));
+  rail.appendChild(btn);
+});
+
+const buttons = [...document.querySelectorAll('.day')];
+function select(i){
+  const day = DAYS[i];
+  buttons.forEach((b,j)=>b.setAttribute('aria-current', j===i?'true':'false'));
+  const color = day.wed ? COL.wed : COL[day.leg];
+  tint(day.focus,color);
+  const pts = day.focus.map(k=>P[k].ll);
+  if(pts.length===1) map.flyTo(pts[0],15,{duration:.7});
+  else map.flyToBounds(L.latLngBounds(pts).pad(.35),{duration:.7,maxZoom:15});
+}
+
+const checks = document.getElementById('checks');
+CHECKS.forEach(c=>{
+  const li=document.createElement('li');
+  li.innerHTML=`<b>${c.b}</b><span>${c.s}</span><span class="when">${c.w}</span>`;
+  checks.appendChild(li);
+});
+
+select(2); // open on the wedding day
+</script>
+</body>
+</html>
