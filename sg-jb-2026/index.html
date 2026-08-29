@@ -204,11 +204,24 @@ const P = {
   f1:      {n:"Marina Bay Street Circuit",   a:"F1 Pit Building, 1 Republic Boulevard, Singapore", ll:[1.2915,103.8635]},
   aloft:   {n:"Aloft Novena",                a:"16 Ah Hood Road, Singapore 329982"  ,              ll:[1.3245,103.8430]},
   great:   {n:"Great World",                 a:"1 Kim Seng Promenade, Singapore 237994",           ll:[1.2940,103.8320]},
+
+  // --- food ---
+  liangseah:{n:"Liang Seah Street",          a:"Liang Seah Street, Singapore",                     ll:[1.2985,103.8562]},
+  soupexp: {n:"The Soup Expert",             a:"The Soup Expert, Suntec City, 3 Temasek Boulevard, Singapore 038983", ll:[1.2956,103.8577]},
+  linkus:  {n:"LINKUS",                      a:"LINKUS, Suntec City, 3 Temasek Boulevard, Singapore 038983", ll:[1.2952,103.8582]},
+  imperial:{n:"Imperial Sky Pavilion",       a:"2 Boon Leat Terrace #01-01, Singapore 119844",     ll:[1.2748,103.8008]},
+  dcrab:   {n:"Dancing Crab",                a:"1 HarbourFront Walk #03-10, VivoCity, Singapore 098585", ll:[1.2644,103.8222]},
+  zhuguang:{n:"Zhu Guang Yu",                a:"Zhu Guang Yu, Johor Bahru",                        ll:[1.4655,103.7625]},
+  kushiro: {n:"Kushiro BBQ",                 a:"Kushiro BBQ, Johor Bahru",                         ll:[1.4700,103.7580]},
+  jombali: {n:"Jombali Village",             a:"Jombali Village, Johor Bahru",                     ll:[1.4780,103.7490]},
+  kopisrwk:{n:"Kopi Sarawak",                a:"Kopi Sarawak, Johor Bahru",                        ll:[1.4720,103.7635]},
+  gaodeng: {n:"Gao Deng",                    a:"Gao Deng, Johor Bahru",                            ll:[1.4665,103.7690]},
 };
 
 /* ---------------- days ---------------- */
 const DAYS = [
   {d:"Thu 1 Oct", t:"Fly out", leg:"sg", focus:["changi","frasers"], items:[
+    {t:"13:00", w:"Leave Willetton for Perth T1", p:"perth", note:"About 30 minutes. Seven of you will not fit in one car — Uber XL seats six. Two cars, or book a maxi taxi."},
     {t:"16:55", w:"SQ214 to Singapore", p:"perth", note:"Airbus A350-900 · Economy · Perth T1"},
     {t:"22:10", w:"Land at Changi", p:"changi", note:"Same time zone as Perth — no jet lag."},
     {t:"", w:"Check in — Frasers House", p:"frasers", note:"Nights 1–2"},
@@ -218,6 +231,9 @@ const DAYS = [
     {t:"", w:"Check out of Frasers House, bags held", p:"frasers"},
     {t:"13:00", w:"Salon", note:"Ladies cut + perm · 1 men's cut · 2 kids' cuts. The perm runs long — expect 3–4 hours."},
     {t:"", w:"Check in — JW Marriott South Beach", p:"jw", note:"Nights 3–4. A few minutes from Frasers on Beach Road."},
+    {t:"", w:"Supper on Liang Seah Street", p:"liangseah", note:"Five minutes on foot. Where Singapore goes for late supper — easier tonight than on arrival night."},
+    {t:"", w:"Option — The Soup Expert", p:"soupexp", note:"Suntec City, a short walk from the JW. Either JW night."},
+    {t:"", w:"Option — LINKUS", p:"linkus", note:"Also inside Suntec City."},
   ]},
 
   {d:"Sat 3 Oct", t:"Inn Chao and Angel's wedding", leg:"sg", wed:true, focus:["jw","house","edition"], items:[
@@ -233,10 +249,12 @@ const DAYS = [
   {d:"Sun 4 Oct", t:"Move to Sentosa", leg:"sg", focus:["jw","laurus"], items:[
     {t:"", w:"Check out — JW Marriott", p:"jw"},
     {t:"", w:"Check in — The Laurus, Sentosa", p:"laurus", note:"Nights 5–6"},
+    {t:"", w:"Dinner — Imperial Sky Pavilion", p:"imperial", note:"Closed Mondays, so tonight rather than the 5th. The bill stretches for a big group. On your way over to Sentosa."},
   ]},
 
   {d:"Mon 5 Oct", t:"Sentosa", leg:"sg", focus:["laurus"], items:[
     {t:"", w:"Sentosa day", p:"laurus", note:"Adventure Cove is on the doorstep. Swim cap for the fresh perm."},
+    {t:"", w:"Dinner — Dancing Crab", p:"dcrab", note:"VivoCity, one Sentosa Express stop off the island."},
   ]},
 
   {d:"Tue 6 Oct", t:"Cross to Johor", leg:"my", focus:["laurus","wahdah","batu"], items:[
@@ -252,10 +270,15 @@ const DAYS = [
   {d:"Thu 8 Oct", t:"Down to Johor Bahru", leg:"my", focus:["batu","sheraton"], items:[
     {t:"", w:"Batu Pahat to JB", p:"batu"},
     {t:"", w:"Check in — Sheraton Johor Bahru", p:"sheraton", note:"Nights 9–10. Return the hire car to Wahdah while you're near JB Sentral."},
+    {t:"", w:"Zhu Guang Yu", p:"zhuguang"},
+    {t:"", w:"Kushiro BBQ", p:"kushiro"},
   ]},
 
   {d:"Fri 9 Oct", t:"Johor Bahru", leg:"my", focus:["sheraton"], items:[
     {t:"", w:"Johor Bahru", p:"sheraton"},
+    {t:"", w:"Jombali Village", p:"jombali"},
+    {t:"", w:"Kopi Sarawak", p:"kopisrwk"},
+    {t:"", w:"Gao Deng", p:"gaodeng"},
   ]},
 
   {d:"Sat 10 Oct", t:"Back to Singapore · F1", leg:"sg", focus:["sheraton","furama","f1"], items:[
@@ -286,6 +309,8 @@ const CHECKS = [
   {b:"Malaysia Digital Arrival Card ×7", s:"Mandatory for Australian passports, land crossings included. Free — ignore sites that charge.", w:"From 3 Oct, at the JW Marriott"},
   {b:"Singapore Arrival Card ×7, again", s:"Coming back from Johor is a fresh entry, not a continuation.", w:"From 7 Oct, at the Sheraton"},
   {b:"Singapore GP app", s:"Zone 1 tickets are delivered in-app. Screenshots and PDFs get turned away at the gate.", w:"Install before leaving Perth"},
+  {b:"New SIMs — Singapore and Malaysia", s:"One regional eSIM covering both sides saves swapping at the causeway. Set it up before you fly — you land at 22:10 and a Changi counter is the last thing you'll want.", w:"Before 1 Oct"},
+  {b:"Airport run from Willetton", s:"Seven of you — Uber XL seats six, so it's two cars or a maxi taxi. Uber Reserve books up to 90 days ahead; a maxi taxi is the surer bet with five children and the luggage.", w:"Book before 1 Oct"},
   {b:"Ear defenders for the boys", s:"Proper kids' sets. Adult foam plugs won't seal on a 4-year-old.", w:"Buy in Perth"},
   {b:"International Driving Permit", s:"RAC issues them. Some Malaysian rental desks insist.", w:"Buy in Perth"},
   {b:"Child seats with Wahdah", s:"Malaysia requires restraints under 135 cm. Get it in writing on the booking.", w:"Call ahead"},
