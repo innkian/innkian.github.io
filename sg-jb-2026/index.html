@@ -60,6 +60,22 @@ h1 em{font-style:normal;color:var(--wed)}
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;font-size:12px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .dot{width:9px;height:9px;border-radius:50%;flex:none}
+.toggle{
+  margin-top:12px;display:inline-flex;align-items:center;gap:8px;
+  font-family:inherit;font-size:12px;font-weight:600;letter-spacing:.01em;
+  color:var(--muted);background:var(--card);
+  border:1px solid var(--line);border-radius:999px;padding:6px 13px;cursor:pointer;
+  transition:background .18s,color .18s,border-color .18s;
+}
+.toggle:hover{border-color:var(--sg);color:var(--sg)}
+.toggle:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.toggle[aria-pressed="true"]{background:var(--sg);border-color:var(--sg);color:#fff}
+.sw{width:22px;height:13px;border-radius:999px;background:var(--line);position:relative;flex:none;transition:background .18s}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:9px;height:9px;border-radius:50%;background:var(--card);transition:transform .18s}
+.toggle[aria-pressed="true"] .sw{background:rgba(255,255,255,.5)}
+.toggle[aria-pressed="true"] .sw::after{transform:translateX(9px)}
+.item.laundry{display:none}
+body.show-laundry .item.laundry{display:grid}
 
 /* ---------- layout ---------- */
 .wrap{display:grid;grid-template-columns:1fr;gap:0}
@@ -195,6 +211,7 @@ footer{padding:0 var(--pad) 30px;color:var(--muted);font-size:12px;max-width:70c
     <span><i class="dot" style="background:var(--my)"></i>Malaysia</span>
     <span><i class="dot" style="background:var(--wed)"></i>Wedding day</span>
   </div>
+  <button type="button" class="toggle" id="laundry" aria-pressed="false"><i class="sw"></i>Laundry</button>
 </header>
 
 <div class="wrap">
@@ -255,6 +272,14 @@ const P = {
   herbal:  {n:"Original Herbal Shop",        a:"414 Balestier Road, Singapore 329806",             ll:[1.3260,103.8480]},
   labyrinth:{n:"Restaurant Labyrinth",       a:"8 Raffles Avenue, #02-23 Esplanade Mall, Singapore 039802", ll:[1.2900,103.8555]},
   chieng:  {n:"Uncle Chieng wafer ice cream", a:"391 Orchard Road, Ngee Ann City, Singapore 238801", ll:[1.3030,103.8350]},
+
+  // --- laundry ---
+  tumbler: {n:"Tumbler",                     a:"Tumbler, Waterloo Centre, Waterloo Street, Singapore", ll:[1.3005,103.8530]},
+  aquawash:{n:"Aqua Wash",                   a:"Aqua Wash, Beach Road, Singapore",                 ll:[1.2975,103.8600]},
+  speedwash:{n:"Speed Wash",                 a:"Speed Wash, Telok Blangah Rise, Singapore",        ll:[1.2735,103.8140]},
+  laundrybar:{n:"Laundrybar",                a:"Laundrybar, Kampung Merdeka, Batu Pahat, Johor",   ll:[1.8520,102.9330]},
+  laundryjb:{n:"The Laundry JBCC",           a:"The Laundry, JBCC, Jalan Wong Ah Fook, Johor Bahru", ll:[1.4615,103.7620]},
+  steviewash:{n:"Stevie Wash",               a:"Stevie Wash, Jalan Bukit Ho Swee, Singapore",      ll:[1.2880,103.8300]},
 };
 
 /* ---------------- days ---------------- */
@@ -264,6 +289,7 @@ const DAYS = [
     {t:"16:55", w:"SQ214 to Singapore", p:"perth", note:"Airbus A350-900 · Economy · Perth T1"},
     {t:"22:10", w:"Land at Changi", p:"changi", note:"Same time zone as Perth — no jet lag."},
     {t:"", w:"Check in — Frasers House", p:"frasers", note:"Nights 1–2"},
+    {t:"", w:"Laundry — Tumbler", p:"tumbler", laundry:true, note:"Waterloo Centre, 400 m from Frasers. 16 kg machines."},
     {t:"", w:"Late supper — Liang Seah Street", p:"liangseah", note:"Five minutes on foot. Bugis Junction shuts at 22:00 and you land at 22:10 — this is the only thing near the hotel still serving."},
   ]},
 
@@ -283,6 +309,7 @@ const DAYS = [
     {t:"", w:"Option — Tekka Place", p:"tekka", note:"Little India. 08:00–22:00."},
     {t:"", w:"Option — Uncle Lee Confectionery", p:"unclelee", note:"Jalan Pisang. 10:00–17:00, so it is a daytime stop."},
     {t:"", w:"Option — Original Herbal Shop", p:"herbal", note:"Balestier Road. 11:30–23:00 daily."},
+    {t:"", w:"Laundry — Aqua Wash", p:"aquawash", laundry:true, note:"Beach Road, for the JW nights. Drop-off with delivery back to the hotel — for seven people's washing that is worth paying for rather than sitting in a laundromat."},
     {t:"", w:"Option — Restaurant Labyrinth", p:"labyrinth", note:"Esplanade Mall. Dinner from 18:30, closed Mon–Tue. Fine dining — not a night for the children."},
   ]},
 
@@ -305,6 +332,7 @@ const DAYS = [
 
   {d:"Mon 5 Oct", t:"Sentosa", leg:"sg", focus:["laurus"], items:[
     {t:"", w:"Sentosa day", p:"laurus", note:"Adventure Cove is on the doorstep. Swim cap for the fresh perm."},
+    {t:"", w:"Laundry — Speed Wash", p:"speedwash", laundry:true, note:"Sentosa has no laundromat at all, not one. Bus 123 across to Telok Blangah Rise, about two hours door to door — a job for while the children are at Adventure Cove, not an evening one."},
     {t:"", w:"Dinner — Dancing Crab", p:"dcrab", note:"VivoCity, one Sentosa Express stop off the island."},
   ]},
 
@@ -316,6 +344,7 @@ const DAYS = [
 
   {d:"Wed 7 Oct", t:"Batu Pahat", leg:"my", focus:["batu"], items:[
     {t:"", w:"Batu Pahat", p:"batu"},
+    {t:"", w:"Laundry — Laundrybar", p:"laundrybar", laundry:true, note:"Kampung Merdeka. Avoid the two Bubblelab branches in town — their token machines have a long history of being empty."},
   ]},
 
   {d:"Thu 8 Oct", t:"Down to Johor Bahru", leg:"my", focus:["batu","sheraton"], items:[
@@ -327,6 +356,7 @@ const DAYS = [
 
   {d:"Fri 9 Oct", t:"Johor Bahru", leg:"my", focus:["sheraton"], items:[
     {t:"", w:"Johor Bahru", p:"sheraton"},
+    {t:"", w:"Laundry — The Laundry JBCC", p:"laundryjb", laundry:true, note:"Jalan Wong Ah Fook, walkable from the Sheraton. Takes e-wallet, so no hunting for RM1 coins."},
     {t:"", w:"Gao Deng", p:"gaodeng", note:"Breakfast, from 05:15 — closed Thursdays, so today and not the 8th. Skudai, west of JB."},
     {t:"", w:"Kopi Sarawak", p:"kopisrwk", note:"Kopitiam — closes 19:00. Taman Setia Indah, east side."},
     {t:"", w:"Jombali Village", p:"jombali", note:"13:00–22:00. Taman Pelangi."},
@@ -335,6 +365,7 @@ const DAYS = [
   {d:"Sat 10 Oct", t:"Back to Singapore · F1", leg:"sg", focus:["sheraton","furama","f1"], items:[
     {t:"08:00", w:"Transfer to Singapore", p:"sheraton", note:"Currently booked for 12:00 — move it earlier. Saturday midday at Woodlands is the worst crossing of the week, and it's F1 weekend. Ask for the Second Link at Tuas. SGD 120 cash."},
     {t:"", w:"Check in — Furama RiverFront", p:"furama", note:"Night 11"},
+    {t:"", w:"Laundry — Stevie Wash", p:"steviewash", laundry:true, note:"Jalan Bukit Ho Swee, about 400 m from the Furama."},
     {t:"", w:"Hair and nails", p:"great", note:"Kitty and the three girls. Great World is one stop from Havelock."},
     {t:"16:30", w:"Into the circuit — Zone 1", p:"f1", note:"Collect the daily wristband on arrival, or you can't cross into the other zones. Singapore Flyer is free with Zone 1."},
     {t:"17:00", w:"Sprint race", p:"f1", note:"Singapore's first ever. Roughly half an hour of running."},
@@ -415,7 +446,7 @@ DAYS.forEach((day,i)=>{
     <div class="card">
       ${day.items.map(it=>{
         const p = it.p ? P[it.p] : null;
-        return `<div class="item${p?' haspin':''}"${p?` data-pin="${it.p}" data-day="${i}" role="button" tabindex="0" aria-label="Show ${p.n} on the map"`:''}>
+        return `<div class="item${p?' haspin':''}${it.laundry?' laundry':''}"${p?` data-pin="${it.p}" data-day="${i}" role="button" tabindex="0" aria-label="Show ${p.n} on the map"`:''}>
           <div class="t">${it.t||'—'}</div>
           <div>
             <div class="what">${it.w}</div>
@@ -483,6 +514,24 @@ CHECKS.forEach(c=>{
 });
 
 select(2); // open on the wedding day
+
+/* Laundry is a separate layer: off by default so it stays out of the way,
+   and it hides its pins as well as its rows. The choice is remembered. */
+const LAUNDRY = ['tumbler','aquawash','speedwash','laundrybar','laundryjb','steviewash'];
+const laundryBtn = document.getElementById('laundry');
+function setLaundry(on){
+  document.body.classList.toggle('show-laundry', on);
+  laundryBtn.setAttribute('aria-pressed', on?'true':'false');
+  LAUNDRY.forEach(k=>{
+    const m = markers[k]; if(!m) return;
+    if(on){ if(!map.hasLayer(m)) m.addTo(map); }
+    else if(map.hasLayer(m)) map.removeLayer(m);
+  });
+  try{ localStorage.setItem('sgjb-laundry', on?'1':'0'); }catch(e){}
+}
+laundryBtn.addEventListener('click',()=>setLaundry(laundryBtn.getAttribute('aria-pressed')!=='true'));
+let saved=false; try{ saved = localStorage.getItem('sgjb-laundry')==='1'; }catch(e){}
+setLaundry(saved);
 </script>
 </body>
 </html>
