@@ -404,7 +404,7 @@ const CHECKS = [
 /* ---------------- map ---------------- */
 const COL = {sg:"#0F766E", my:"#A85B10", wed:"#B32B37"};
 const map = L.map('map',{scrollWheelZoom:false,zoomControl:true}).setView([1.35,103.5],9);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_2sd5_1_2ebec67e29fa944441555c2d',{
   maxZoom:19, attribution:'&copy; OpenStreetMap &copy; CARTO'
 }).addTo(map);
 
