@@ -272,6 +272,7 @@ const P = {
   herbal:  {n:"Original Herbal Shop",        a:"414 Balestier Road, Singapore 329806",             ll:[1.3260,103.8480]},
   labyrinth:{n:"Restaurant Labyrinth",       a:"8 Raffles Avenue, #02-23 Esplanade Mall, Singapore 039802", ll:[1.2900,103.8555]},
   chieng:  {n:"Uncle Chieng wafer ice cream", a:"391 Orchard Road, Ngee Ann City, Singapore 238801", ll:[1.3030,103.8350]},
+  koksen:  {n:"KOK Sen Restaurant",          a:"KOK Sen Restaurant, 30 Keong Saik Road, Singapore 089138", ll:[1.2794,103.8416]},
 
   // --- laundry ---
   tumbler: {n:"Tumbler",                     a:"Tumbler, Waterloo Centre, Waterloo Street, Singapore", ll:[1.3005,103.8530]},
@@ -293,11 +294,12 @@ const DAYS = [
     {t:"", w:"Late supper — Liang Seah Street", p:"liangseah", note:"Five minutes on foot. Bugis Junction shuts at 22:00 and you land at 22:10 — this is the only thing near the hotel still serving."},
   ]},
 
-  {d:"Fri 2 Oct", t:"Haircuts, then move hotels", leg:"sg", focus:["frasers","jw"], items:[
+  {d:"Fri 2 Oct", t:"Haircuts, then move hotels", leg:"sg", focus:["frasers","jw","koksen"], items:[
     {t:"", w:"Check out of Frasers House, bags held", p:"frasers"},
     {t:"", w:"Breakfast — Tiong Bahru Bakery", p:"tbbakery", note:"From 07:30 at Raffles City. Closest outlet to Beach Road, not the original shop."},
     {t:"", w:"Lunch — Hey! Yakiniku", p:"heyyaki", note:"Bugis Junction, 80 Middle Road — the same building as Frasers. 11:00–22:00."},
     {t:"13:00", w:"Salon", note:"Ladies cut + perm · 1 men's cut · 2 kids' cuts. The perm runs long — expect 3–4 hours."},
+    {t:"17:15", w:"Dinner with the immediate family — KOK Sen", p:"koksen", note:"Keong Saik Road, Chinatown. A perm starting at 13:00 finishes 16:00–17:00, so this is tight — straight from the salon, and check in to the JW afterwards."},
     {t:"", w:"Check in — JW Marriott South Beach", p:"jw", note:"Nights 3–4. A few minutes from Frasers on Beach Road."},
     {t:"", w:"Supper on Liang Seah Street", p:"liangseah", note:"Five minutes on foot. Where Singapore goes for late supper — easier tonight than on arrival night."},
     {t:"", w:"Option — The Soup Expert", p:"soupexp", note:"Suntec City, a short walk from the JW. Either JW night."},
@@ -315,13 +317,24 @@ const DAYS = [
 
   {d:"Sat 3 Oct", t:"Inn Chao and Angel's wedding", leg:"sg", wed:true, focus:["jw","house","edition"], items:[
     {t:"05:30", w:"Wake the girls"},
-    {t:"06:10", w:"Leave the JW Marriott", note:"Girls' dresses travel on hangers — change after their hair is done, not before."},
-    {t:"06:30", w:"Girls' hair at Inn Chao's home", p:"house", note:"Allow for lift queues."},
-    {t:"08:00", w:"Boys arrive for car door duty", p:"house", note:"Both in wedding clothes from the hotel. Ang baos ready."},
-    {t:"08:30", w:"Tea ceremony", p:"house"},
-    {t:"12:00", w:"Registration — EDITION Ballroom, LG", p:"edition", note:"About 20 minutes from the house."},
-    {t:"12:30", w:"Wedding lunch", p:"edition", note:"Girls are flower girls. Feed the little ones early — this is a long sit."},
-    {t:"", w:"Uncle Chieng wafer ice cream", p:"chieng", note:"Kerbside outside Ngee Ann City, 13:00–22:00. Ten minutes from the EDITION — something for the children after the long lunch."},
+    {t:"06:10", w:"Inn Kian and the girls leave the JW Marriott", note:"Girls' dresses travel on hangers — change after their hair is done, not before."},
+    {t:"06:30", w:"Girls' hair and make-up at Inn Chao's home", p:"house", note:"Allow for lift queues. Mom is in the chair from 05:30 and Sin Yee from 06:00, so the girls' slot can slip."},
+    {t:"07:30", w:"Kitty and the boys arrive", p:"house", note:"Both boys in wedding clothes from the hotel. Leave the JW by about 07:10."},
+    {t:"08:00", w:"Groom's car arrives — car door duty", note:"The boys open one door each. Ang baos ready."},
+    {t:"08:30", w:"Tea ceremony", note:"Immediate family — everyone."},
+    {t:"08:50", w:"Bed-rolling", note:"The boys and their cousin jump and roll on the bed."},
+    {t:"09:15", w:"Bride and groom leave for the EDITION", note:"Breakfast and a rest at the house until about 09:45, then Grab across — book with 25A Saint Georges Lane as the pick-up. Seven of you is two cars."},
+    {t:"10:30", w:"Arrive at the EDITION", p:"edition", note:"Straight down to the lower-ground VIP room. It's yours until 16:00 — the place to park the little ones between moments."},
+    {t:"11:00", w:"Extended-family tea ceremony", note:"Elders only, with Mom and Dad. Watch if you like."},
+    {t:"11:30", w:"Family photo in the garden", note:"Start heading over at 11:20."},
+    {t:"11:45", w:"March-in rehearsal", note:"The three girls — five minutes."},
+    {t:"12:20", w:"First march-in", note:"The three girls are flower girls."},
+    {t:"12:30", w:"Wedding lunch", note:"Ballroom, lower ground. Inn Kian, Kitty and the boys seated — table number still to come. Mom and Dad at the VIP table. Feed the little ones early — this runs to 16:00."},
+    {t:"13:00", w:"Dad's speech", note:"Around the second course."},
+    {t:"14:00", w:"Champagne toast and stage photos", note:"After the second march-in. Whether immediate family joins the stage photo is still to be decided."},
+    {t:"14:30", w:"Table photos", note:"Inn Kian helps with the photo at each table, until 15:00."},
+    {t:"16:00", w:"Program ends", note:"The VIP room goes at the same time."},
+    {t:"", w:"Uncle Chieng wafer ice cream", p:"chieng", note:"Kerbside outside Ngee Ann City, 13:00–22:00. Ten minutes from the EDITION — something for the children once it wraps."},
   ]},
 
   {d:"Sun 4 Oct", t:"Move to Sentosa", leg:"sg", focus:["jw","laurus"], items:[
@@ -392,6 +405,7 @@ const CHECKS = [
   {b:"Singapore Arrival Card ×7, again", s:"Coming back from Johor is a fresh entry, not a continuation.", w:"From 7 Oct, at the Sheraton"},
   {b:"Singapore GP app", s:"Zone 1 tickets are delivered in-app. Screenshots and PDFs get turned away at the gate.", w:"Install before leaving Perth"},
   {b:"New SIMs — Singapore and Malaysia", s:"One regional eSIM covering both sides saves swapping at the causeway. Set it up before you fly — you land at 22:10 and a Changi counter is the last thing you'll want.", w:"Before 1 Oct"},
+  {b:"Grab app, with a card loaded", s:"The wedding-morning plan is Grab from the house to the EDITION, and seven of you is two cars. Set it up in Perth, not on the kerb.", w:"Before 1 Oct"},
   {b:"Airport run from Willetton", s:"Seven of you — Uber XL seats six, so it's two cars or a maxi taxi. Uber Reserve books up to 90 days ahead; a maxi taxi is the surer bet with five children and the luggage.", w:"Book before 1 Oct"},
   {b:"Ear defenders for the boys", s:"Proper kids' sets. Adult foam plugs won't seal on a 4-year-old.", w:"Buy in Perth"},
   {b:"International Driving Permit", s:"RAC issues them. Some Malaysian rental desks insist.", w:"Buy in Perth"},
