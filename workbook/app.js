@@ -173,6 +173,7 @@
       id: t.id, type: t.type, title: t.title, status: t.status,
       equipment: f.equipment || "", component: f.component || "", department: f.department || "",
       assignee: f.assignee || "", reporter: f.reporter || "", priority: f.priority || "",
+      owner: f.actionOwner || "", site: f.site || "",
       expiryAt: f.expiryAt || "", created: t.created, updated: t.updated,
       comments: (t.comments || []).length, files: (t.attachments || []).length,
     };
@@ -332,7 +333,7 @@
       const q = LF.q.trim().toLowerCase();
       let rows = all.filter((t) => (LF.type === "all" || t.type === LF.type)
         && (LF.status === "all" || (LF.status === "open" ? !["done", "bad"].includes(statusCat(t.type, t.eff)) : t.eff === LF.status))
-        && (!q || [t.id, t.title, t.equipment, t.component, t.department, t.assignee, t.reporter, t.eff].join(" ").toLowerCase().includes(q)));
+        && (!q || [t.id, t.title, t.equipment, t.component, t.department, t.assignee, t.reporter, t.owner, t.site, t.priority, t.eff].join(" ").toLowerCase().includes(q)));
       rows.sort((a, b) => LF.sort === "id" ? b.id.localeCompare(a.id) : String(b[LF.sort]).localeCompare(String(a[LF.sort])));
       $("#rows").innerHTML = rows.length ? `
         <div class="tbl">
@@ -463,6 +464,7 @@
           <div><p class="kicker">${t ? `<a href="#/t/${t.id}">${t.id}</a> · Edit` : "New"} · ${typeChip(type)}</p>
           <h1>${t ? "Edit " : ""}${esc(T.label)}</h1></div>
         </div>
+        ${t && t.imported ? `<div class="note">Imported from ${esc(t.importSource || "a register")}. Only the summary is required when editing; fill in the rest as you go.</div>` : ""}
         ${restored ? `<div class="note">Restored your unsaved changes. <button type="button" class="linkbtn" id="discardDraft">Discard them</button></div>` : ""}
         <datalist id="dl_people">${people.map((p) => `<option value="${esc(p)}">`).join("")}</datalist>
         <section class="card">
@@ -517,7 +519,7 @@
       const newTitle = form.elements.title.value.trim();
       const newStatus = t ? form.elements.status.value : T.workflow.start;
       $$(".field.bad", form).forEach((x) => x.classList.remove("bad"));
-      const miss = missingFields(T, cur, newStatus);
+      const miss = t && t.imported ? [] : missingFields(T, cur, newStatus);
       if (!newTitle) miss.unshift({ k: "title", label: "Summary" });
       if (cur.estimate && isNaN(parseDur(cur.estimate))) miss.push({ k: "estimate", label: "Original estimate (format)" });
       if (miss.length) {
@@ -534,7 +536,7 @@
           const pend = up.list.slice();
           const res = await commitWith(async (readAt) => {
             const idx = (await readAt(dp("index.json"))) || emptyIndex();
-            const num = Math.max(idx.nextNum || 1, ...idx.tickets.map((x) => +x.id.split("-")[1] + 1 || 1));
+            const num = Math.max(idx.nextNum || 1, ...idx.tickets.filter((x) => /^WB-\d+$/.test(x.id)).map((x) => +x.id.split("-")[1] + 1));
             const nid = "WB-" + String(num).padStart(4, "0");
             idx.nextNum = num + 1;
             const { files, recs } = stageUploads(nid, pend, who);
@@ -657,7 +659,7 @@
     $$("[data-to]").forEach((b) => b.addEventListener("click", async () => {
       const to = b.dataset.to;
       if (!canWrite()) return toast("Add a GitHub token in Settings to change status.", "err");
-      const miss = missingFields(T, f, to);
+      const miss = t.imported ? [] : missingFields(T, f, to);
       if (miss.length) { toast(`Fill ${miss.map((x) => x.label).join(", ")} to move to ${to}`, "err"); location.hash = `#/edit/${t.id}?to=${encodeURIComponent(to)}`; return; }
       if (["Cancelled", "Removed"].includes(to) && !confirm(`Move ${t.id} to ${to}?`)) return;
       b.disabled = true;

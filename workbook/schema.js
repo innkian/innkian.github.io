@@ -32,11 +32,21 @@
       short: "Change",
       sections: [
         { title: "Details", fields: [
-          { k: "priority", label: "Priority", type: "select", opts: ["Low", "Medium", "High", "Critical"], req: true, def: "Medium" },
+          { k: "priority", label: "Priority", type: "select", opts: ["1 – Next 48 Hours", "2 – Next Week", "3 – Next Fortnight", "Low", "Medium", "High", "Critical"], req: true, def: "Medium" },
           { k: "component", label: "Component", type: "text", list: COMPONENTS, req: true },
           { k: "department", label: "Department", type: "text", list: DEPARTMENTS, req: true, def: "PCS" },
           { k: "equipment", label: "Equipment / Labels", type: "text", placeholder: "e.g. CVR061" },
           { k: "fixVersion", label: "Fix Version", type: "text", def: "Backlog" },
+        ]},
+        { title: "Register Tracking", fields: [
+          { k: "site", label: "Site", type: "text", placeholder: "e.g. Pilgangoora" },
+          { k: "registerStatus", label: "Register status", type: "text", placeholder: "e.g. CODE In Development" },
+          { k: "dateSubmitted", label: "Date submitted", type: "date" },
+          { k: "approver", label: "Approver", type: "person" },
+          { k: "actionOwner", label: "Action owner", type: "person" },
+          { k: "latestPosition", label: "Latest position", type: "textarea", wide: true },
+          { k: "nextAction", label: "Next action", type: "textarea", wide: true },
+          { k: "statusConflict", label: "Status conflict / register note", type: "text", wide: true },
         ]},
         { title: "Change Request", fields: [
           { k: "why", label: "Why is the change required?", type: "textarea", req: true, wide: true, rows: 5 },
@@ -80,12 +90,16 @@
       workflow: {
         start: "Draft",
         states: {
-          "Draft": { cat: "todo", next: ["Awaiting Approval", "Cancelled"] },
-          "Awaiting Approval": { cat: "wait", next: ["Approved", "Draft", "Cancelled"] },
-          "Approved": { cat: "prog", next: ["Implementing", "Cancelled"] },
-          "Implementing": { cat: "prog", next: ["Done", "Approved"] },
-          "Done": { cat: "done", next: ["Implementing"] },
+          "Draft": { cat: "todo", next: ["Awaiting Approval", "On Hold", "Cancelled"] },
+          "Awaiting Approval": { cat: "wait", next: ["Approved", "Draft", "On Hold", "Cancelled"] },
+          "Approved": { cat: "prog", next: ["In Development", "On Hold", "Cancelled"] },
+          "In Development": { cat: "prog", next: ["Testing", "On Hold", "Approved"] },
+          "Testing": { cat: "prog", next: ["Done", "In Development", "On Hold"] },
+          "On Hold": { cat: "wait", next: ["Draft", "Awaiting Approval", "Approved", "In Development", "Testing", "Cancelled"] },
+          "Done": { cat: "done", next: ["Testing"] },
           "Cancelled": { cat: "bad", next: ["Draft"] },
+          // older name for In Development / Testing
+          "Implementing": { cat: "prog", next: ["In Development", "Testing", "Done"] },
         },
       },
     },
