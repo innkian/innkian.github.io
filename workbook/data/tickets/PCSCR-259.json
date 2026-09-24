@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-259",
+  "type": "change",
+  "title": "NLO – HPGR Vibration High High Trip Debounce Timer",
+  "status": "In Development",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "NLO – HPGR",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "In Development",
+    "dateSubmitted": "2024-01-20",
+    "approver": "",
+    "actionOwner": "PCS",
+    "latestPosition": "Correct documentation required in order to close out; PTS to review and confirm (14/08).",
+    "nextAction": "PCS to review and close out or implement (carried from 04/09).",
+    "statusConflict": "",
+    "reporter": "Desmond Maravanyika",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: In Development)"
+    }
+  ],
+  "created": "2024-01-20T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Desmond Maravanyika",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

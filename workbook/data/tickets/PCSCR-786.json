@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-786",
+  "type": "change",
+  "title": "NLO Faceplate Modification for Flotation Circuit",
+  "status": "Draft",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "Flotation",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Status not recorded",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "PCS",
+    "latestPosition": "PTS to email (04/09). Document is in the PCSCR shared folder.",
+    "nextAction": "PCS to review and implement; assign a status in the register (18/09).",
+    "statusConflict": "Status field blank in register",
+    "reporter": "Tate Mawire",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Status not recorded)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Tate Mawire",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

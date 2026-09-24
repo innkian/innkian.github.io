@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-779",
+  "type": "change",
+  "title": "Flotation BL-501 & BL-502 Change Sequence",
+  "status": "Approved",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "Flotation",
+    "department": "PCS",
+    "equipment": "BL-501, BL-502",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Approved",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "PCS",
+    "latestPosition": "Approved and ready for implementation.",
+    "nextAction": "PCS to implement (18/09).",
+    "statusConflict": "",
+    "reporter": "Jonathan Nguyen",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Jonathan Nguyen",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

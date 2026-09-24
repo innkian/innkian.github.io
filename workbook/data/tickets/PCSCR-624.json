@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-624",
+  "type": "change",
+  "title": "Plant Wide & Device Run Mode Trend",
+  "status": "On Hold",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "ALL – Control System",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "On Hold",
+    "dateSubmitted": "2025-10-03",
+    "approver": "",
+    "actionOwner": "PTS",
+    "latestPosition": "Added to the plant shutdown list (Kayne 29/10/2025).",
+    "nextAction": "Confirm which shutdown this is scheduled into.",
+    "statusConflict": "",
+    "reporter": "Renier Van Der Merwe",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+    }
+  ],
+  "created": "2025-10-03T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Renier Van Der Merwe",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

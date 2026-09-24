@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-793",
+  "type": "change",
+  "title": "NLO PP-0410/0415 LL Flow Interlock Change",
+  "status": "Approved",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "NLO",
+    "department": "PCS",
+    "equipment": "PP-0410",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Approved",
+    "dateSubmitted": "2026-08-27",
+    "approver": "Ben Sipos",
+    "actionOwner": "PCS / PTS",
+    "latestPosition": "Proposal emailed, awaiting reply (27/08 BR). Agreed PCS to remove the interlock as the transmitter is too unreliable (04/09).",
+    "nextAction": "PTS to flag the transmitter with maintenance; PCS to implement.",
+    "statusConflict": "Register 'Approved' vs meeting action 'Testing'",
+    "reporter": "Casey Ellis",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+    }
+  ],
+  "created": "2026-08-27T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Casey Ellis",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

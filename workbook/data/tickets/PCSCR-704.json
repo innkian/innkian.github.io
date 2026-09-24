@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-704",
+  "type": "change",
+  "title": "GDC / FDC Auto Close / Open Pop-up",
+  "status": "Draft",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "Grinding & Gravity",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "PCS",
+    "latestPosition": "P2. PTS to review whether the PCSCR is still required (14/08).",
+    "nextAction": "PCS to finish development and implement so testing can be co-ordinated (04/09).",
+    "statusConflict": "",
+    "reporter": "Casey Ellis",
+    "assignee": "Miguel Borquez"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Casey Ellis",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

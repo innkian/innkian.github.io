@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-801",
+  "type": "change",
+  "title": "Timed Inhibit on ROM Bin Sprayer (Rock Breaker)",
+  "status": "Approved",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "C&S",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Approved",
+    "dateSubmitted": "",
+    "approver": "Michael Sullivan",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "Timed inhibit to stop the ROM bin sprayer running continuously while the rock breaker is in position. DocuSign completed 16/09/2026 – all parties signed.",
+    "nextAction": "PCS to implement now fully signed.",
+    "statusConflict": "",
+    "reporter": "Thomas Hoffman",
+    "assignee": "Ben Ratcliffe"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Thomas Hoffman",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

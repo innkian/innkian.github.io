@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-794",
+  "type": "change",
+  "title": "Reduce 222-WIC-8106 Output Ramp Rate to Minimise CV-005 Surging",
+  "status": "Draft",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "HPGR",
+    "department": "PCS",
+    "equipment": "222-WIC-8106, CV-005",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "PTS",
+    "latestPosition": "PTS to review implementation (04/09). Earlier note (28/08) recorded that evidence of surging caused by the PID was not found.",
+    "nextAction": "Close out the review and confirm proceed or cancel.",
+    "statusConflict": "",
+    "reporter": "Kane Brotherwood",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Kane Brotherwood",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

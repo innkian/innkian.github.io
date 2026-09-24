@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-788",
+  "type": "change",
+  "title": "PK00774 – HPGR Screens 1 & 2 Delay",
+  "status": "Testing",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "HPGR",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Testing",
+    "dateSubmitted": "2026-08-19",
+    "approver": "Michael Sullivan",
+    "actionOwner": "PTS / Projects",
+    "latestPosition": "Previously on hold pending review (21/08). Signed PDF filed 16/09. Waiting for a test period to be arranged by Mech Projects.",
+    "nextAction": "Review upstream start timing before permanent implementation (18/09).",
+    "statusConflict": "",
+    "reporter": "Matthew Trigg",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    }
+  ],
+  "created": "2026-08-19T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Matthew Trigg",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

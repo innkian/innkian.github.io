@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-554",
+  "type": "change",
+  "title": "HPGR 1 & 2 Shutdown Alarm Indication",
+  "status": "In Development",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "HPGR",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "In Development",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "Under review by BR since 14/08; meeting action list records it as cancelled.",
+    "nextAction": "Confirm cancel vs proceed and correct the register.",
+    "statusConflict": "Register 'In Development' vs meeting action 'Cancelled'",
+    "reporter": "Benjamin Ratcliffe",
+    "assignee": "Ben Ratcliffe"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: In Development)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Benjamin Ratcliffe",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

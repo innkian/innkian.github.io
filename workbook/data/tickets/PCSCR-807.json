@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-807",
+  "type": "change",
+  "title": "Decant Water Supply Pump Automation",
+  "status": "Awaiting Approval",
+  "fields": {
+    "priority": "",
+    "component": "Water Services",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Signed form on file",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "",
+    "latestPosition": "Draft created and a signed PDF filed 23/09. Automates level-based transfer pump control between the Decant Return Pond, the Pilgan process water ponds and the 5 ML Turkey Nest, retaining manual mode.",
+    "nextAction": "Move status from DOC In Development to Approved and schedule implementation.",
+    "statusConflict": "Not yet in register",
+    "reporter": "Matthew Dempster",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from PCSCR In Development folder (register status: Signed form on file)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Matthew Dempster",
+  "imported": true,
+  "importSource": "PCSCR In Development folder"
+}

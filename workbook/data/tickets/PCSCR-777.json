@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-777",
+  "type": "change",
+  "title": "NLO Recleaner Con Controller Update",
+  "status": "Testing",
+  "fields": {
+    "priority": "1 – Next 48 Hours",
+    "component": "NLO",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Testing",
+    "dateSubmitted": "2026-08-07",
+    "approver": "Andrew Taylor",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "Still testing as at 21/08.",
+    "nextAction": "Obtain test outcome and close out.",
+    "statusConflict": "",
+    "reporter": "Casey Ellis",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    }
+  ],
+  "created": "2026-08-07T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Casey Ellis",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

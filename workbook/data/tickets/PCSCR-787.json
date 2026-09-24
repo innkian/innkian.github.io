@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-787",
+  "type": "change",
+  "title": "Flotation Hopper / Pump Level Controller – Phase 3",
+  "status": "On Hold",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "Flotation",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "On Hold",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "PCS",
+    "latestPosition": "Waiting until PCSCR-771 (Phase 2) has been trialled. Phase 2 was reported working well on 11/09.",
+    "nextAction": "Confirm with Luke Fortuna on 22/09 whether Phase 3 can proceed.",
+    "statusConflict": "Register 'On Hold' vs meeting action 'CODE In Development'",
+    "reporter": "Luke Fortuna",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Luke Fortuna",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

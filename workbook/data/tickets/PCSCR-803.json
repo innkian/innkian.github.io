@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-803",
+  "type": "change",
+  "title": "Automate Ball Mill 2 Kibble Loading",
+  "status": "Draft",
+  "fields": {
+    "priority": "",
+    "component": "Grinding & Gravity",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "PTS",
+    "latestPosition": "Automates kibble loading based on mill power draw to reduce CRO intervention. Draft document created 16/09.",
+    "nextAction": "Assign a priority and nominate an approver.",
+    "statusConflict": "Priority not set in register",
+    "reporter": "Tayla Davies",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Tayla Davies",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-488",
+  "type": "change",
+  "title": "Split Con Blank / Unblank Sequence",
+  "status": "In Development",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "Spod Dressing",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "In Development",
+    "dateSubmitted": "2025-03-12",
+    "approver": "Pierre Bille",
+    "actionOwner": "PTS",
+    "latestPosition": "Parked until time allows. Genies edited to show note status, to be deployed and reviewed by PTS. Cancellation proposed 04/09 in favour of a substitute genie modification.",
+    "nextAction": "PTS to confirm whether cancellation is acceptable (raised 18/09).",
+    "statusConflict": "",
+    "reporter": "Pierre Bille",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: In Development)"
+    }
+  ],
+  "created": "2025-03-12T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Pierre Bille",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

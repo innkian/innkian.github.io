@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-719",
+  "type": "change",
+  "title": "Modbus Diagnostics",
+  "status": "Draft",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "PLO – Control System",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "Vincent Goh",
+    "latestPosition": "VWG – low priority; requires a shutdown to implement.",
+    "nextAction": "Nominate a shutdown window.",
+    "statusConflict": "",
+    "reporter": "Vincent Goh",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Vincent Goh",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-723",
+  "type": "change",
+  "title": "Reagent Feeder kWh Calculation",
+  "status": "Testing",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "Reagent",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Testing",
+    "dateSubmitted": "2026-06-03",
+    "approver": "Shane Thorne",
+    "actionOwner": "PCS",
+    "latestPosition": "CTs not reading current so the calculation is not working; otherwise the logic should be sound.",
+    "nextAction": "Ask site electrical team for progress on the CTs (21/08).",
+    "statusConflict": "",
+    "reporter": "Blair Bartley",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    }
+  ],
+  "created": "2026-06-03T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Blair Bartley",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

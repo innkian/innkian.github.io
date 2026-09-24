@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-668",
+  "type": "change",
+  "title": "PIL – Flotation Train 1 and 2 Conditioning Power Alarms",
+  "status": "On Hold",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "Flotation",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "On Hold",
+    "dateSubmitted": "2026-01-05",
+    "approver": "Brandon Rego",
+    "actionOwner": "PTS",
+    "latestPosition": "Email sent 30/07 requesting the change be placed on hold for further review.",
+    "nextAction": "Confirm review outcome or cancel.",
+    "statusConflict": "",
+    "reporter": "Andrew Taylor",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+    }
+  ],
+  "created": "2026-01-05T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Andrew Taylor",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

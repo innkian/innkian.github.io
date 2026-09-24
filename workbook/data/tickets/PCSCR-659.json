@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-659",
+  "type": "change",
+  "title": "CV-012 Ramp Down Time Increase",
+  "status": "Draft",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "PLO – PR",
+    "department": "PCS",
+    "equipment": "CV-012",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "Awaiting review of Renier's email (BR 04/09). Note: the 27/08 snapshot recorded this as Successful, then it reverted to DOC In Development.",
+    "nextAction": "Resolve the status reversal and confirm implementation.",
+    "statusConflict": "",
+    "reporter": "Renier Van Der Merwe",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Renier Van Der Merwe",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

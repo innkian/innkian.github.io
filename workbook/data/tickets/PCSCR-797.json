@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-797",
+  "type": "change",
+  "title": "50 Meg to 5 Meg Pump Automation",
+  "status": "Testing",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "Water Services",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Testing",
+    "dateSubmitted": "2026-08-31",
+    "approver": "Michael Phillips",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "In testing; completion document to be issued (BR 18/09).",
+    "nextAction": "Issue completion document.",
+    "statusConflict": "",
+    "reporter": "Tayla Davies",
+    "assignee": "Ben Ratcliffe"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    }
+  ],
+  "created": "2026-08-31T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Tayla Davies",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

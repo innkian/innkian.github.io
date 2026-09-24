@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-718",
+  "type": "change",
+  "title": "CV-006 Dynamic Stop Function",
+  "status": "Draft",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "HPGR",
+    "department": "PCS",
+    "equipment": "CV-006",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "PCS",
+    "latestPosition": "PCSCR not signed as at 28/08.",
+    "nextAction": "PCS to follow up signature (04/09).",
+    "statusConflict": "",
+    "reporter": "Renier Van De Merwe",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Renier Van De Merwe",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

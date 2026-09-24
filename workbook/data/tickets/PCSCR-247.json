@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-247",
+  "type": "change",
+  "title": "NLO – Flocculant dosing alarms",
+  "status": "In Development",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "NLO",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "In Development",
+    "dateSubmitted": "2023-12-29",
+    "approver": "Tim Wakeham",
+    "actionOwner": "PCS",
+    "latestPosition": "Clarification requested from PTS; PTS to review and confirm (14/08).",
+    "nextAction": "PCS to review and close out or implement (carried from 04/09).",
+    "statusConflict": "",
+    "reporter": "Casey Ellis",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: In Development)"
+    }
+  ],
+  "created": "2023-12-29T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Casey Ellis",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-323",
+  "type": "change",
+  "title": "Middlings Controller 'Feed Forward' Control",
+  "status": "In Development",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "NLO",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "CODE In Development",
+    "dateSubmitted": "2026-08-27",
+    "approver": "Ben Sipos",
+    "actionOwner": "PCS",
+    "latestPosition": "Waiting on CV-850 weightometer calibration before the controller can be proven (15/09 MB).",
+    "nextAction": "PCS to enable the change and test once calibration complete (18/09).",
+    "statusConflict": "Register 'CODE In Development' vs meeting action 'In Development'",
+    "reporter": "Tom Boulton",
+    "assignee": "Miguel Borquez"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: CODE In Development)"
+    }
+  ],
+  "created": "2026-08-27T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Tom Boulton",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-775",
+  "type": "change",
+  "title": "NLO DMS Thickener Torque Controller",
+  "status": "Testing",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "NLO",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Testing",
+    "dateSubmitted": "2026-08-07",
+    "approver": "Andrew Taylor",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "Still testing as at 21/08; PTS to review (14/08). Meeting list shows it as Successful.",
+    "nextAction": "Agree one status and close out if testing is complete.",
+    "statusConflict": "Register 'Testing' vs meeting action 'Successful'",
+    "reporter": "Casey Ellis",
+    "assignee": "Ben Ratcliffe"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    }
+  ],
+  "created": "2026-08-07T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Casey Ellis",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

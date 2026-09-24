@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-269",
+  "type": "change",
+  "title": "FT-8622 Dampening",
+  "status": "On Hold",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "PLO – PR",
+    "department": "PCS",
+    "equipment": "FT-8622",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "On Hold",
+    "dateSubmitted": "2024-02-06",
+    "approver": "Kyle Jones",
+    "actionOwner": "PCS / PTS",
+    "latestPosition": "VWG 17/07/2026 – found disabled, so status moved from Successful back to Testing. Awaiting instrument installation; confirm whether the average is still required (09/09 MB).",
+    "nextAction": "Confirm instrument installation date, then re-test and agree a single status.",
+    "statusConflict": "Register 'On Hold' vs meeting action 'Testing'",
+    "reporter": "Kyle Jones",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+    }
+  ],
+  "created": "2024-02-06T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Kyle Jones",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

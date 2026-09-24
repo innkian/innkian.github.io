@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-650",
+  "type": "change",
+  "title": "Metso RockSense Detection on CV-005 and CV-815",
+  "status": "Testing",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "C&S",
+    "department": "PCS",
+    "equipment": "CV-005, CV-815",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Testing",
+    "dateSubmitted": "2025-11-26",
+    "approver": "Jason Dieu Ly",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "Vendor (PX) works ongoing.",
+    "nextAction": "Obtain completion date from PX.",
+    "statusConflict": "",
+    "reporter": "Benjamin Ratcliffe",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    }
+  ],
+  "created": "2025-11-26T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Benjamin Ratcliffe",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

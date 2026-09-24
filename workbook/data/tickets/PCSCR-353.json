@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-353",
+  "type": "change",
+  "title": "NLO – Deslime and Mill Cyclone Valve Change",
+  "status": "On Hold",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "NLO",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "On Hold",
+    "dateSubmitted": "2024-09-03",
+    "approver": "Tim Wakeham",
+    "actionOwner": "PTS",
+    "latestPosition": "Not to be submitted until the work order is planned.",
+    "nextAction": "Confirm WO planning window.",
+    "statusConflict": "",
+    "reporter": "Luke Fortuna",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+    }
+  ],
+  "created": "2024-09-03T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Luke Fortuna",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

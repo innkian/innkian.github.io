@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-690",
+  "type": "change",
+  "title": "Gravity Tails Line Flushing Valves Auto Operation",
+  "status": "Approved",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "Grinding & Gravity",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Approved",
+    "dateSubmitted": "2026-02-12",
+    "approver": "Michael Sullivan",
+    "actionOwner": "PTS",
+    "latestPosition": "Projects – awaiting installation of check valves. Not included in the September shut as at 11/09.",
+    "nextAction": "PTS to raise for the January shut (18/09).",
+    "statusConflict": "Register 'Approved' vs meeting action 'On Hold'",
+    "reporter": "Jason Ly",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+    }
+  ],
+  "created": "2026-02-12T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Jason Ly",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-802",
+  "type": "change",
+  "title": "Primary Ore Sorter PSD Upgrade",
+  "status": "Draft",
+  "fields": {
+    "priority": "1 – Next 48 Hours",
+    "component": "C&S",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "SO-811 Modbus comms upgraded to provide D10/D50/D90. Planned Modbus upgrade complete; tie-in works required.",
+    "nextAction": "Check feed-stopped status returns to plant once tie-in is done.",
+    "statusConflict": "",
+    "reporter": "Oscar Freeman",
+    "assignee": "Ben Ratcliffe"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Oscar Freeman",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

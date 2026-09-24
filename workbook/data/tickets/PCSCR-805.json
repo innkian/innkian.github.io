@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-805",
+  "type": "change",
+  "title": "NLO – DMS Feeder Interlock Classifier Status",
+  "status": "Draft",
+  "fields": {
+    "priority": "",
+    "component": "NLO",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "New PCSCR drafted",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "",
+    "latestPosition": "Draft form created in the In Development folder on 18/09. Adds a process interlock preventing feed to the DMS classifiers while the dart plug is closed (160-FE-0481 / 160-FE-0497).",
+    "nextAction": "Add to register, assign priority and approver.",
+    "statusConflict": "Not yet in register",
+    "reporter": "Casey Ellis",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from PCSCR In Development folder (register status: New PCSCR drafted)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Casey Ellis",
+  "imported": true,
+  "importSource": "PCSCR In Development folder"
+}

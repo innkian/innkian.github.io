@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-282",
+  "type": "change",
+  "title": "Float PW Bleed Flow Controller Alarm",
+  "status": "In Development",
+  "fields": {
+    "priority": "1 – Next 48 Hours",
+    "component": "NLO",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "CODE In Development",
+    "dateSubmitted": "2024-03-08",
+    "approver": "",
+    "actionOwner": "PCS",
+    "latestPosition": "Programmed and ready to deploy (15/09 MB). Valve to be confirmed fixed by PTS (18/09).",
+    "nextAction": "PCS to enable once valve confirmed fixed (target 22/09).",
+    "statusConflict": "Register 'CODE In Development' vs meeting action 'In Development'",
+    "reporter": "Sandrine Symons",
+    "assignee": "Miguel Borquez"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: CODE In Development)"
+    }
+  ],
+  "created": "2024-03-08T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Sandrine Symons",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

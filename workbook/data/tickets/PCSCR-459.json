@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-459",
+  "type": "change",
+  "title": "HPGR Screen Belt Feeder Trim Controller",
+  "status": "Testing",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "HPGR",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Testing",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "In testing since 21/08; no test result recorded since.",
+    "nextAction": "Obtain and record test outcome.",
+    "statusConflict": "",
+    "reporter": "Luke Fortuna",
+    "assignee": "Ben Ratcliffe"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Luke Fortuna",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

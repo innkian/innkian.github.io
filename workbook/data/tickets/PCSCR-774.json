@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-774",
+  "type": "change",
+  "title": "Automate Changeover from TARP A (Full Config) to TARP B (PR Bypass)",
+  "status": "Draft",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "Control Room",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "2026-09-02",
+    "approver": "Michael Phillips",
+    "actionOwner": "PCS",
+    "latestPosition": "Document submitted.",
+    "nextAction": "PCS to review the submitted document (carried from 04/09).",
+    "statusConflict": "",
+    "reporter": "Tayla Davies",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-09-02T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Tayla Davies",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

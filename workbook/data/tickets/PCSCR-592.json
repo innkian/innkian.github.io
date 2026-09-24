@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-592",
+  "type": "change",
+  "title": "COS Feeder Stoppage Audible Alarm",
+  "status": "On Hold",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "HPGR",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "On Hold",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "PTS",
+    "latestPosition": "Awaiting Pierre review and approval (Kayne 04/08/2025). Proposed for cancellation due to alarm noise – a better front-end inventory controller is to be implemented to mitigate CV-005 stoppages (TJ 31/07/2026).",
+    "nextAction": "Formally cancel and reference the inventory controller change.",
+    "statusConflict": "",
+    "reporter": "Jerome Silveira",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Jerome Silveira",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

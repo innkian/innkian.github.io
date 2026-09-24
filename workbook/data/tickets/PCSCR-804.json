@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-804",
+  "type": "change",
+  "title": "CITECT Trend Scaling",
+  "status": "Approved",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "PLO – Control System",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Approved",
+    "dateSubmitted": "2026-09-18",
+    "approver": "Rachel Coggin",
+    "actionOwner": "PCS",
+    "latestPosition": "Programmed and awaiting deployment (24/09 MB).",
+    "nextAction": "PCS to deploy.",
+    "statusConflict": "",
+    "reporter": "Corey Morris",
+    "assignee": "Miguel Borquez"
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+    }
+  ],
+  "created": "2026-09-18T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Corey Morris",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

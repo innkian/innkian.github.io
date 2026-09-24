@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-808",
+  "type": "change",
+  "title": "NLO – Mill Feed Off Stoppage Interlocks",
+  "status": "Draft",
+  "fields": {
+    "priority": "",
+    "component": "Grinding & Gravity",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "New PCSCR drafted",
+    "dateSubmitted": "",
+    "approver": "",
+    "actionOwner": "",
+    "latestPosition": "Draft updated 24/09. Raised after the 23/09 event where the NLO ball mill ran approximately 7 hours without Precon feed and the Middlings feeder kept feeding for around 4 hours.",
+    "nextAction": "Register the change and assign a priority – wear and media consumption impact.",
+    "statusConflict": "Not yet in register",
+    "reporter": "Tom Boulton",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from PCSCR In Development folder (register status: New PCSCR drafted)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Tom Boulton",
+  "imported": true,
+  "importSource": "PCSCR In Development folder"
+}

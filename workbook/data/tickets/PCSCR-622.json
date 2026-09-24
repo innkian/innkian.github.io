@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-622",
+  "type": "change",
+  "title": "Tails Line Emergency Changeover Sequence",
+  "status": "Testing",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "Tail Thickener",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Testing",
+    "dateSubmitted": "2025-10-15",
+    "approver": "",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "TSF3 project. Confirm with Anthony / Issy's ops CRO as CM believes the sequence was triggered; check SQL for instance activation (BR 21/08).",
+    "nextAction": "Book the test during the September 48-hour offline window (raised 04/09).",
+    "statusConflict": "",
+    "reporter": "Jason Ly",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    }
+  ],
+  "created": "2025-10-15T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Jason Ly",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

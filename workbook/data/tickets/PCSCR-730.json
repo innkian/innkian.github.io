@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-730",
+  "type": "change",
+  "title": "HPGR 1 and 2 Temperature Sensor Low Failsafe Interlocks",
+  "status": "Draft",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "HPGR",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "",
+    "approver": "Vincent Goh",
+    "actionOwner": "Ben Ratcliffe",
+    "latestPosition": "Temperature-only proposal to be built and sent to Koppern for review (BR 04/09).",
+    "nextAction": "Issue proposal to Koppern.",
+    "statusConflict": "",
+    "reporter": "Benjamin Ratcliffe",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Benjamin Ratcliffe",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

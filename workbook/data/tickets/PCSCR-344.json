@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-344",
+  "type": "change",
+  "title": "NLO HPGR PT35A / PT35B Pressure Transmitters to Citect",
+  "status": "On Hold",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "NLO",
+    "department": "PCS",
+    "equipment": "PT35A, PT35B",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "On Hold",
+    "dateSubmitted": "",
+    "approver": "Andrew Taylor",
+    "actionOwner": "PTS",
+    "latestPosition": "No movement recorded. No comment on file.",
+    "nextAction": "Confirm whether this remains required or should be cancelled.",
+    "statusConflict": "",
+    "reporter": "Andrew Taylor",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+    }
+  ],
+  "created": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Andrew Taylor",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

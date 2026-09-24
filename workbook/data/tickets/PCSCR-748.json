@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-748",
+  "type": "change",
+  "title": "CV-003 No Feed Water Spray Alarm",
+  "status": "Draft",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "C&S",
+    "department": "PCS",
+    "equipment": "CV-003",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "DOC In Development",
+    "dateSubmitted": "2026-07-25",
+    "approver": "Oscar Freeman",
+    "actionOwner": "PCS",
+    "latestPosition": "27/07 – status returned to under development because the document was not fully signed off. A signed PDF (PCSCR-748 CV-003 Sprays on with no feed) was filed on 18/09.",
+    "nextAction": "PCS to implement now the signed document is on file (18/09).",
+    "statusConflict": "Register 'DOC In Development' vs meeting action 'CODE In Development'",
+    "reporter": "Corey Morris",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    }
+  ],
+  "created": "2026-07-25T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Corey Morris",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

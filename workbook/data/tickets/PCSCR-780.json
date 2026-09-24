@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-780",
+  "type": "change",
+  "title": "SCADA Trend File Reduction",
+  "status": "Approved",
+  "fields": {
+    "priority": "3 – Next Fortnight",
+    "component": "PLO – Control System",
+    "department": "PCS",
+    "equipment": "",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Approved",
+    "dateSubmitted": "2026-08-10",
+    "approver": "Michael Phillips",
+    "actionOwner": "Vincent Goh",
+    "latestPosition": "File to be sent to PCS to implement on an ongoing basis through to December 2026.",
+    "nextAction": "Issue file to PCS and set the recurring schedule.",
+    "statusConflict": "",
+    "reporter": "Vincent Goh",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+    }
+  ],
+  "created": "2026-08-10T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Vincent Goh",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "PCSCR-750",
+  "type": "change",
+  "title": "Conveyor CV-005 Operation – VSD Start-Up Review",
+  "status": "Testing",
+  "fields": {
+    "priority": "2 – Next Week",
+    "component": "HPGR",
+    "department": "PCS",
+    "equipment": "CV-005",
+    "fixVersion": "",
+    "site": "Pilgangoora",
+    "registerStatus": "Testing",
+    "dateSubmitted": "2026-07-01",
+    "approver": "Raymond Klaproth",
+    "actionOwner": "PCS",
+    "latestPosition": "Con Mon requested more aggressive S-curve settings after review.",
+    "nextAction": "PCS to implement, then request Con Mon review on 26/09.",
+    "statusConflict": "",
+    "reporter": "Mohamed Essa",
+    "assignee": ""
+  },
+  "comments": [],
+  "attachments": [],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T09:00:00+08:00",
+      "by": "Import",
+      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    }
+  ],
+  "created": "2026-07-01T09:00:00+08:00",
+  "updated": "2026-09-25T09:00:00+08:00",
+  "createdBy": "Mohamed Essa",
+  "imported": true,
+  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+}
