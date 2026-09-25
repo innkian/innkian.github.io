@@ -7,7 +7,7 @@
     "priority": "3 – Next Fortnight",
     "component": "HPGR",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "222-SC-002, 222-SC-502, 222-CV-006",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Testing",
@@ -18,7 +18,16 @@
     "nextAction": "Review upstream start timing before permanent implementation (18/09).",
     "statusConflict": "",
     "reporter": "Matthew Trigg",
-    "assignee": ""
+    "assignee": "",
+    "why": "Under the existing control philosophy, 222-SC-002 and 222-SC-502 keep running after a 222-CV-006 process stoppage. A trial interlock with a 2-second off-delay is proposed to see whether it reduces material accumulation in the CV-006 feed chutes.",
+    "design": "- 222-SC-002 HPGR Screen 1 – add process interlock: 222-CV-006 HPGR Feed Conveyor Running (2 s delay)\n- 222-SC-502 HPGR Screen 2 – add process interlock: 222-CV-006 HPGR Feed Conveyor Running (2 s delay)\n- Neither screen currently has start permissives or process interlocks",
+    "impact": "HPGR screens 1 and 2 will stop about 2 seconds after CV-006 stops instead of continuing to run.",
+    "fFunctionality": "Yes",
+    "testCriteria": "- Normal operation: screen starts, runs and stops normally from PCS/SCADA\n- Process shutdown delay: screen stops ~2 s after 222-CV-006 stops\n- Safety shutdown: screen stops immediately with no delay on E-Stop or pull-wire\n- Alarm and status verification: no unexpected alarms\n- Record Pass/Fail for 222-SC-002 and 222-SC-502 at each step",
+    "scheduleNote": "Waiting for a test period to be arranged by Mech Projects.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -28,10 +37,15 @@
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
       "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-788_-_PK00774_-_HPGR_Screens_1__2_Delay - Signed.pdf"
     }
   ],
   "created": "2026-08-19T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Matthew Trigg",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"

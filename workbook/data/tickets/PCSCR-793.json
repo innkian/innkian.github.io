@@ -7,7 +7,7 @@
     "priority": "2 – Next Week",
     "component": "NLO",
     "department": "PCS",
-    "equipment": "PP-0410",
+    "equipment": "160-PP-0410, 160-PP-0415, 160-FIT-0410, 150-FE-0310, PLC605",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Approved",
@@ -18,7 +18,16 @@
     "nextAction": "PTS to flag the transmitter with maintenance; PCS to implement.",
     "statusConflict": "Register 'Approved' vs meeting action 'Testing'",
     "reporter": "Casey Ellis",
-    "assignee": ""
+    "assignee": "",
+    "why": "NLO fines pumps PP-0410/0415 stop on a Low-Low flow interlock. The line runs about 200 m, so stopping the pump when the flow meter fails increases the risk of blockages. Plant feed does not share this interlock.",
+    "design": "- Remove interlock from 160-PP-0410: 160-FIT-0410 Fines Pump Discharge Flow Low Low Alarm Healthy\n- Remove interlock from 160-PP-0415: 160-FIT-0410 Fines Pump Discharge Flow Low Low Alarm Healthy\n- Add to 150-FE-0310 HPGR Circuit Group Interlock: 160-FIT-0410 Fines Pump Discharge Flow Low Low Alarm Healthy\n- PLC: PLC605",
+    "impact": "Fines pumps will no longer stop on low-low flow; a 160-FIT-0410 low-low flow will instead stop the 150-FE-0310 HPGR circuit group.",
+    "fFunctionality": "Yes",
+    "likelihood": "Possible",
+    "severity": "Slight",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -28,10 +37,15 @@
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
       "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-793 NLO PP-0410-0415 LL Flow Interlock Change.docx (form risk ranking 1C)"
     }
   ],
   "created": "2026-08-27T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Casey Ellis",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"

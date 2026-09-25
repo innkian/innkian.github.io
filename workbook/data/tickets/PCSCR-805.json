@@ -7,18 +7,25 @@
     "priority": "",
     "component": "NLO",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "160-FE-0481, 160-FE-0497, 160-LIC-0470, 160-LIC-0472",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "New PCSCR drafted",
     "dateSubmitted": "",
     "approver": "",
     "actionOwner": "",
-    "latestPosition": "Draft form created in the In Development folder on 18/09. Adds a process interlock preventing feed to the DMS classifiers while the dart plug is closed (160-FE-0481 / 160-FE-0497).",
+    "latestPosition": "Draft form created in the In Development folder on 18/09.",
     "nextAction": "Add to register, assign priority and approver.",
     "statusConflict": "Not yet in register",
     "reporter": "Casey Ellis",
-    "assignee": ""
+    "assignee": "",
+    "why": "DMS feeders can be started with the classifier dart plugs in manual at 0%. This has led to classifier overfilling events and could bog the classifiers.",
+    "design": "- Add a process interlock preventing feed to the DMS classifiers while the dart plug is closed\n- 160-FE-0481: 160-LIC-0470 Classifier Controller in Auto or Manual > 5%\n- 160-FE-0497: 160-LIC-0472 Classifier Controller in Auto or Manual > 5%",
+    "impact": "DMS feeders will not start unless the classifier level controller is in Auto or Manual above 5%.",
+    "fFunctionality": "Yes",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -27,12 +34,17 @@
     {
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
-      "action": "imported from PCSCR In Development folder (register status: New PCSCR drafted)"
+      "action": "imported from In Development (Word Docs) folder (register status: New PCSCR drafted)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-805 NLO - DMS Feeder Interlock Classifier Status.docx"
     }
   ],
   "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Casey Ellis",
   "imported": true,
-  "importSource": "PCSCR In Development folder"
+  "importSource": "1. In Development (Word Docs) folder"
 }

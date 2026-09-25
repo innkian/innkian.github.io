@@ -7,7 +7,7 @@
     "priority": "3 – Next Fortnight",
     "component": "Flotation",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "235-AG-502, 235-AG-002, 235-AG-003, 235-PY-3637, 235-PY-3638, 235-PY-3639, 235-TK-004",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "On Hold",
@@ -16,9 +16,18 @@
     "actionOwner": "PTS",
     "latestPosition": "Email sent 30/07 requesting the change be placed on hold for further review.",
     "nextAction": "Confirm review outcome or cancel.",
-    "statusConflict": "",
+    "statusConflict": "Form priority 2 – Within 1 Week vs register 3 – Next Fortnight",
     "reporter": "Andrew Taylor",
-    "assignee": ""
+    "assignee": "",
+    "why": "Conditioning power on Train 1 and Train 2 recently dropped to levels that impact flotation performance. There are no alarms on these values to indicate operation below setpoint.",
+    "design": "- Alarm when the 30-minute average PV is 7.5% below SP\n- Train 1: 235-AG-502-PWR-M3, 235-AG-002-PWR-M3, 235-AG-003-PWR-M3\n- Train 2: 235-PY-3637, 235-PY-3638, 235-PY-3639\n- Create Train 1 faceplates (Train 2 already has them)\n- No trip to be implemented\n- Correct the 235-TK-004 power trend naming (shows 235-AG-002-PWR-M3 instead of 235-AG-003-PWR-M3)",
+    "impact": "CROs will receive low conditioning power alarms on both trains and have new Train 1 faceplates.",
+    "fAlarms": "Yes",
+    "likelihood": "Rare",
+    "severity": "Slight",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -28,10 +37,15 @@
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
       "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-668 - PIL Flotation T1 and T2 Cond Power Alarms.docx (form risk ranking 1E)"
     }
   ],
   "created": "2026-01-05T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Andrew Taylor",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"

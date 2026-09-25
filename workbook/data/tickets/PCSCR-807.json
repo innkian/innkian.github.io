@@ -7,18 +7,26 @@
     "priority": "",
     "component": "Water Services",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "322-PU-794, 322-PU-795, 322-PU-796, 322-PU-797, 322-LT-6110, 272-LT-0812, 272-LT-3347, 364-PN-101-LT01, 272-XV-4014, 272-XV-4015, 322-XV-6126",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Signed form on file",
     "dateSubmitted": "",
     "approver": "",
     "actionOwner": "",
-    "latestPosition": "Draft created and a signed PDF filed 23/09. Automates level-based transfer pump control between the Decant Return Pond, the Pilgan process water ponds and the 5 ML Turkey Nest, retaining manual mode.",
-    "nextAction": "Move status from DOC In Development to Approved and schedule implementation.",
+    "latestPosition": "Draft created and a signed PDF filed 23/09.",
+    "nextAction": "Update register status and schedule implementation.",
     "statusConflict": "Not yet in register",
     "reporter": "Matthew Dempster",
-    "assignee": ""
+    "assignee": "",
+    "why": "The Decant Return Pond supplies both the Pilgan Plant process water ponds and the 5 ML Turkey Nest, but the transfer pumps run in manual only. During high demand the pond has dropped to about 20%, risking insufficient raw water for mining. Automatic level-based pump control would improve transfer reliability while keeping manual mode.",
+    "design": "- 322-PU-794 (duty, to Pilgan PW ponds) – Auto start: 322-LT-6110 ≥ 70% and healthy, AND (272-XV-4015 open cmd AND 272-LT-0812 healthy, OR 272-XV-4014 open cmd AND 272-LT-3347 healthy). Auto stop: 322-LT-6110 ≤ 65% or unhealthy, OR both destination paths closed/unhealthy\n- 322-PU-796 (duty, to 5 ML Turkey Nest) – Auto start: 322-LT-6110 ≥ 85% and healthy AND 364-PN-101-LT01 ≤ 70% and healthy. Auto stop: 322-LT-6110 ≤ 80% or unhealthy, OR 364-PN-101-LT01 ≥ 90% or unhealthy\n- 322-PU-795 common standby – operator selects which duty strategy it follows; automatic valve alignment (322-XV-6126 open when standby to PU-794, closed when standby to PU-796)\n- Independent source setpoints prioritise Pilgan process water over the Turkey Nest\n- 322-PU-797 NLO decant return pump unchanged; existing manual mode retained\n- Refs: PIL-20000-PID-PR-369 Rev 1, PIL-20000-PID-PR-727 Rev 4, PIL-36105-PID-PR-508 Rev 1",
+    "impact": "Decant transfer pumps can run in Auto on pond levels. Operators choose which duty pump the standby 322-PU-795 backs up. Manual mode remains available.",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -27,12 +35,17 @@
     {
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
-      "action": "imported from PCSCR In Development folder (register status: Signed form on file)"
+      "action": "imported from In Development (Word Docs) folder (register status: Signed form on file)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-807 - Decant Water Supply Pump Automation.pdf"
     }
   ],
   "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Matthew Dempster",
   "imported": true,
-  "importSource": "PCSCR In Development folder"
+  "importSource": "1. In Development (Word Docs) folder"
 }

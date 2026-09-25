@@ -7,7 +7,7 @@
     "priority": "3 – Next Fortnight",
     "component": "NLO",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "410-FE-1140, CV850, CV1792, CV1120 (calc)",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "CODE In Development",
@@ -18,7 +18,18 @@
     "nextAction": "PCS to enable the change and test once calibration complete (18/09).",
     "statusConflict": "Register 'CODE In Development' vs meeting action 'In Development'",
     "reporter": "Tom Boulton",
-    "assignee": "Miguel Borquez"
+    "assignee": "Miguel Borquez",
+    "why": "Middlings control is often sinusoidal under the incremental autospeed controller, giving variable grind size and variable throughput. Variable throughput drives variable mass pull to the cons circuit. Retuning autospeed limits only gives stable throughput briefly because coarse/fines feed and the DMS 3 split keep changing.",
+    "design": "- Calculate CV1120 feed rate as CV850 – CV1792 (CV1725 and CV1120 have no weightometers)\n- Use a 1–2 hour average of each weightometer to reduce variability\n- Use the calculated rate as the input to Middlings Feeder 410-FE-1140 speed control, with the middlings bin level acting as a buffer\n- Controller retains the ability to adjust speed on bin level high/low\n- Calc tag trendable and added to PI Historian\n- Add an enable/disable button so the trial can be reverted",
+    "impact": "CROs can enable/disable feed-forward control on the 410-FE-1140 faceplate. Bin level high/low settings will be widened so the bin buffers feed variability.",
+    "fSetpoints": "Yes",
+    "fTags": "Yes",
+    "fFunctionality": "Yes",
+    "likelihood": "Possible",
+    "severity": "Moderate",
+    "productionApprover": "Tim Wakeham",
+    "maintenanceApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -28,10 +39,15 @@
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
       "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: CODE In Development)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-323 Middlings controller 1.docx (form risk ranking 3C)"
     }
   ],
   "created": "2026-08-27T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Tom Boulton",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"

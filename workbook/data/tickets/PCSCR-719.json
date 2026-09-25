@@ -7,7 +7,7 @@
     "priority": "3 – Next Fortnight",
     "component": "PLO – Control System",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "Prosoft Modbus modules (Pilgan / Pilgan C&S)",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "DOC In Development",
@@ -18,7 +18,19 @@
     "nextAction": "Nominate a shutdown window.",
     "statusConflict": "",
     "reporter": "Vincent Goh",
-    "assignee": ""
+    "assignee": "",
+    "why": "PLC logic cycles through each Modbus client for about one second to read health status. On Prosoft modules with 11 clients, a comms loss can go undetected for about 10 seconds, and a return to healthy takes as long to confirm.",
+    "design": "- Update Prosoft configurations to map client status/error into spare Modbus addressing so health is monitored continuously\n- Replace Modbus health statuses where appropriate and alarm when Modbus is unhealthy – high priority for control devices, low for monitoring-only devices\n- Ensure adequate timeouts (typically 2 s)\n- New SCADA page/faceplate, accessible from the PLC page: total requests, responses, errors, configuration error word, current error, last error",
+    "impact": "CROs will see Modbus comms alarms prioritised by device criticality, plus a new Modbus diagnostics faceplate.",
+    "fTags": "Yes",
+    "fFunctionality": "Yes",
+    "fAlarms": "Yes",
+    "likelihood": "Rare",
+    "severity": "Moderate",
+    "scheduleNote": "Low priority; requires a shutdown to implement (VWG).",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -28,10 +40,15 @@
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
       "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-719 - Modbus diagnostics.docx (form risk ranking 3E)"
     }
   ],
   "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Vincent Goh",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"

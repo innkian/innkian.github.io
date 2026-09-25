@@ -14,11 +14,20 @@
     "dateSubmitted": "",
     "approver": "",
     "actionOwner": "",
-    "latestPosition": "Draft created 21/09 to standardise the ACT control philosophy across the primary sorters following the SO-811 upgrade. The file is saved as 'PCSCR-805 Primary Ore Sorter SO-812-813 upgrade.docx' but the form inside is numbered 806.",
-    "nextAction": "Rename the file to 806 to remove the clash with the NLO DMS item, and add to register.",
-    "statusConflict": "Not yet in register",
+    "latestPosition": "Draft created 21/09 following the SO-811 ACT upgrade.",
+    "nextAction": "Rename the file to 806 and add to register.",
+    "statusConflict": "Not yet in register; File saved as 'PCSCR-805 …' but the form is numbered 806",
     "reporter": "Oscar Freeman",
-    "assignee": ""
+    "assignee": "",
+    "why": "Following the successful ACT upgrade on SO-811, standardising the control philosophy across all primary ore sorters will improve operability, maintainability and future optimisation.",
+    "design": "- Update SO-812/813 SCADA graphics and faceplates to align with SO-811\n- Configure Modbus mappings, alarms, warnings, status indications and operating modes\n- Review and implement fault handling, interlocking and occupancy monitoring logic identified during SO-811 commissioning",
+    "impact": "SO-812 and SO-813 will operate the same way as SO-811.",
+    "fTags": "Yes",
+    "fFunctionality": "Yes",
+    "fAlarms": "Yes",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -27,12 +36,17 @@
     {
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
-      "action": "imported from PCSCR In Development folder (register status: New PCSCR drafted)"
+      "action": "imported from In Development (Word Docs) folder (register status: New PCSCR drafted)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-805 Primary Ore Sorter SO-812-813 upgrade.docx"
     }
   ],
   "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Oscar Freeman",
   "imported": true,
-  "importSource": "PCSCR In Development folder"
+  "importSource": "1. In Development (Word Docs) folder"
 }

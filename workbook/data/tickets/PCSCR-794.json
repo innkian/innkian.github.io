@@ -7,7 +7,7 @@
     "priority": "3 – Next Fortnight",
     "component": "HPGR",
     "department": "PCS",
-    "equipment": "222-WIC-8106, CV-005",
+    "equipment": "222-WIC-8106, CV-005, FE-005, FE-006, FE-007, FE-008",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "DOC In Development",
@@ -16,9 +16,19 @@
     "actionOwner": "PTS",
     "latestPosition": "PTS to review implementation (04/09). Earlier note (28/08) recorded that evidence of surging caused by the PID was not found.",
     "nextAction": "Close out the review and confirm proceed or cancel.",
-    "statusConflict": "",
+    "statusConflict": "Form attributes CV-005 surging to the PID; 28/08 review found no evidence of this",
     "reporter": "Kane Brotherwood",
-    "assignee": ""
+    "assignee": "",
+    "why": "222-WIC-8106 produces significant reclaim feed surges on CV-005 during feed rate increases. Trends show a stable 260 t/h setpoint while measured feed spikes to about 640 t/h, despite small output changes (~63–66% CV). Feeder demand increases faster than the transport delay between FE-005/006/007/008 and the CV-005 weightometer, so material arrives in slugs rather than a controlled increase.",
+    "design": "- Modify positive output ramping of 222-WIC-8106 Crushed Ore Stockpile Reclaim Feed Rate Controller to match reclaim system deadtime\n- Retune the control loop to reduce responsiveness",
+    "impact": "Less operator intervention needed to manage reclaim feed surges; feed increases will ramp more slowly.",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "likelihood": "Unlikely",
+    "severity": "Slight",
+    "reviewers": "James Brooks",
+    "productionApprover": "Raymond Klaproth",
+    "maintenanceApprover": "Chris Hoskins"
   },
   "comments": [],
   "attachments": [],
@@ -28,10 +38,15 @@
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
       "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-794 Reduce 222-WIC-8106 Output Ramp Rate to Minimise CV-005 Surging.docx (form risk ranking 1D)"
     }
   ],
   "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Kane Brotherwood",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"

@@ -7,7 +7,7 @@
     "priority": "1 – Next 48 Hours",
     "component": "NLO",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "910-FIT-2440",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "CODE In Development",
@@ -16,9 +16,19 @@
     "actionOwner": "PCS",
     "latestPosition": "Programmed and ready to deploy (15/09 MB). Valve to be confirmed fixed by PTS (18/09).",
     "nextAction": "PCS to enable once valve confirmed fixed (target 22/09).",
-    "statusConflict": "Register 'CODE In Development' vs meeting action 'In Development'",
+    "statusConflict": "Register 'CODE In Development' vs meeting action 'In Development'; Form priority 3 – Within 1 Fortnight vs register 1 – Next 48 Hours",
     "reporter": "Sandrine Symons",
-    "assignee": "Miguel Borquez"
+    "assignee": "Miguel Borquez",
+    "why": "155 m³/h of flotation process water was sent to the DMS process water tank for a period of time. The volume carried ultrafine solids into the DMS process water tank, causing foaming in the DMS circuit and production loss.",
+    "design": "- Add a High alarm setpoint to 910-FIT-2440 – initial value 100 m³/h\n- Setpoint adjustable through metallurgy login",
+    "impact": "CROs will receive a high flow alarm on 910-FIT-2440 at 100 m³/h. Metallurgy can adjust the alarm setpoint.",
+    "fSetpoints": "Yes",
+    "fAlarms": "Yes",
+    "likelihood": "Rare",
+    "severity": "Slight",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -28,10 +38,15 @@
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
       "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: CODE In Development)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-282 - Float PW Bleed Flow Controller High.docx (form risk ranking 1E)"
     }
   ],
   "created": "2024-03-08T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Sandrine Symons",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"

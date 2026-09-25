@@ -7,7 +7,7 @@
     "priority": "3 – Next Fortnight",
     "component": "C&S",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "ROM bin sprays, rock breaker position sensor",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Approved",
@@ -18,7 +18,17 @@
     "nextAction": "PCS to implement now fully signed.",
     "statusConflict": "",
     "reporter": "Thomas Hoffman",
-    "assignee": "Ben Ratcliffe"
+    "assignee": "Ben Ratcliffe",
+    "why": "The ROM bin sprays run continuously while the rock breaker is in sensor range unless put in manual off. This sends excess water into the process, and sprays left in manual off affect dust suppression.",
+    "design": "- Add a timer/inhibit: when the sensor triggers, sprays run for a set period, then stay off until the sensor clears and re-triggers\n- Keep existing functionality for the loader",
+    "impact": "Sprays can be left in Auto; they run one cycle while the rock breaker is in position, removing the need to switch to manual off.",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "likelihood": "Unlikely",
+    "severity": "Minor",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -28,10 +38,15 @@
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
       "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-801 ROM Bin Spray Inhibit.pdf (form risk ranking 2D)"
     }
   ],
   "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Thomas Hoffman",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"

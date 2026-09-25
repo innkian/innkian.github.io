@@ -7,7 +7,7 @@
     "priority": "1 – Next 48 Hours",
     "component": "C&S",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "221-SO-811",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "DOC In Development",
@@ -18,7 +18,17 @@
     "nextAction": "Check feed-stopped status returns to plant once tie-in is done.",
     "statusConflict": "",
     "reporter": "Oscar Freeman",
-    "assignee": "Ben Ratcliffe"
+    "assignee": "Ben Ratcliffe",
+    "why": "SO-811 Primary Ore Sorter Modbus comms have been upgraded to provide PSD measurements (D10, D50, D90). Displaying and trending them improves visibility of sorter feed size and lets the team monitor crushing circuit performance and ore presentation.",
+    "design": "- Modify the SO-811 SCADA faceplate to display D10, D50 and D90\n- Add historian tags and trending for the new PSD values\n- No control logic changes at this stage",
+    "impact": "CROs and metallurgists can see and trend SO-811 feed PSD, helping spot screen panel, grizzly and crusher wear.",
+    "fTags": "Yes",
+    "fFunctionality": "No",
+    "likelihood": "Rare",
+    "severity": "Slight",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
@@ -28,10 +38,15 @@
       "at": "2026-09-25T09:00:00+08:00",
       "by": "Import",
       "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+    },
+    {
+      "at": "2026-09-25T12:03:00+08:00",
+      "by": "Import",
+      "action": "enriched from PCSCR form: PCSCR-802 Primary Ore Sorter PSD upgrade.docx (form risk ranking 1E)"
     }
   ],
   "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-25T12:03:00+08:00",
   "createdBy": "Oscar Freeman",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
