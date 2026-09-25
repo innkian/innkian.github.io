@@ -5,9 +5,9 @@
     {
       "id": "PCSCR-247",
       "type": "change",
-      "title": "NLO – Flocculant dosing alarms",
+      "title": "NLO – Flocculant Dosing Pump Stoppage Alarm",
       "status": "In Development",
-      "equipment": "",
+      "equipment": "810-ZM-2295E, 810-ZM-2295F, 810-ZM-2295G, 140-WIT-0255 (CV-0250), NLO HPGR, PLC2, PLC4, SCADA",
       "component": "NLO",
       "department": "PCS",
       "assignee": "",
@@ -17,7 +17,7 @@
       "site": "Pilgangoora",
       "expiryAt": "",
       "created": "2023-12-29T09:00:00+08:00",
-      "updated": "2026-09-25T09:00:00+08:00",
+      "updated": "2026-09-25T13:08:00+08:00",
       "comments": 0,
       "files": 0
     },
