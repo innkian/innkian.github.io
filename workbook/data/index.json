@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "nextNum": 1,
+  "nextNum": 2,
   "tickets": [
     {
       "id": "PCSCR-247",
@@ -837,6 +837,25 @@
       "updated": "2026-09-25T09:00:00+08:00",
       "comments": 0,
       "files": 0
+    },
+    {
+      "id": "WB-0001",
+      "type": "service",
+      "title": "Ticketing System Test",
+      "status": "Open",
+      "equipment": "Test_Equipment",
+      "component": "Infrastructure",
+      "department": "PCS",
+      "assignee": "",
+      "reporter": "",
+      "priority": "",
+      "owner": "",
+      "site": "",
+      "expiryAt": "",
+      "created": "2026-09-25T00:06:17.061Z",
+      "updated": "2026-09-25T00:06:17.061Z",
+      "comments": 0,
+      "files": 1
     }
   ]
 }

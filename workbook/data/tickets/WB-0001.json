@@ -1,0 +1,42 @@
+{
+  "id": "WB-0001",
+  "type": "service",
+  "title": "Ticketing System Test",
+  "status": "Open",
+  "fields": {
+    "component": "Infrastructure",
+    "requestType": "Remote Support",
+    "department": "PCS",
+    "userFullName": "Miguel Borquez",
+    "equipment": "Test_Equipment",
+    "issue": "Testing",
+    "resolution": "Successful testing",
+    "followUp": "No",
+    "followUpNote": "",
+    "assignee": "",
+    "reporter": ""
+  },
+  "comments": [],
+  "attachments": [
+    {
+      "path": "workbook/data/att/WB-0001/mug7aaxx26u-Test.txt",
+      "name": "Test.txt",
+      "type": "text/plain",
+      "size": 0,
+      "at": "2026-09-25T00:06:17.061Z",
+      "by": "Unknown"
+    }
+  ],
+  "worklog": [],
+  "history": [
+    {
+      "at": "2026-09-25T00:06:17.061Z",
+      "by": "Unknown",
+      "action": "created",
+      "to": "Open"
+    }
+  ],
+  "created": "2026-09-25T00:06:17.061Z",
+  "updated": "2026-09-25T00:06:17.061Z",
+  "createdBy": "Unknown"
+}
