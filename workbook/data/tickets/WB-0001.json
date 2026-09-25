@@ -16,7 +16,24 @@
     "assignee": "",
     "reporter": ""
   },
-  "comments": [],
+  "comments": [
+    {
+      "id": "mugdjgvokvg2u",
+      "author": "Unknown",
+      "at": "2026-09-25T03:01:22.356Z",
+      "text": "test",
+      "images": [
+        {
+          "path": "workbook/data/att/WB-0001/mugdjgvomc1-Test_Innki.txt",
+          "name": "Test Innki.txt",
+          "type": "text/plain",
+          "size": 10,
+          "at": "2026-09-25T03:01:22.356Z",
+          "by": "Unknown"
+        }
+      ]
+    }
+  ],
   "attachments": [
     {
       "path": "workbook/data/att/WB-0001/mug7aaxx26u-Test.txt",
@@ -37,6 +54,6 @@
     }
   ],
   "created": "2026-09-25T00:06:17.061Z",
-  "updated": "2026-09-25T00:06:17.061Z",
+  "updated": "2026-09-25T03:01:22.356Z",
   "createdBy": "Unknown"
 }
