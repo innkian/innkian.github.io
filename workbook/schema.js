@@ -111,7 +111,7 @@
         { title: "Details", fields: [
           { k: "component", label: "Component", type: "text", list: COMPONENTS, req: true },
           { k: "department", label: "Department", type: "text", list: DEPARTMENTS, req: true },
-          { k: "equipment", label: "Equipment Number", type: "text", req: true, placeholder: "e.g. CVR102 BRK001" },
+          { k: "equipment", label: "Equipment Number", type: "text", req: true, placeholder: "e.g. CV-809 BRK001" },
         ]},
         { title: "Bridge / Bypass", fields: [
           { k: "reason", label: "Reason", type: "textarea", req: true, wide: true, rows: 4 },
@@ -169,7 +169,7 @@
         ]},
         { title: "Description", fields: [
           { k: "userFullName", label: "User Full Name", type: "person", req: true, help: "Who raised the request" },
-          { k: "equipment", label: "Equipment/System", type: "text", req: true, placeholder: "e.g. FDR531" },
+          { k: "equipment", label: "Equipment/System", type: "text", req: true, placeholder: "e.g. CV-809" },
           { k: "issue", label: "Description of Issue", type: "textarea", req: true, wide: true, rows: 4 },
           { k: "resolution", label: "Description of Resolution", type: "textarea", wide: true, rows: 5, reqAt: ["Done"] },
           { k: "followUp", label: "Follow Up Required", type: "yesno", reqAt: ["Done"] },
