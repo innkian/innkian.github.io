@@ -35,7 +35,7 @@
           { k: "priority", label: "Priority", type: "select", opts: ["1 – Next 48 Hours", "2 – Next Week", "3 – Next Fortnight", "Low", "Medium", "High", "Critical"], req: true, def: "Medium" },
           { k: "component", label: "Component", type: "text", list: COMPONENTS, req: true },
           { k: "department", label: "Department", type: "text", list: DEPARTMENTS, req: true, def: "PCS" },
-          { k: "equipment", label: "Equipment / Labels", type: "text", placeholder: "e.g. CVR061" },
+          { k: "equipment", label: "Equipment / Labels", type: "text", placeholder: "e.g. CV-809" },
           { k: "fixVersion", label: "Fix Version", type: "text", def: "Backlog" },
         ]},
         { title: "Register Tracking", fields: [
