@@ -5,34 +5,48 @@
   "status": "On Hold",
   "fields": {
     "priority": "2 – Next Week",
-    "component": "ALL – Control System",
+    "component": "ALL - Control System",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "All drives – new *XX_RMD_N tags",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "On Hold",
     "dateSubmitted": "2025-10-03",
     "approver": "",
-    "actionOwner": "PTS",
-    "latestPosition": "Added to the plant shutdown list (Kayne 29/10/2025).",
-    "nextAction": "Confirm which shutdown this is scheduled into.",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "Added to plant shutdown list - Kayne 29/10/2025",
+    "nextAction": "Confirm which shutdown this is scheduled into",
+    "statusConflict": "Form ticks both priority 1 and 2",
     "reporter": "Renier Van Der Merwe",
-    "assignee": ""
+    "assignee": "",
+    "why": "When investigating why a process interlock did not trip a device, it presently has to be inferred through trending the alarms in the event tab versus drive status to see whether a device was running in auto, local or manual mode. This makes finding process interlock faults difficult to assess if they are properly actuating a stop signal or has been bypassed through running the device in local/manual. Implementing a trend for run mode for each device would mean clarity into plant control & cause location.",
+    "design": "Implement a new trendable tag for each device that monitors device run mode similar to the device status tag\n*XX_STS_N -> Drive Status\ne.g.\n*XX_RMD_N – Drive Run Mode\n\nWhere the tag variable gets updated each time the run mode changes:\n1 = Local Mode\n2 = Manual Mode\n3 = Auto\n\nSimilar to XX_STS_N code rungs:\n[Image in form – see source document]",
+    "impact": "Engineers and metallurgists can trend device run mode for root cause analysis.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fTags": "Yes",
+    "severity": "Slight",
+    "likelihood": "Unlikely"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: On Hold)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-624 Plant Wide Device Run Mode Trend.docx (form risk ranking 1D)"
     }
   ],
   "created": "2025-10-03T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Renier Van Der Merwe",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

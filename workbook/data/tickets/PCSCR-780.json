@@ -1,11 +1,11 @@
 {
   "id": "PCSCR-780",
   "type": "change",
-  "title": "SCADA Trend File Reduction",
+  "title": "SCADA trend file reduction",
   "status": "Approved",
   "fields": {
     "priority": "3 – Next Fortnight",
-    "component": "PLO – Control System",
+    "component": "PLO - Control System",
     "department": "PCS",
     "equipment": "PlantSCADA trend server (Pilgan)",
     "fixVersion": "",
@@ -13,41 +13,41 @@
     "registerStatus": "Approved",
     "dateSubmitted": "2026-08-10",
     "approver": "Michael Phillips",
-    "actionOwner": "Vincent Goh",
-    "latestPosition": "File to be sent to PCS to implement on an ongoing basis through to December 2026.",
-    "nextAction": "Issue file to PCS and set the recurring schedule.",
+    "actionOwner": "",
+    "latestPosition": "File to be sent to PCS to implement on ongoing basis until 12/26.",
+    "nextAction": "Issue file to PCS; set recurring schedule to Dec 2026",
     "statusConflict": "",
     "reporter": "Vincent Goh",
     "assignee": "",
-    "why": "Pilgan PlantSCADA trending has been extremely unstable and often cannot start until trend files are cleared. Trend files are configured one file per day for 365 days – over 11 million files – all transitioning at 00:00 UTC. With PI Historian in place, a year of SCADA trends is no longer needed.",
-    "design": "- Change trend file size from 1 day to 1 week\n- Reduce trend file storage from 365 days to 13 weeks (under ~400k files)\n- Stagger trend file cutover times to reduce drive load\n- Review performance and adjust file size/storage if needed",
+    "why": "PlantSCADA trending for Pilgan has been extremely unstable for some time. Often it is unable to start up and trend files have to be cleared in order for the trend service to properly start up\n\nInvestigations indicate that one of the possible reasons is due to the way the trend files are configured. They are currently configured to one file per day, for 365 days, meaning we have over 11 million files that the file system is not capable of handling. Furthermore these all transition to a new file at the same time of 0:00 UTC putting additional strain on the drive storage\n\nWith the introduction of PI Historian, there shouldn’t be a requirement to keep 1 years worth of trends.",
+    "design": "Change trend file size from 1 day to 1 week. Reduce trend file storage from 365 days to 13 week to get number of files to under 400k\nStagger trend file cutover time to reduce loading on drive storage\nReview performance and adjust trend file size and/or storage if required to achieve stability",
     "impact": "Built-in SCADA trends will hold 13 weeks of history; older data comes from PI Historian.",
-    "fFunctionality": "Yes",
-    "likelihood": "Unlikely",
-    "severity": "Slight",
-    "scheduleNote": "Implement on an ongoing basis through to December 2026.",
     "maintenanceApprover": "",
     "productionApprover": "",
-    "reviewers": ""
+    "reviewers": "",
+    "fFunctionality": "Yes",
+    "severity": "Slight",
+    "likelihood": "Unlikely",
+    "scheduleNote": "Implement on an ongoing basis through to December 2026."
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Approved)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-780.docx (form risk ranking 1D)"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-780.docx (form risk ranking 1D)"
     }
   ],
   "created": "2026-08-10T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Vincent Goh",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

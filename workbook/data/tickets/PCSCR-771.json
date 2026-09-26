@@ -1,24 +1,24 @@
 {
-  "id": "PCSCR-629",
+  "id": "PCSCR-771",
   "type": "change",
-  "title": "251-PU-673 gland flow sensors",
-  "status": "On Hold",
+  "title": "Floation Hopper / Pump Level Controller - Phase 2",
+  "status": "Done",
   "fields": {
     "priority": "3 – Next Fortnight",
-    "component": "Conc Filter",
+    "component": "Flotation",
     "department": "PCS",
-    "equipment": "251-PU-673",
+    "equipment": "",
     "fixVersion": "",
     "site": "Pilgangoora",
-    "registerStatus": "On Hold",
+    "registerStatus": "Meeting action only",
     "dateSubmitted": "",
     "approver": "",
     "actionOwner": "",
-    "latestPosition": "Implementation Review",
-    "nextAction": "Troy Della-Bona to supply a PCSCR form or confirm cancellation",
-    "statusConflict": "No PCSCR form found in In Development or Approved (Scan)",
-    "reporter": "Troy Della-Bona",
-    "assignee": "",
+    "latestPosition": "Deployed 18/08 MB. Good feedback so far 11/09. PCS/PTS Review 18/09",
+    "nextAction": "PCS/PTS review; close out",
+    "statusConflict": "In meeting action list but not in the register",
+    "reporter": "Luke Fortuna",
+    "assignee": "Miguel",
     "why": "",
     "design": "",
     "impact": "",
@@ -33,12 +33,12 @@
     {
       "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: On Hold)"
+      "action": "imported from meeting action list, Pilgangoora PCS Change Request Log (25.09.2026) (register status: Meeting action only)"
     }
   ],
   "created": "2026-09-26T11:03:00+08:00",
   "updated": "2026-09-26T11:03:00+08:00",
-  "createdBy": "Troy Della-Bona",
+  "createdBy": "Luke Fortuna",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

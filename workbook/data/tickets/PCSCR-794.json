@@ -13,41 +13,41 @@
     "registerStatus": "DOC In Development",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "PTS",
-    "latestPosition": "PTS to review implementation (04/09). Earlier note (28/08) recorded that evidence of surging caused by the PID was not found.",
-    "nextAction": "Close out the review and confirm proceed or cancel.",
+    "actionOwner": "",
+    "latestPosition": "PTS to review implementation 25/09",
+    "nextAction": "PTS to review implementation 25/09; confirm proceed or cancel",
     "statusConflict": "Form attributes CV-005 surging to the PID; 28/08 review found no evidence of this",
     "reporter": "Kane Brotherwood",
     "assignee": "",
-    "why": "222-WIC-8106 produces significant reclaim feed surges on CV-005 during feed rate increases. Trends show a stable 260 t/h setpoint while measured feed spikes to about 640 t/h, despite small output changes (~63–66% CV). Feeder demand increases faster than the transport delay between FE-005/006/007/008 and the CV-005 weightometer, so material arrives in slugs rather than a controlled increase.",
-    "design": "- Modify positive output ramping of 222-WIC-8106 Crushed Ore Stockpile Reclaim Feed Rate Controller to match reclaim system deadtime\n- Retune the control loop to reduce responsiveness",
+    "why": "222-WIC-8106 is producing significant reclaim feed surges on CV-005 during feed rate increases. Trend data shows the controller operating at a stable setpoint of 260 t/h while measured feed rate periodically spikes to approximately 640 t/h, despite relatively small controller output changes (~63-66% CV).\nThe behaviour indicates reclaim feeder demand is increasing faster than the transport delay between FE-005/006/007/008 and the CV-005 weightometer feedback can respond. Additional feeder demand is applied before the effect of previous output changes is measured, resulting in material being delivered to CV-005 in large slugs rather than a controlled increase in feed.",
+    "design": "Modify the positive output ramping of 222-WIC-8106 Crushed Ore Stockpile Reclaim Feed Rate Controller to better match reclaim system deadtime and reduce material slugging on CV-005.\nRequested Functionality:\n- Conduct P&ID control loop tuning to reduce rate of responsiveness",
     "impact": "Less operator intervention needed to manage reclaim feed surges; feed increases will ramp more slowly.",
+    "maintenanceApprover": "Chris Hoskins",
+    "productionApprover": "Raymond Klaproth",
+    "reviewers": "James Brooks",
     "fSetpoints": "Yes",
     "fFunctionality": "Yes",
-    "likelihood": "Unlikely",
     "severity": "Slight",
-    "reviewers": "James Brooks",
-    "productionApprover": "Raymond Klaproth",
-    "maintenanceApprover": "Chris Hoskins"
+    "likelihood": "Unlikely"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: DOC In Development)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-794 Reduce 222-WIC-8106 Output Ramp Rate to Minimise CV-005 Surging.docx (form risk ranking 1D)"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-794 Reduce 222-WIC-8106 Output Ramp Rate to Minimise CV-005 Surging.docx (form risk ranking 1D)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Kane Brotherwood",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

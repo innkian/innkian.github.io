@@ -1,38 +1,54 @@
 {
   "id": "PCSCR-803",
   "type": "change",
-  "title": "Automate Ball Mill 2 Kibble Loading",
+  "title": "Automate Ball mill 2 kibble loading",
   "status": "Draft",
   "fields": {
     "priority": "",
     "component": "Grinding & Gravity",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "Ball Mill 2 kibble loading system",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "DOC In Development",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "PTS",
-    "latestPosition": "Automates kibble loading based on mill power draw to reduce CRO intervention. Draft document created 16/09.",
-    "nextAction": "Assign a priority and nominate an approver.",
-    "statusConflict": "Priority not set in register",
+    "actionOwner": "",
+    "latestPosition": "",
+    "nextAction": "Assign priority and approver",
+    "statusConflict": "Priority not set in register; Form priority 3 – Within 1 Fortnight; register priority blank",
     "reporter": "Tayla Davies",
-    "assignee": ""
+    "assignee": "",
+    "why": "The current kibble loading process requires the Control Room Operator to manually identify when Ball Mill 2 requires additional mill balls and initiate the kibble loading sequence. This approach is dependent on operator intervention and may result in delayed charging, inconsistent mill charge levels, and variations in mill performance.\nThe proposed change will automate Ball mill 2 kibble loading based on the power draw to maintain a more consistent mill charge and reduce reliance on CRO intervention",
+    "design": "Install a new BM2 Kibble Auto Load control box containing:\n- Auto Enable selector\n- Minimum Mill Power Setpoint (MW) – That control room can determine\n- Maximum Mill Power Setpoint (MW) – that control room can determine\n- Number of Loading Cycles per event (Range from 3 to 10)\n\nWhen Auto Enable is selected, the control system will continuously monitor Ball Mill 2 power draw. If mill power falls below the operator-defined minimum power setpoint (e.g. 3.50 MW), the existing kibble loading auto-cycle sequence will automatically start.\n\nThe crane will complete the configured number of loading cycles (typically 10 cycles, approximately 3 tonnes when the mill is at its minimum power) using the existing auto-cycling functionality.\n\nUpon completion of the loading sequence, the system will allow a configurable stabilisation period before evaluating the mill power response (approx 5 mins). The system will compare mill power before and after the loading event to determine whether the charge addition has resulted in a measurable increase in power draw.\n\nIf the increase in mill power is less than 0.02MW, an alarm will be generated to notify control room that the kibble loading may have been ineffective and investigation is required.\n\nThe loading sequence will not initiate if mill power is above the operator-defined maximum power setpoint, preventing overcharging of the mill and will only initiate when the mill power is at its minimum power set point for >5mins.",
+    "impact": "Ball Mill 2 charging happens automatically on low power draw; CROs get an alarm if a load had no effect.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "fAlarms": "Yes",
+    "severity": "Minor",
+    "likelihood": "Unlikely"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: DOC In Development)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-803 - Automate Ball mill 2 kibble loading.docx (form risk ranking 2D)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Tayla Davies",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

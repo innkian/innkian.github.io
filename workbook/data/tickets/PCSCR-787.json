@@ -1,38 +1,53 @@
 {
   "id": "PCSCR-787",
   "type": "change",
-  "title": "Flotation Hopper / Pump Level Controller – Phase 3",
-  "status": "On Hold",
+  "title": "Floation Hopper / Pump Level Controller - Phase 3",
+  "status": "In Development",
   "fields": {
     "priority": "3 – Next Fortnight",
     "component": "Flotation",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "235-PU-066, 235-PU-067, 235-PU-069, 235-PU-070, 235-LIC-0520B, 235-LIC-0539B, 235-LIC-0562B, 235-LIC-0570A/B",
     "fixVersion": "",
     "site": "Pilgangoora",
-    "registerStatus": "On Hold",
+    "registerStatus": "CODE In Development",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "PCS",
-    "latestPosition": "Waiting until PCSCR-771 (Phase 2) has been trialled. Phase 2 was reported working well on 11/09.",
-    "nextAction": "Confirm with Luke Fortuna on 22/09 whether Phase 3 can proceed.",
-    "statusConflict": "Register 'On Hold' vs meeting action 'CODE In Development'",
+    "actionOwner": "",
+    "latestPosition": "Wait until PCSCR-771 trialled. Confirm with luke on 22/09 for implementation. PCS to implement 25/09",
+    "nextAction": "PCS to implement 25/09",
+    "statusConflict": "DocuSign signed 28–29/08/2026",
     "reporter": "Luke Fortuna",
-    "assignee": ""
+    "assignee": "",
+    "why": "Currently in the float circuit, the hopper pump speed is manually adjusted by the CRO based on hopper level. This results in inconsistent and delayed level control, which can lead to surging through the flotation circuit and unnecessary CRO workload. This controller was successfully trialed on PU-073 & PU-068. It is proposed to implement this controller on T1 & T2 pumps.",
+    "design": "It is proposed to implement an additional LIC PID loop on the discharge pump of the flotation hoppers, so that hopper level is controlled using both the water addition valve and the discharge pump speed.\n\n1. Create a new level control PID loop:\n a. 235-LIC-0520B for 235-PU-066\n b. 235-LIC-0539B for 235-PU-067\n c. 235-LIC-0562B for 235-PU-069\n Control loops will have Manual and Remote mode. Remote mode will equal water addition LIC SP + 5%. Tune new PID loops so that pump slowly adjusts speed up/down allowing the pump to respond to level changes gradually, avoiding sudden changes that could cause surging or instability.\n EDIT: For PU-070, add a remote condition linked to 235-LIC-0570B, similar to the logic above. This will ensure the level SP on LIC-0570A is always set correctly.\n2. Water addition control loops to have min CV of 20% to ensure water is always used on the hopper. Maintain the function to be able to close water addition valve when changed to Manual mode. Review PID loop tuning on water addition control loop to avoid surges in hopper level\n3. Have the following process off conditions:\n a. 235-LIC-0520B\n  i. LO or HI alarm healthy for flotation cells LT-0536, LT-0543.\n b. 235-LIC-0539B\n  i. LO or HI alarm healthy for flotation cells LT-0536, LT-0543.\n c. 235-LIC-0562B\n  i. LO or HI alarm healthy for flotation cells LT-0567.\n4. Copy all control loops from T1 onto their associated T2 pumps. Ensure to update process off conditions with the T2 cells\n5. Implement a \"All T1 Pumps to Remote\" and \"All T2 Pumps to Remote\" button on the floatation feed page so that all pumps in the flotation circuit can be swapped to remote. Please ensure to remove PU-071 and PU-628 from this button logic. This will be investigated in the future.",
+    "impact": "CROs can put all T1/T2 flotation hopper pumps into Remote level control with one button.",
+    "maintenanceApprover": "Matthew Collins",
+    "productionApprover": "Michael Phillips",
+    "reviewers": "Tayla Davies, Tim Johns",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: CODE In Development)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-787 Flotation Hopper_Pump Level Controller - Phase 3.docx (form risk ranking 1E)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Luke Fortuna",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

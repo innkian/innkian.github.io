@@ -1,38 +1,52 @@
 {
   "id": "PCSCR-774",
   "type": "change",
-  "title": "Automate Changeover from TARP A (Full Config) to TARP B (PR Bypass)",
+  "title": "Automate procedure when changing from TARP A (full configuration) to TARP B (PR bypass",
   "status": "Draft",
   "fields": {
     "priority": "3 – Next Fortnight",
     "component": "Control Room",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "CV-005, FE-010, PU-009, PU-010, HP-001, 222-LIC-8173, 231-CY-514, HP-301, PU-301",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "DOC In Development",
     "dateSubmitted": "2026-09-02",
     "approver": "Michael Phillips",
-    "actionOwner": "PCS",
-    "latestPosition": "Document submitted.",
-    "nextAction": "PCS to review the submitted document (carried from 04/09).",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "Doc Submitted. To be Implemted PCS 25/09",
+    "nextAction": "PCS to implement 25/09 – agree which draft is current first",
+    "statusConflict": "Two drafts: Tayla Davies 17/08 (risk 3D, no steps) and James Brooks 06/08 'TARP change PCSCR.docx' (risk 4E, 23 steps) – agree one",
     "reporter": "Tayla Davies",
-    "assignee": ""
+    "assignee": "",
+    "why": "To Automate procedure when changing from TARP A (full configuration) to TARP B (PR bypass). To eliminate Inconsistencies and pro-longed downtime.\n\n[James Brooks draft 'TARP change PCSCR.docx': To Automate procedure when changing from TARP A (full configuration) to TARP B (PR bypass). To eliminate inconsistencies.]",
+    "design": "PCSCR-774 (Tayla Davies):\nAs Below: Please have the sequence box set up like this:\n[Image in form – see source document] (sequence box layout)\n\n'TARP change PCSCR.docx' (James Brooks draft, also numbered 774):\n1. CV-005 setpoint to 530tph - Maintain Bin Inventory Between 110-120%\n2. Put FE-10 to manual and turn stop\n3. Allow PU-009 to flush for allocated time 10 to 15 min\n4. Put PU-009 pressure PiD loop to manual at current speed\n5. Manual close HP-001 make up water 222-LIC-8173\n6. Allow HP-001 level to reduce below 10% ready for pump change\n7. Line PU-010 to HMS bypass Dewatering cyclone 231-CY-514\n8. Open gland water valve 222 Change -XV-8176 to PU-010\n9. Close Drain valve to PU-010 222-XV-8191\n10. Open suction valve to Pu-010 222-XV-8190\n11. Stop PU-009\n12. Change duty pump from PU-009 to PU-010\n13. Start PU-010 at a manual CV of 90%\n14. Manual close Make up to HP-301 223-LIC-1526\n15. Slow down Pump PU-301 to 45 %\n16. Decrease Ball mill feed water to 15 m3/h\n17. Increase Ball mill discharge pump speed to 98%\n18. Possibly look at GDC and FDC automated opening and closing depending on hopper levels\n19. Put HP-001 make up water 222-LIC-8173 back into Auto\n20. Stabilise Hooper levels and flows pressures etc\n21. Close PU-009 Suction valve 222-XV-8180\n22. Open PU-009 Drain valve 222-XV-8181\n23. Restart 222-FE-010 with a reduced CV around 20 to 25 %\nPlease note that this can also be done when changing from 222-PU-509 to 222-PU-510, using the same procedure.",
+    "impact": "TARP A→B changeover runs as a sequence rather than ~23 manual CRO steps.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fFunctionality": "Yes",
+    "severity": "Moderate",
+    "likelihood": "Unlikely"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: DOC In Development)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): TARP change PCSCR.docx (James Brooks) / PCSCR-774 Automate TARP change from full plant configuration to TARP B.docx (form risk ranking 3D)"
     }
   ],
   "created": "2026-09-02T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Tayla Davies",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

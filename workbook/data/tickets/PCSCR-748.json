@@ -7,32 +7,46 @@
     "priority": "2 – Next Week",
     "component": "C&S",
     "department": "PCS",
-    "equipment": "CV-003",
+    "equipment": "CV-003, WT-2157, XV-2340, XV-2338, CV-005",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "DOC In Development",
     "dateSubmitted": "2026-07-25",
     "approver": "Oscar Freeman",
-    "actionOwner": "PCS",
-    "latestPosition": "27/07 – status returned to under development because the document was not fully signed off. A signed PDF (PCSCR-748 CV-003 Sprays on with no feed) was filed on 18/09.",
-    "nextAction": "PCS to implement now the signed document is on file (18/09).",
-    "statusConflict": "Register 'DOC In Development' vs meeting action 'CODE In Development'",
+    "actionOwner": "",
+    "latestPosition": "27/07 - changed status back to under development - document was not fully signed off. PTS to follow up. 14/08 PCS to Implement 18/09",
+    "nextAction": "PCS to implement (signed form on file)",
+    "statusConflict": "Register 'DOC In Development' vs meeting action 'CODE In Development'; Signed PDF filed 18/09",
     "reporter": "Corey Morris",
-    "assignee": ""
+    "assignee": "",
+    "why": "CV-005 was bogged due to wet feed material on the COS. There were reports that during an outage that day the sprays were left on without any feed on the belt, resulting in excess water making it onto the COS. While the sprays run in auto they will automatically shut off however if for any reason the sprays are in manual then an alarm would be required to prompt the CRO to turn the spray off.",
+    "design": "Add an alarm for when the following conditions are met:\nWT-2157 below 10 tph for 30 minutes and XV-2340 or XV-2338 open\n\nThe alarm should read \"CV-003 spray on without feed – consider turning off\" the alarm can be a yellow alarm.",
+    "impact": "CROs get a yellow alarm if CV-003 sprays stay on with no feed.",
+    "maintenanceApprover": "Ash Whelan",
+    "productionApprover": "James Feakes",
+    "reviewers": "James Brooks",
+    "fAlarms": "Yes",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: DOC In Development)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-748 CV-003 sprays on with no feed.docx (form risk ranking 1E)"
     }
   ],
   "created": "2026-07-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Corey Morris",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

@@ -1,7 +1,7 @@
 {
   "id": "PCSCR-668",
   "type": "change",
-  "title": "PIL – Flotation Train 1 and 2 Conditioning Power Alarms",
+  "title": "PIL - Flotation Train 1 and 2 Conditioning Power Alarms",
   "status": "On Hold",
   "fields": {
     "priority": "3 – Next Fortnight",
@@ -13,40 +13,40 @@
     "registerStatus": "On Hold",
     "dateSubmitted": "2026-01-05",
     "approver": "Brandon Rego",
-    "actionOwner": "PTS",
-    "latestPosition": "Email sent 30/07 requesting the change be placed on hold for further review.",
-    "nextAction": "Confirm review outcome or cancel.",
+    "actionOwner": "",
+    "latestPosition": "Email sent 30/07 requesting put on hold for further review",
+    "nextAction": "Confirm review outcome or cancel",
     "statusConflict": "Form priority 2 – Within 1 Week vs register 3 – Next Fortnight",
     "reporter": "Andrew Taylor",
     "assignee": "",
-    "why": "Conditioning power on Train 1 and Train 2 recently dropped to levels that impact flotation performance. There are no alarms on these values to indicate operation below setpoint.",
-    "design": "- Alarm when the 30-minute average PV is 7.5% below SP\n- Train 1: 235-AG-502-PWR-M3, 235-AG-002-PWR-M3, 235-AG-003-PWR-M3\n- Train 2: 235-PY-3637, 235-PY-3638, 235-PY-3639\n- Create Train 1 faceplates (Train 2 already has them)\n- No trip to be implemented\n- Correct the 235-TK-004 power trend naming (shows 235-AG-002-PWR-M3 instead of 235-AG-003-PWR-M3)",
+    "why": "Recently the conditioning power on train 1 and train 2 dropped to levels that impact flotation performance. There currently aren’t any alarms present on these values to indicate operating below setpoint.",
+    "design": "Add alarms for the following calculation for PV (average over 30 mins time) is 7.5% below SP:\nTrain 1:\n- 235-AG-502-PWR-M3\n- 235-AG-002-PWR-M3\n- 235-AG-003-PWR-M3\nTrain 2\n- 235-PY-3637\n- 235-PY-3638\n- 235-PY-3639\n\nTrain 1 will also need faceplates created as currently doesn’t appear to any, Train 2 has them.\nNo trip to be implemented\nAlso change the naming of power trend for 235-TK-004 as its incorrect, it has 235-AG-002-PWR-M3 instead of 235-AG-003-PWR-M3",
     "impact": "CROs will receive low conditioning power alarms on both trains and have new Train 1 faceplates.",
-    "fAlarms": "Yes",
-    "likelihood": "Rare",
-    "severity": "Slight",
     "maintenanceApprover": "",
     "productionApprover": "",
-    "reviewers": ""
+    "reviewers": "",
+    "fAlarms": "Yes",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: On Hold)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-668 - PIL Flotation T1 and T2 Cond Power Alarms.docx (form risk ranking 1E)"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-668 - PIL Flotation T1 and T2 Cond Power Alarms.docx (form risk ranking 1E)"
     }
   ],
   "created": "2026-01-05T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Andrew Taylor",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

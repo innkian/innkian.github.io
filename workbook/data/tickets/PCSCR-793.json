@@ -13,40 +13,40 @@
     "registerStatus": "Approved",
     "dateSubmitted": "2026-08-27",
     "approver": "Ben Sipos",
-    "actionOwner": "PCS / PTS",
-    "latestPosition": "Proposal emailed, awaiting reply (27/08 BR). Agreed PCS to remove the interlock as the transmitter is too unreliable (04/09).",
-    "nextAction": "PTS to flag the transmitter with maintenance; PCS to implement.",
+    "actionOwner": "",
+    "latestPosition": "Email sent with proposal. Waiting for reply 27/08 BR. PCS to remove interlock, Tx too unreliable. 04/09 PTS to flag with maintenance 04/09. PCS to Implement.",
+    "nextAction": "PTS to flag transmitter with maintenance; PCS to implement",
     "statusConflict": "Register 'Approved' vs meeting action 'Testing'",
     "reporter": "Casey Ellis",
     "assignee": "",
-    "why": "NLO fines pumps PP-0410/0415 stop on a Low-Low flow interlock. The line runs about 200 m, so stopping the pump when the flow meter fails increases the risk of blockages. Plant feed does not share this interlock.",
-    "design": "- Remove interlock from 160-PP-0410: 160-FIT-0410 Fines Pump Discharge Flow Low Low Alarm Healthy\n- Remove interlock from 160-PP-0415: 160-FIT-0410 Fines Pump Discharge Flow Low Low Alarm Healthy\n- Add to 150-FE-0310 HPGR Circuit Group Interlock: 160-FIT-0410 Fines Pump Discharge Flow Low Low Alarm Healthy\n- PLC: PLC605",
+    "why": "NLO Fines pumps PP-0410/415 have a process interlock to stop the pump at LL Flow.\nThe travel on this line is ~200m and stopping the pump if the flow meter fails increases the risk of blockages.\nPlant feed does not share this same interlock.",
+    "design": "Remove the interlock that risks pump blockages to plant feed conveyor.\nRemove the following interlocks:\n- 160-PP-0410: 160-FIT-0410: Fines Pump Discharge Flow Low Low Alarm Healthy.\n- 160-PP-0415: 160-FIT-0410: Fines Pump Discharge Flow Low Low Alarm Healthy.\nAddition of interlock to\n- 150-FE-0310 HPGR Circuit Group Interlock:\n - 160-FIT-0410: Fines Pump Discharge Flow Low Low Alarm Healthy",
     "impact": "Fines pumps will no longer stop on low-low flow; a 160-FIT-0410 low-low flow will instead stop the 150-FE-0310 HPGR circuit group.",
-    "fFunctionality": "Yes",
-    "likelihood": "Possible",
-    "severity": "Slight",
     "maintenanceApprover": "",
     "productionApprover": "",
-    "reviewers": ""
+    "reviewers": "",
+    "fFunctionality": "Yes",
+    "severity": "Slight",
+    "likelihood": "Possible"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Approved)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-793 NLO PP-0410-0415 LL Flow Interlock Change.docx (form risk ranking 1C)"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-793 NLO PP-0410-0415 LL Flow Interlock Change.docx (form risk ranking 1C)"
     }
   ],
   "created": "2026-08-27T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Casey Ellis",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

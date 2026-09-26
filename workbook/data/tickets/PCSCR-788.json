@@ -1,7 +1,7 @@
 {
   "id": "PCSCR-788",
   "type": "change",
-  "title": "PK00774 – HPGR Screens 1 & 2 Delay",
+  "title": "PK00774 - HPGR Screens 1 & 2 Delay",
   "status": "Testing",
   "fields": {
     "priority": "3 – Next Fortnight",
@@ -13,40 +13,40 @@
     "registerStatus": "Testing",
     "dateSubmitted": "2026-08-19",
     "approver": "Michael Sullivan",
-    "actionOwner": "PTS / Projects",
-    "latestPosition": "Previously on hold pending review (21/08). Signed PDF filed 16/09. Waiting for a test period to be arranged by Mech Projects.",
-    "nextAction": "Review upstream start timing before permanent implementation (18/09).",
+    "actionOwner": "",
+    "latestPosition": "On Hold Pending review 21/08. Waiting for test period to be arranged by Mech Projects. 18/09 Review Upstream start timing prior to permanent implementation (if successful)",
+    "nextAction": "Review upstream start timing; arrange test period with Mech Projects",
     "statusConflict": "",
     "reporter": "Matthew Trigg",
     "assignee": "",
-    "why": "Under the existing control philosophy, 222-SC-002 and 222-SC-502 keep running after a 222-CV-006 process stoppage. A trial interlock with a 2-second off-delay is proposed to see whether it reduces material accumulation in the CV-006 feed chutes.",
-    "design": "- 222-SC-002 HPGR Screen 1 – add process interlock: 222-CV-006 HPGR Feed Conveyor Running (2 s delay)\n- 222-SC-502 HPGR Screen 2 – add process interlock: 222-CV-006 HPGR Feed Conveyor Running (2 s delay)\n- Neither screen currently has start permissives or process interlocks",
+    "why": "• Under the existing control philosophy, 222-SC-002 and 222-SC-502 continue running following a 222-CV-006 process stoppage. A trial 222-CV-006 Running process interlock with a two (2) second off-delay is proposed to assess whether it reduces material accumulation within the CV-006 feed chutes.",
+    "design": "• Add a two (2) second process shutdown delay to 222-SC-002 HPGR Screen 1 and 222-SC-502 HPGR Screen 2 following loss of the 222-CV-006 HPGR Feed Conveyor Running status.\n\nSCADA Reference Pages:\n• 222-CV-006 HPGR Feed Conveyor: [Image in form – see source document]\n• 222-SC-002 HPGR Screen 1:\n o There are currently no start permissives or process interlocks.\n• 222-SC-502 HPGR Screen 2:\n o There are currently no start permissives or process interlocks.\n\nSCADA Changes:\n• 222-SC-002 HPGR Screen 1 – Add one Process Interlock to the faceplate:\n o 222-CV-006: HPGR Feed Conveyor Running (With 2 second delay)\n• 222-SC-502 HPGR Screen 2 – Add one Process Interlock to the faceplate:\n o 222-CV-006: HPGR Feed Conveyor Running (With 2 second delay)",
     "impact": "HPGR screens 1 and 2 will stop about 2 seconds after CV-006 stops instead of continuing to run.",
-    "fFunctionality": "Yes",
-    "testCriteria": "- Normal operation: screen starts, runs and stops normally from PCS/SCADA\n- Process shutdown delay: screen stops ~2 s after 222-CV-006 stops\n- Safety shutdown: screen stops immediately with no delay on E-Stop or pull-wire\n- Alarm and status verification: no unexpected alarms\n- Record Pass/Fail for 222-SC-002 and 222-SC-502 at each step",
-    "scheduleNote": "Waiting for a test period to be arranged by Mech Projects.",
     "maintenanceApprover": "",
     "productionApprover": "",
-    "reviewers": ""
+    "reviewers": "",
+    "fFunctionality": "Yes",
+    "testCriteria": "- Normal operation: screen starts, runs and stops normally from PCS/SCADA\n- Process shutdown delay: screen stops ~2 s after 222-CV-006 stops\n- Safety shutdown: screen stops immediately with no delay on E-Stop or pull-wire\n- Alarm and status verification: no unexpected alarms\n- Record Pass/Fail for 222-SC-002 and 222-SC-502 at each step",
+    "scheduleNote": "Waiting for a test period to be arranged by Mech Projects."
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Testing)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-788_-_PK00774_-_HPGR_Screens_1__2_Delay - Signed.pdf"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-788_-_PK00774_-_HPGR_Screens_1__2_Delay - Signed.pdf"
     }
   ],
   "created": "2026-08-19T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Matthew Trigg",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

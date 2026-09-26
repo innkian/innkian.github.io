@@ -1,24 +1,24 @@
 {
-  "id": "PCSCR-344",
+  "id": "PCSCR-785",
   "type": "change",
-  "title": "NLO HPGR PT35A and PT35B Pressure Transmitters to Citect",
-  "status": "On Hold",
+  "title": "NLO Pop-up Alarm for Soda Ash and Collector Dosing Pump Stopages",
+  "status": "Done",
   "fields": {
     "priority": "3 – Next Fortnight",
-    "component": "NLO",
+    "component": "Flotation",
     "department": "PCS",
-    "equipment": "PT35A, PT35B",
+    "equipment": "",
     "fixVersion": "",
     "site": "Pilgangoora",
-    "registerStatus": "On Hold",
+    "registerStatus": "Meeting action only",
     "dateSubmitted": "",
-    "approver": "Andrew Taylor",
+    "approver": "",
     "actionOwner": "",
-    "latestPosition": "",
-    "nextAction": "Andrew Taylor to supply a PCSCR form or confirm cancellation",
-    "statusConflict": "No PCSCR form found in In Development or Approved (Scan)",
-    "reporter": "Andrew Taylor",
-    "assignee": "",
+    "latestPosition": "Tested with Chris Goodwin 09/09 MB",
+    "nextAction": "Close out",
+    "statusConflict": "In meeting action list but not in the register",
+    "reporter": "Tate Mawire",
+    "assignee": "Miguel",
     "why": "",
     "design": "",
     "impact": "",
@@ -33,12 +33,12 @@
     {
       "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: On Hold)"
+      "action": "imported from meeting action list, Pilgangoora PCS Change Request Log (25.09.2026) (register status: Meeting action only)"
     }
   ],
   "created": "2026-09-26T11:03:00+08:00",
   "updated": "2026-09-26T11:03:00+08:00",
-  "createdBy": "Andrew Taylor",
+  "createdBy": "Tate Mawire",
   "imported": true,
   "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

@@ -7,32 +7,47 @@
     "priority": "1 – Next 48 Hours",
     "component": "NLO",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "430-LIC-1645, 430-LIC-1645B, 430-DIC-1650, 420-PP-1330",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Testing",
     "dateSubmitted": "2026-08-07",
     "approver": "Andrew Taylor",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "Still testing as at 21/08.",
-    "nextAction": "Obtain test outcome and close out.",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "Still Testing 21/08",
+    "nextAction": "Record test outcome and close out",
+    "statusConflict": "Form ticks both priority 1 and 3",
     "reporter": "Casey Ellis",
-    "assignee": ""
+    "assignee": "",
+    "why": "Current control logic for recleaner con pump has the pump running to a level controller, previous controller was put in place from project PK525/WP70 for the restart, this offers no protection against the hopper level emptying. The pump currently runs in manual to maintain stable pumping.",
+    "design": "Make the following changes to the control logic\n- Adjust current PID loop 430-DIC-1650 to 430-LIC-1645B.\n- 430-LIC-1645 will have Manual and Remote mode. Remote mode will equal 430-LIC-1645B SP + 5%.\n- Tune 430-LIC-1645 pump to respond to level changes slowly avoiding sudden changes that could cause surging or instability.\n- 430-LIC-1645B control loop to have min CV of 50% to ensure water is always used on the hopper.\n- Maintain the function to be able to close water addition valve when changed to Manual mode.\n- Review PID loop tuning on water addition control loop to avoid surges in hopper level.\n- Maintain 430-LIC-1645 Min CV of 56%\n- Have the following process off conditions:\n - Float feed pump 420-PP-1330 is offline",
+    "impact": "Recleaner con pump can run in Remote on level instead of manual.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Testing)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-777 NLO Recleaner Con Controller Update.docx (form risk ranking 1E)"
     }
   ],
   "created": "2026-08-07T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Casey Ellis",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

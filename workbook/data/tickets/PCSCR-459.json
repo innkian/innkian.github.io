@@ -7,32 +7,45 @@
     "priority": "3 – Next Fortnight",
     "component": "HPGR",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "222-FE-010, 222-FE-510, 222-LY-8120, 222-LY-8137, 222-LY-8207, BN-005, BN-505",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Testing",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "In testing since 21/08; no test result recorded since.",
-    "nextAction": "Obtain and record test outcome.",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "Testing 21/08",
+    "nextAction": "Record test outcome; add risk ranking to form",
+    "statusConflict": "Form has no risk ranking",
     "reporter": "Luke Fortuna",
-    "assignee": "Ben Ratcliffe"
+    "assignee": "Ben",
+    "why": "While running the HPGR feeders in Auto‑Trim mode automates the FE‑010/510 speed changes and removes the responsibility from the CROs, the speed adjustments made by the controller still cause the feed rate to oscillate. These oscillations flow through the plant, resulting in feed surges and variability in coarse streams and grind size.\n\nCurrently, the HPGR Roller and HPGR Feeder Auto‑Trim controllers are driven by similar input signals, which causes the total inventory measurement to oscillate. Because this total inventory signal is the primary input to the Auto‑Trim controllers, these fluctuations cause the feeders to overshoot and undershoot their speed set‑points. This also reduces the controller’s ability to react effectively to feed interruptions or surges, as the system is already operating from an offset set‑point.\n\n[Image in form – see source document] Stable grind size when running HPGR feeders in Manual Mode\n[Image in form – see source document] Oscillating HPGR Feeders while running in Auto-Trim Mode",
+    "design": "Change the current control operating logic for the HPGR circuit.\n\nHPGR Roller Speed Controller\nChange for HPGR 1 and 2 Cascade controller so that HPGR rollers run together.\n- Create a new PID loop based on the average calculated bin level 222-LY-8120 with only Auto and Manual Mode, acting as the master cascade loop feeding the CV to the relevant line LIC loops. With the following setpoints: Min SP = 35, Max SP = 75. SP = 60.\n- Create individual LIC loops for HPGR 1 roll speed and HPGR 2 roll speed, both having Manual, Auto and Remote Mode. When in remote, each LIC loop will simply copy the CV from the master loop to its CV. This works like a selector command to either run the bins as a group or as individual line. With the following setpoints: Min SP = 35, Max SP = 75. SP = 60.\n- Put a process off condition on the master cascade loop so that both FE-010/510 must be online. This means that in certain rate loss modes where 1 HPGR is required, the slave controller will not look at the combined bin level and will look at its individual bin level. This can be achieved by also automatically turning the slave controller from Remote to Auto mode.\n\nHPGR Screen Belt Feeder Trim Controller\n- Like the trim controller already implemented, the change would be to base it off 222-LY-8137 instead of 222-LY-8207.\n- Interlocks to be reviewed, remove any interlock based on BN-005 and BN-505.\n\nTo be investigated if above doesn’t work\n- Apply a small bias to each bin CV based on its own level in relevant to the group level. Therefore, if one bin is lower than the other, the other roll speed will slow down to even the feed distribution across both bins.",
+    "impact": "HPGR rolls run together from a group bin level; CROs can select group or individual line control.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Testing)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-459 HPGR Screen Belt Feeder Trim Controller.docx"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Luke Fortuna",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

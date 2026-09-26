@@ -5,34 +5,48 @@
   "status": "Approved",
   "fields": {
     "priority": "2 – Next Week",
-    "component": "PLO – Control System",
+    "component": "PLO - Control System",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "CITECT trend tags (per attached list)",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Approved",
     "dateSubmitted": "2026-09-18",
     "approver": "Rachel Coggin",
-    "actionOwner": "PCS",
-    "latestPosition": "Programmed and awaiting deployment (24/09 MB).",
-    "nextAction": "PCS to deploy.",
+    "actionOwner": "",
+    "latestPosition": "PCS to implement 18/09",
+    "nextAction": "PCS to deploy",
     "statusConflict": "",
     "reporter": "Corey Morris",
-    "assignee": "Miguel Borquez"
+    "assignee": "",
+    "why": "A number of trends on CITECT currently have incorrect / no scaling when right clicking on them to display the trend data. In all cases the default scale given is +/- millions causing the trend to always appear as a flat line if the scaling isn’t noted, which can catch people out when checking trends.",
+    "design": "Using the attached list update the scaling on all the required tags to ensure the data can be accurately trended.",
+    "impact": "Right-click trends in CITECT will show correctly scaled data.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fTags": "Yes",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Approved)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-804 CITECT Trends Scaling.docx (form risk ranking 1E)"
     }
   ],
   "created": "2026-09-18T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Corey Morris",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

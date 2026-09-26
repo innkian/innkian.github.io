@@ -13,26 +13,32 @@
     "registerStatus": "Testing",
     "dateSubmitted": "2025-11-26",
     "approver": "Jason Dieu Ly",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "Vendor (PX) works ongoing.",
-    "nextAction": "Obtain completion date from PX.",
-    "statusConflict": "",
-    "reporter": "Benjamin Ratcliffe",
-    "assignee": ""
+    "actionOwner": "",
+    "latestPosition": "PX - Works Ongoing",
+    "nextAction": "Locate or raise the PCSCR form; get PX completion date",
+    "statusConflict": "No PCSCR form found in In Development or Approved (Scan)",
+    "reporter": "Benjamin Ratclife",
+    "assignee": "",
+    "why": "",
+    "design": "",
+    "impact": "",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Testing)"
     }
   ],
   "created": "2025-11-26T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
-  "createdBy": "Benjamin Ratcliffe",
+  "updated": "2026-09-26T11:03:00+08:00",
+  "createdBy": "Benjamin Ratclife",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

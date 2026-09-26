@@ -1,7 +1,7 @@
 {
   "id": "PCSCR-801",
   "type": "change",
-  "title": "Timed Inhibit on ROM Bin Sprayer (Rock Breaker)",
+  "title": "Timed inhibit on ROM bin sprayer to prevent always on operation with rock breaker",
   "status": "Approved",
   "fields": {
     "priority": "3 – Next Fortnight",
@@ -12,42 +12,42 @@
     "site": "Pilgangoora",
     "registerStatus": "Approved",
     "dateSubmitted": "",
-    "approver": "Michael Sullivan",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "Timed inhibit to stop the ROM bin sprayer running continuously while the rock breaker is in position. DocuSign completed 16/09/2026 – all parties signed.",
-    "nextAction": "PCS to implement now fully signed.",
-    "statusConflict": "",
+    "approver": "",
+    "actionOwner": "",
+    "latestPosition": "Timed inhibit on ROM bin sprayer to prevent always on operation with rock breaker",
+    "nextAction": "PCS to implement (DocuSign complete)",
+    "statusConflict": "DocuSign completed 16/09/2026; Initiator blank in register – Thomas Hoffman taken from form",
     "reporter": "Thomas Hoffman",
     "assignee": "Ben Ratcliffe",
-    "why": "The ROM bin sprays run continuously while the rock breaker is in sensor range unless put in manual off. This sends excess water into the process, and sprays left in manual off affect dust suppression.",
-    "design": "- Add a timer/inhibit: when the sensor triggers, sprays run for a set period, then stay off until the sensor clears and re-triggers\n- Keep existing functionality for the loader",
-    "impact": "Sprays can be left in Auto; they run one cycle while the rock breaker is in position, removing the need to switch to manual off.",
-    "fSetpoints": "Yes",
-    "fFunctionality": "Yes",
-    "likelihood": "Unlikely",
-    "severity": "Minor",
+    "why": "Rom bin sprays continuously while the rock breaker is in position unless put in manual off. This change will put a timer so if the sensor does not clear the sprays only operate for one cycle then remain off until it clears again. This will mean they can be left in auto and eliminate potential to be left in manual off state.",
+    "design": "Instate a timer / inhibit so when the sensor is triggered, the sprays operate for a set period then don't operate again until the sensor clears and gets re-triggered. Looking to keep functionality for loader and prevent constant water spraying into bin when rock breaker is operating in sensor range.\n\n[Text extracted from the DocuSign PDF – the order of the reason and proposed-change boxes should be checked against the source document]",
+    "impact": "Sprays can be left in Auto; they run one cycle while the rock breaker is in position.",
     "maintenanceApprover": "",
     "productionApprover": "",
-    "reviewers": ""
+    "reviewers": "",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "severity": "Minor",
+    "likelihood": "Unlikely"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Approved)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-801 ROM Bin Spray Inhibit.pdf (form risk ranking 2D)"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-801 ROM Bin Spray Inhibit.pdf (form risk ranking 2D)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Thomas Hoffman",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

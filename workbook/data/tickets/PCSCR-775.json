@@ -1,38 +1,53 @@
 {
   "id": "PCSCR-775",
   "type": "change",
-  "title": "NLO DMS Thickener Torque Controller",
+  "title": "NLO DMS Thickener Torque controller",
   "status": "Testing",
   "fields": {
     "priority": "3 – Next Fortnight",
     "component": "NLO",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "720-FIC-2134, 720-DIC-2134, 720-NIC-2135, 720-NI-2135",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Testing",
     "dateSubmitted": "2026-08-07",
     "approver": "Andrew Taylor",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "Still testing as at 21/08; PTS to review (14/08). Meeting list shows it as Successful.",
-    "nextAction": "Agree one status and close out if testing is complete.",
+    "actionOwner": "",
+    "latestPosition": "PTS to review 14/08. Working. Close out. 25/09",
+    "nextAction": "Close out – confirmed working 25/09",
     "statusConflict": "Register 'Testing' vs meeting action 'Successful'",
     "reporter": "Casey Ellis",
-    "assignee": "Ben Ratcliffe"
+    "assignee": "Ben",
+    "why": "The DMS Thickener discharge controller 720-FIC-2134 & 720-DIC-2134 Currently runs in auto to flow 720-FIC-2134. Can’t be run in remote, as the controller does not consider the increasing rake torque required to be changed to auto flow to get rake torque under control.",
+    "design": "Introduction of a max selector between density and rake torque that will adjust the flow SP to slowly bring rake torque down instead of rapidly emptying the hopper.\n- Addition of a torque controller 720-NIC-2135\n- Addition of Max selector between 720-NIC-2135 and 720-DIC-2134 that links to current control logic of flow controller.\n- Label the 720-NIC-2135 check box Rake Torque\n- Label the 720-DIC-2134 check box Density\n- Addition of H and HH SW points on 720-NI-2135 at 20% and 25%\n- Each switch point is the trigger for a bias increase for how much extra flow the torque controller demands\n- Bias setpoints: 20% = +5m3/hr and >25% = +10m3/h\n- Bias >20% +5m3hr until torque < 16% (then -5m3hr) or torque >25% then +10m3hr until torque < 21% (then back to just +5m3hr)\n- The bias should reduce process upsets and allow density controller to still be the fundamentally main controller.\n- Have bias values and triggers adjustable through metallurgy login.\n\nRake torque controller demand of flow controller (720-FIC-2134) to be 10m3/hr higher than that of the density controller. This will allow the rake torque to come down.\n- PV = 720-NI-2135 Instrument Scaled Value\n- SP = 20% rake torque\n- CV = 720-DIC-2134 CV + Bias\n- Have process off conditions align with 720-DIC-2134",
+    "impact": "Thickener discharge increases gradually as rake torque rises instead of CROs emptying the hopper manually.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "severity": "Moderate",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Testing)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-775 NLO DMS Thickener Torque controller.docx (form risk ranking 3E)"
     }
   ],
   "created": "2026-08-07T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Casey Ellis",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

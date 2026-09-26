@@ -1,38 +1,53 @@
 {
   "id": "PCSCR-797",
   "type": "change",
-  "title": "50 Meg to 5 Meg Pump Automation",
+  "title": "50Meg to 5Meg pump automation",
   "status": "Testing",
   "fields": {
     "priority": "3 – Next Fortnight",
     "component": "Water Services",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "322-PU-795, 322-PU-796, 322-XV-6126, 322-XV-6127, 364-PD-001",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Testing",
     "dateSubmitted": "2026-08-31",
     "approver": "Michael Phillips",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "In testing; completion document to be issued (BR 18/09).",
-    "nextAction": "Issue completion document.",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "Completion Doc to be sent Out. BR 18/09",
+    "nextAction": "Issue completion document; align with PCSCR-807",
+    "statusConflict": "Overlaps PCSCR-807, which redefines 322-PU-795/796 logic with different setpoints – align before 807 is implemented",
     "reporter": "Tayla Davies",
-    "assignee": "Ben Ratcliffe"
+    "assignee": "Ben Ratcliffe",
+    "why": "To ensure mining has sufficient water in MEG 5 for their ongoing activities through the automation of 322-PU-795/796.\n50Meg refers to DECANT RETURN POND\n5Meg refers to 364-PD-001",
+    "design": "A Duty Pump Selector to be added to allow CROs to select either:\n- 322-PU-796 as Duty Pump, or\n- 322-PU-795 as Duty Pump.\nThe selected duty pump is to operate automatically when the permissives below are satisfied. The non-duty pump will remain as standby. Existing manual start/stop functionality is to remain unchanged.\n\nAutomatic Start Conditions 322-PU-796 (Duty Selected)\n322-PU-796 to automatically start when all the following conditions are met:\n- 50Meg Level ≥ 65%\n- 5Meg Level < 90%\n- Pump is in AUTO\n- No active pump faults, trips, or process interlocks are present\n\nAutomatic Start Conditions 322-PU-795 (Duty Selected)\n322-PU-795 to automatically start when all the following conditions are met:\n- 50Meg Level ≥ 65%\n- 5Meg Level < 90%\n- Pump is in AUTO\n- 322-XV-6127 OPEN confirmed\n- 322-XV-6126 CLOSED confirmed\n- No active pump faults, trips, or operational interlocks are present\n\nAutomatic Start Inhibit Conditions\nAutomatic operation should be inhibited if any of the following conditions exist:\n- 50Meg Level < 65%\n- 5Meg Level ≥ 90%\n- Selected pump is not in AUTO\n- Pump fault or trip is present\n- Process interlock is active\nFor 322-PU-795:\n- 322-XV-6127 is not OPEN\n- 322-XV-6126 is not CLOSED\n\nAutomatic Stop Conditions\nThe running duty pump (322-PU-796 or 322-PU-795) should automatically stop if any of the following occur:\n- 5Meg Level reaches 95%\n- 50Meg Level falls below 60% with a 5 second debounce\n- Pump fault or trip occurs\n- Any process interlock becomes active\nFor 322-PU-795:\n- 322-XV-6127 loses OPEN status\n- 322-XV-6126 loses CLOSED status",
+    "impact": "Decant-to-5 Meg transfer runs automatically on pond levels with a CRO-selected duty pump.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "severity": "Minor",
+    "likelihood": "Unlikely"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Testing)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-797 50Meg to 5Meg pump automation.docx (form risk ranking 2D)"
     }
   ],
   "created": "2026-08-31T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Tayla Davies",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

@@ -7,32 +7,46 @@
     "priority": "3 – Next Fortnight",
     "component": "Flotation",
     "department": "PCS",
-    "equipment": "BL-501, BL-502",
+    "equipment": "273-BL-501, 273-BL-502, 273-PIC-4801, 273-PT-4801, 235-FIC LP air loops",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Approved",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "PCS",
-    "latestPosition": "Approved and ready for implementation.",
-    "nextAction": "PCS to implement (18/09).",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "PCS to implement 18/09",
+    "nextAction": "PCS to implement",
+    "statusConflict": "Form priority 2 – Within 1 Week vs register 3 – Next Fortnight",
     "reporter": "Jonathan Nguyen",
-    "assignee": ""
+    "assignee": "",
+    "why": "During changeover between BL-501 and BL-502, the flotation air lines operating in Auto mode begin to open, causing the LP air header to depressurise. This prevents the incoming blower from building pressure to the required setpoint. With all air valves open during startup, the incoming blower is exposed to excessive air demand, causing it to exceed its operating limits and resulting in an overload trip.\n\nImplementing dedicated changeover sequence logic between the blowers will allow the pressure setpoints to increase gradually during startup. This will reduce sudden air demand on the incoming blower, improve LP air header pressure stability, and minimise the risk of overload trips during blower changeover.",
+    "design": "Control sequence:\n1. Force all listed LP Air FIC loops to Manual Hold.\n 235-FIC-0514, 235-FIC-0529, 235-FIC-0534, 235-FIC-0541, 235-FIC-0565, 235-FIC-0552, 235-FIC-0557, 235-FIC-3666, 235-FIC-3690, 235-FIC-3695, 235-FIC-3714, 235-FIC-3752, 235-FIC-3736, 235-FIC-3738\n2. Disable Auto Trim functions.\n3. Stop operating blower (237-BL-501 or 273-BL-502).\n4. Set 273-PIC-4801 to Manual speed control CV at 25%.\n5. Start standby blower opposite Step 3 Blower.\n6. Hold until 273-PT-4801 PV reaches 25kpa\n7. Ramp up 273-PIC-4801 setpoints:\n - Hold CV at 25% for 30 Sec\n - CV at 50% and hold for 30 Sec\n - CV at 75% and hold for 30 Sec\n8. Change 273-PIC-4801 to AUTO control.\n9. Return LP Air FIC loops to AUTO.\n10. Re-enable Auto Trim.\n11. Set new blower as Duty and complete sequence",
+    "impact": "Blower changeover runs as an automated sequence, reducing overload trips and flotation air disturbances.",
+    "maintenanceApprover": "Christopher Hoskins",
+    "productionApprover": "Michael Phillips",
+    "reviewers": "Tayla Davies",
+    "fFunctionality": "Yes",
+    "severity": "Minor",
+    "likelihood": "Unlikely"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Approved)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-779 - BL-501 & BL-502 Change Sequence.docx (form risk ranking 2D)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Jonathan Nguyen",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

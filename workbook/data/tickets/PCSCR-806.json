@@ -10,43 +10,43 @@
     "equipment": "SO-812, SO-813",
     "fixVersion": "",
     "site": "Pilgangoora",
-    "registerStatus": "New PCSCR drafted",
+    "registerStatus": "Not in register",
     "dateSubmitted": "",
     "approver": "",
     "actionOwner": "",
-    "latestPosition": "Draft created 21/09 following the SO-811 ACT upgrade.",
-    "nextAction": "Rename the file to 806 and add to register.",
+    "latestPosition": "New draft form 21/09 – not yet in register.",
+    "nextAction": "Rename file to 806; add to register",
     "statusConflict": "Not yet in register; File saved as 'PCSCR-805 …' but the form is numbered 806",
     "reporter": "Oscar Freeman",
     "assignee": "",
-    "why": "Following the successful ACT upgrade on SO-811, standardising the control philosophy across all primary ore sorters will improve operability, maintainability and future optimisation.",
-    "design": "- Update SO-812/813 SCADA graphics and faceplates to align with SO-811\n- Configure Modbus mappings, alarms, warnings, status indications and operating modes\n- Review and implement fault handling, interlocking and occupancy monitoring logic identified during SO-811 commissioning",
+    "why": "Following the successful implementation of the ACT upgrade on SO-811 standardising the control philosophy across all primary ore sorters will improve operability, maintainability and future optimisation opportunities.",
+    "design": "Update SCADA graphics and faceplates to align with the SO-811.\nConfigure required Modbus mappings, alarms, warnings, status indications and operating modes.\nReview and implement any required fault handling, interlocking and occupancy monitoring logic identified during SO-811 commissioning.",
     "impact": "SO-812 and SO-813 will operate the same way as SO-811.",
-    "fTags": "Yes",
-    "fFunctionality": "Yes",
-    "fAlarms": "Yes",
     "maintenanceApprover": "",
     "productionApprover": "",
-    "reviewers": ""
+    "reviewers": "",
+    "fTags": "Yes",
+    "fFunctionality": "Yes",
+    "fAlarms": "Yes"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from In Development (Word Docs) folder (register status: New PCSCR drafted)"
+      "action": "imported from In Development (Word Docs) folder (register status: Not in register)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-805 Primary Ore Sorter SO-812-813 upgrade.docx"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-805 Primary Ore Sorter SO-812-813 upgrade.docx"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Oscar Freeman",
   "imported": true,
-  "importSource": "1. In Development (Word Docs) folder"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

@@ -7,32 +7,47 @@
     "priority": "2 – Next Week",
     "component": "Grinding & Gravity",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "233-XV-3115, 234-XV-3116, 234-XV-3117, 233-PU-057/557, 361-PU-761/762, DT-3031, FT-3030",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Approved",
     "dateSubmitted": "2026-02-12",
     "approver": "Michael Sullivan",
-    "actionOwner": "PTS",
-    "latestPosition": "Projects – awaiting installation of check valves. Not included in the September shut as at 11/09.",
-    "nextAction": "PTS to raise for the January shut (18/09).",
-    "statusConflict": "Register 'Approved' vs meeting action 'On Hold'",
+    "actionOwner": "",
+    "latestPosition": "Projects - awaiting install of check valves. Check after Oct Shut 21/08 PTS to confirm shceduled in 04/09. Not in Shut as of 11/09, may need to be put on hold. PTS to create for Jan Shut 18/09",
+    "nextAction": "PTS to raise for January shut; confirm one risk ranking",
+    "statusConflict": "Register 'Approved' vs meeting action 'On Hold'; DocuSign completed Feb 2026; form shows two risk rankings (1C and 3C)",
     "reporter": "Jason Ly",
-    "assignee": ""
+    "assignee": "",
+    "why": "Auto Operational requirements for Gravity Tails line flushing valves (233-XV-3115, 234-XV-3116 & 234-XV-3117) to be refined to assist with line blockage prevention.",
+    "design": "Purpose:\nThis automatic valve flushing sequence serves as a last resort to prevent the gravity line from blocking when other methods have failed.\n\nAdd Open Permissive Interlocks:\n- 361-PU-761 Raw Water Pump 1 Running OR\n- 361-PU-762 Raw Water Pump 2 Running\nThis Permissive Interlocks is to reduce the risk of contaminating the raw water lines with slurry. It is highly recommended to install non-return valves upstream of these flushing valves to provide mechanical protection.\n\nGravity Tails Line Flushing Valves Auto Sequence: 233-SEQ-001\nTrigger Conditions:\n1. If DT-3031 is High High and FT-3030 is low low and no pump is running for 30 seconds. OR\n2. After the 5-min Flushing Sequence as part of the PCSCR-685 is completed and FT-3030 still Low-Low.\nA popup shall be displayed on SCADA to advise the Operator to start this flushing valves. If no decision is made within 30s of the popup, the sequence shall proceed automatically.\n\nSteps:\n1. Interlock both 233-PU-057 and 233-PU-557 from running. (Suction valve and Drain Valves will close and open as part of the current logic, Discharge Valve will remain open)\n2. Open XV-3117 for 2 minutes.\n3. Close XV-3117\n4. Open XV-3116 for 2 minutes.\n5. Close XV-3116\n6. Open XV-3115 for 2 minutes.\n7. Close XV-3115\n\nMinor Updates to PCSCR-685:\n1. DT-3031 High Alarm: Update setpoint to 1.35 (one of three conditions triggering plant feed interlock and flushing sequence popup)\n2. DT-3031 High-High Alarm: Update setpoint to 1.50 (immediately triggers plant feed interlock and flushing sequence popup)\n3. SCADA HMI: Add \"All-to-Auto\" button for PU-057, PU-557, and their associated valves",
+    "impact": "Line flushing becomes automatic (with CRO popup) when a blockage condition is detected.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "Daniel Tasanen",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "fAlarms": "Yes",
+    "scheduleNote": "Awaiting check valve installation by Projects – PTS to raise for January shut."
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Approved)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Approved)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-690 - PLO - Gravity Tails Line Flushing Valves Auto Operation.pdf"
     }
   ],
   "created": "2026-02-12T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Jason Ly",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

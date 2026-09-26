@@ -4,51 +4,51 @@
   "title": "NLO – Mill Feed Off Stoppage Interlocks",
   "status": "Draft",
   "fields": {
-    "priority": "2 – Next Week",
+    "priority": "",
     "component": "Grinding & Gravity",
     "department": "PCS",
     "equipment": "410-FE-1140, 410-FIC-1170, 410-DIT-1295, 410-ML-1171",
     "fixVersion": "",
     "site": "Pilgangoora",
-    "registerStatus": "New PCSCR drafted",
+    "registerStatus": "Not in register",
     "dateSubmitted": "",
     "approver": "",
     "actionOwner": "",
-    "latestPosition": "Draft updated 24/09. Raised after the 23/09 NLO ball mill feed-off event.",
-    "nextAction": "Register the change and confirm priority.",
+    "latestPosition": "Draft 24/09 after the 23/09 NLO mill feed-off event – not yet in register.",
+    "nextAction": "Add to register; assign priority",
     "statusConflict": "Not yet in register",
     "reporter": "Tom Boulton",
     "assignee": "",
-    "why": "On 23/09 the NLO Ball Mill kept running without Precon feed while the HPGR chiller pump was out of service. The job was expected to take about 1 hour, but plant feed was not restored for 7 hours and the mill ran the whole time; the Middlings Feeder kept feeding for about 4 hours. This wears the mill liners and wastes grinding media and power.",
-    "design": "- When HPGR feed has been off for 20 min (HPGR Drive Status = Off), process-interlock stop Middlings Feeder 410-FE-1140 first\n- At the same time set Mill Feed Line Water 410-FIC-1170 to Auto at 20 m³/h to flush the mill (SP change only; CRO can still modify)\n- Raise a high-priority operator popup explaining the actions and the density trip\n- After 410-FE-1140 stops, if 410-DIT-1295 < 1.2 SG (26% solids) start a 5-minute countdown visible to CROs\n- If still < 1.2 SG at the end, stop Ball Mill Main Drive 410-ML-1171 via process interlock\n- After the mill stops, reset 410-FIC-1170 to Remote SP\n- Set up and display like the existing 12-hour PDSH interlock on 410-ML-1171",
-    "impact": "CROs will get a popup and a visible countdown when the mill runs without feed. The mill stops automatically if discharge density stays below 1.2 SG for 5 minutes; flush water SP can still be adjusted.",
+    "why": "On 23/09, the NLO Ball Mill continued running without Precon feed due to the HPGR chiller pump being out of service. The job was initially expected to take approximately 1 hour; however, it was 7 hours before plant feed was restored, with the mill running for the full duration. The Middlings Feeder continued feeding the mill for approximately 4 hours.\nThis is detrimental to the mill lining system as it causes unnecessary wear. It also results in unnecessary grinding media consumption and power usage.",
+    "design": "- Create a process interlock on the Middlings Feeder 410-FE-1140 when HPGR feed has been off for 20 minutes, based on HPGR Drive Status = Off.\n- Stop 410-FE-1140 first, as continued middlings feed will delay or prevent the mill discharge density from dropping below the low-density trip setpoint.\n- When the 20-minute feed-off condition is met, set Mill Feed Line Water 410-FIC-1170 to Auto at 20 m3/hr to flush the mill. This should be just a SP change and still can be modified by CRO.\n- Generate a high-priority operator popup advising that the Middlings Feeder has been stopped, Mill Feed Line Water has been placed in Auto at 20 m3/hr SP, and the mill will stop if Mill Discharge Density 410-DIT-1295 drops below 1.2 SG.\n- After 410-FE-1140 has stopped, If Mill Discharge Density 410-DIT-1295 drops below 1.2 SG (26% solids), start a 5-minute countdown timer to stop Ball Mill Main Drive 410-ML-1171.\n- If 410-DIT-1295 remains below 1.2 SG at the end of the 5-minute countdown, stop Ball Mill Main Drive 410-ML-1171 via process interlock.\n- Once the Mill has stopped reset Mill Feed Line Water 410-FIC-1170 to Remote SP .\n- The 5-minute countdown timer should be visible to CRO operators\n- Setup and visibility should be similar to the existing PDSH alarm that stops 410-ML-1171 Main Drive after 12 hours as an interlock.",
+    "impact": "CROs get a popup and a visible countdown when the mill runs without feed. The mill stops automatically if discharge density stays below 1.2 SG for 5 minutes.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
     "fSetpoints": "Yes",
     "fFunctionality": "Yes",
     "fAlarms": "Yes",
-    "likelihood": "Possible",
     "severity": "Slight",
-    "maintenanceApprover": "",
-    "productionApprover": "",
-    "reviewers": ""
+    "likelihood": "Possible"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from In Development (Word Docs) folder (register status: New PCSCR drafted)"
+      "action": "imported from In Development (Word Docs) folder (register status: Not in register)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-808 NLO - Mill Feed off - Stoppage Interlocks.docx (form risk ranking 1C)"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-808 NLO - Mill Feed off - Stoppage Interlocks.docx (form risk ranking 1C)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Tom Boulton",
   "imported": true,
-  "importSource": "1. In Development (Word Docs) folder"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

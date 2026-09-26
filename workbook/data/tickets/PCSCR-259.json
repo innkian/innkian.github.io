@@ -1,38 +1,53 @@
 {
   "id": "PCSCR-259",
   "type": "change",
-  "title": "NLO – HPGR Vibration High High Trip Debounce Timer",
+  "title": "NLO - HPGR Vibration High High Trip Debounce timer",
   "status": "In Development",
   "fields": {
     "priority": "3 – Next Fortnight",
-    "component": "NLO – HPGR",
+    "component": "NLO - HPGR",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "NLO HPGR gearbox vibration, PLC_HPGR",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "In Development",
-    "dateSubmitted": "2024-01-20",
+    "dateSubmitted": "2024-01-29",
     "approver": "",
-    "actionOwner": "PCS",
-    "latestPosition": "Correct documentation required in order to close out; PTS to review and confirm (14/08).",
-    "nextAction": "PCS to review and close out or implement (carried from 04/09).",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "Correct Documentation to be supplied in order to close out. - PTS to review and confirm 14/08 PCS to review and close/implement 04/09",
+    "nextAction": "Confirm the 2 s debounce is live and close out",
+    "statusConflict": "Control System Engineer acknowledged 29/01/24 (Jason Ly), backup and killswitch ticked – may already be implemented",
     "reporter": "Desmond Maravanyika",
-    "assignee": ""
+    "assignee": "",
+    "why": "NLO HPGR occasionally trips out on Vibration Shut Down alarm. After investigation, it has been concluded that the gearbox was normal, and the high vibration reading was temporary which could have been caused by the impact of falling rocks.",
+    "design": "Currently, this HPGR Vibration High High alarm has no debounce timer which means any nuisance high reading will immediately trip the drive. A 2-secound debounce timer shall be added to this high high alarm (like the high warning alarm) to avoid nuisance trip.",
+    "impact": "Momentary vibration spikes shorter than 2 s will no longer trip the NLO HPGR.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fAlarms": "Yes",
+    "fSetpoints": "Yes",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: In Development)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-259 NLO HPGR Vibration High High Debounce Timer.docx (form risk ranking 1E)"
     }
   ],
-  "created": "2024-01-20T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2024-01-29T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Desmond Maravanyika",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

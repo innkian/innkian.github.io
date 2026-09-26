@@ -1,38 +1,50 @@
 {
   "id": "PCSCR-750",
   "type": "change",
-  "title": "Conveyor CV-005 Operation – VSD Start-Up Review",
+  "title": "Conveyor CV-005 Operation - VSD Start-Up Review",
   "status": "Testing",
   "fields": {
     "priority": "2 – Next Week",
     "component": "HPGR",
     "department": "PCS",
-    "equipment": "CV-005",
+    "equipment": "CV-005 VSD",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Testing",
     "dateSubmitted": "2026-07-01",
     "approver": "Raymond Klaproth",
-    "actionOwner": "PCS",
-    "latestPosition": "Con Mon requested more aggressive S-curve settings after review.",
-    "nextAction": "PCS to implement, then request Con Mon review on 26/09.",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "Con Mon requested more agressive S curve settings after review. PCS to implement and wait for con mon monitor. Ask for Con Mon review on 26/09",
+    "nextAction": "Apply revised S-curve; Con Mon review 26/09",
+    "statusConflict": "'Implemented' copy filed (PCS engineer Vincent Goh 02/07/2026) – now being retuned; risk ranking on form 'XX'",
     "reporter": "Mohamed Essa",
-    "assignee": ""
+    "assignee": "",
+    "why": "Change Description\nImplement an S-ramp acceleration profile on the drive system to replace the existing linear acceleration ramp during motor start-up.\n\nBackground\nDuring equipment start-up, the current acceleration profile can create a noticeable jerking action as torque is applied to the drive system. This sudden change in acceleration places additional mechanical stress on the gearbox, couplings, drive train components, and associated mechanical equipment.\nFeedback and review of the current operating characteristics indicate that introducing an S-ramp acceleration profile would provide a smoother transition from standstill to operating speed by gradually increasing and decreasing the rate of acceleration.",
+    "design": "The proposed S-ramp profile is intended to:\n- Reduce the jerking effect experienced during start-up.\n- Minimise shock loading on the gearbox and drive train components.\n- Lower mechanical stresses transmitted through couplings, shafts, bearings, and associated equipment.\n- Reduce wear and tear on mechanical components, potentially extending equipment service life.\n- Improve equipment reliability and decrease the likelihood of premature failures caused by repeated mechanical shock.\n\nProvide smoother equipment operation during start-up without impacting normal operating performance",
+    "impact": "CV-005 will start more smoothly; no change to how CROs operate the conveyor.",
+    "maintenanceApprover": "Jak Morrison",
+    "productionApprover": "Luke Fortuna",
+    "reviewers": "D. Tasanen",
+    "fSetpoints": "Yes"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Testing)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-750 - Conveyor CV-005 Operations - VSD Start-Up Review - implemented.pdf"
     }
   ],
   "created": "2026-07-01T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Mohamed Essa",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

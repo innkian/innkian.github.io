@@ -1,38 +1,54 @@
 {
   "id": "PCSCR-723",
   "type": "change",
-  "title": "Reagent Feeder kWh Calculation",
+  "title": "Reagent Feeder kWh calculation",
   "status": "Testing",
   "fields": {
     "priority": "3 – Next Fortnight",
     "component": "Reagent",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "351-SG-101 K107, 271-SG-101, 271-TX-620, 280-TX-901/902/903, 260-SS-001, 235-PLC-606",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Testing",
     "dateSubmitted": "2026-06-03",
     "approver": "Shane Thorne",
-    "actionOwner": "PCS",
-    "latestPosition": "CTs not reading current so the calculation is not working; otherwise the logic should be sound.",
-    "nextAction": "Ask site electrical team for progress on the CTs (21/08).",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "CTs not reading current so not working, otherwise should be OK. Waiting on site status 14/08 PCS Ask elec on site for progress. 21/08",
+    "nextAction": "Confirm CT readings with electrical and close out",
+    "statusConflict": "'Implemented' copy signed 16/07/2026 (Vincent Goh, 235-PLC-606) records passes, noting TX901/902/903 showing 0 A – register still Testing",
     "reporter": "Blair Bartley",
-    "assignee": ""
+    "assignee": "",
+    "why": "The existing High Voltage Switchboard feeding the Midstream facility does not have a voltage measurement, which means the protection relays do not provide a Power or Energy reading. This is required to bill the Midstream facility appropriate for it’s power use. This change is to use the current readings from the protection relays, using the voltage from 271-SG-601 and then calculate the Power and Energy consumed by Midstream on a regular basis.",
+    "design": "Item 1:\nFor all Feeders in Box 1 below, the following data should be pulled / calculated\n- Voltage = insert data from 271_SG_101_PQM1_PCA_VLT_N when feeder breaker is closed and when 351-SG-101 K107 breaker is closed. When either breaker is open, then show voltage as 0.\n- Current = Leave as it currently is.\n- Power kW = Voltage x Current * sqrt(3)*(351-SG-101 K107 Power Factor).\n- Energy = Above Power kW value integrated over time to provide kWh. If sampled every second, then kWh = Power kW / 3600.\n\nItem 2:\nFor Feeder in Box 2, calculate the current, Power & Energy as follows\n- Voltage = insert data from 271_SG_101_PQM1_PCA_VLT_N when feeder breaker is closed and when 351-SG-101 K107 breaker is closed. When either breaker is open, then show voltage as 0.\n- Current = (351-SG-101 K107 average current) less all outgoing feeders currents measured for 271-TX-620, 280-TX901, 280-TX-902 and 280-TX-903.\n- Power kW = Voltage x Current * sqrt(3)*(351-SG-101 K107 Power Factor).\n- Energy = Above Power kW value integrated over time to provide kWh. If sampled every second, then kWh = Power kW / 3600.\n\nEnsure that the following tags are tracked in Pi Historian\n- Power for each outgoing feeder\n- Energy for each outgoing feeder\n\n[Image in form – see source document] (Box 1 / Box 2 feeder single-line)",
+    "impact": "Midstream power and energy become available in PI for billing.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fTags": "Yes",
+    "fFunctionality": "Yes",
+    "severity": "Slight",
+    "likelihood": "Rare",
+    "testCriteria": "- Voltage matches 271-SG-101 on each feeder; drops to 0 V when either breaker is open\n- Power ≈ 11 kV × I × √3 for each feeder\n- Energy over an hour matches average power\n- 260-SS-001 current equals K107 minus the other feeders"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Testing)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-723 Reagent Feeder kWh calculation.docx (form risk ranking 1E)"
     }
   ],
   "created": "2026-06-03T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Blair Bartley",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

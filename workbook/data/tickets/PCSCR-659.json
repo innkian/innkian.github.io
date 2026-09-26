@@ -5,7 +5,7 @@
   "status": "Draft",
   "fields": {
     "priority": "2 – Next Week",
-    "component": "PLO – PR",
+    "component": "PLO - PR",
     "department": "PCS",
     "equipment": "CV-012",
     "fixVersion": "",
@@ -13,26 +13,32 @@
     "registerStatus": "DOC In Development",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "Awaiting review of Renier's email (BR 04/09). Note: the 27/08 snapshot recorded this as Successful, then it reverted to DOC In Development.",
-    "nextAction": "Resolve the status reversal and confirm implementation.",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "Review Renier Email BR 04/09",
+    "nextAction": "Renier to supply the PCSCR form; confirm whether PCSCR-625 covers it",
+    "statusConflict": "No PCSCR form found in In Development or Approved (Scan)",
     "reporter": "Renier Van Der Merwe",
-    "assignee": ""
+    "assignee": "",
+    "why": "",
+    "design": "",
+    "impact": "",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: DOC In Development)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Renier Van Der Merwe",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

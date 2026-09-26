@@ -1,38 +1,51 @@
 {
   "id": "PCSCR-786",
   "type": "change",
-  "title": "NLO Faceplate Modification for Flotation Circuit",
+  "title": "NLO Faceplate modification for Flotation Circuit",
   "status": "Draft",
   "fields": {
     "priority": "3 – Next Fortnight",
     "component": "Flotation",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "NLO flotation faceplates",
     "fixVersion": "",
     "site": "Pilgangoora",
-    "registerStatus": "Status not recorded",
+    "registerStatus": "",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "PCS",
-    "latestPosition": "PTS to email (04/09). Document is in the PCSCR shared folder.",
-    "nextAction": "PCS to review and implement; assign a status in the register (18/09).",
-    "statusConflict": "Status field blank in register",
+    "actionOwner": "",
+    "latestPosition": "PTS to email 04/09. In PCSCR shared folder. PCS to review and implement. 18/09",
+    "nextAction": "Tate Mawire to complete the proposed change; assign a register status",
+    "statusConflict": "Status field blank in register; Form has no proposed change description",
     "reporter": "Tate Mawire",
-    "assignee": ""
+    "assignee": "",
+    "why": "Faceplate modification to improve consistency with the current control philosophy.",
+    "design": "[This section is blank on the PCSCR form]",
+    "impact": "",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Status not recorded)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: )"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-786 Faceplate modification for NLO Flotation Circuit.docx (form risk ranking 1E)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Tate Mawire",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

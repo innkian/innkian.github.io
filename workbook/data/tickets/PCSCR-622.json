@@ -7,32 +7,45 @@
     "priority": "2 – Next Week",
     "component": "Tail Thickener",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "Tails Line A/B pumps 1 & 2, 236-SEQ-677B, 236-SEQ-678B, tails tank, gland water booster pump",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "Testing",
-    "dateSubmitted": "2025-10-15",
+    "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "TSF3 project. Confirm with Anthony / Issy's ops CRO as CM believes the sequence was triggered; check SQL for instance activation (BR 21/08).",
-    "nextAction": "Book the test during the September 48-hour offline window (raised 04/09).",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "TSF3 Project - Confirm with Anthony / Issy's ops CRO as CM believes it was triggered. Check SQL for instance activation BR 21/08. Book in test during 48h offline sept? 04/09",
+    "nextAction": "Confirm sequence activation via SQL; test in 48-hour offline window",
+    "statusConflict": "'Implemented' signed copy filed (DocuSign 1–6 Oct 2025) but register shows Testing; form requestor Benjamin Ratcliffe vs register initiator Jason Ly; form priority 1 vs register 2; no risk ranking on form",
     "reporter": "Jason Ly",
-    "assignee": ""
+    "assignee": "",
+    "why": "New TSF3 will be cut over in January shut, and downtime in the event of a blockage is significantly greater than current setup. To mitigate this downtime in the event of loss of tailings flow, an auto failover to standby line is needed. This Failover will prioritise the flushing of the discharge pipeline to the TSF over the conditioning on the local pump skid.\n\nThe proposed plan is for these sequences to be automatically initiated on edge case failures (i.e. total pump failure) and will not be able to manually started. However, the sequence will be tested via manual start while running on water during the October shut.",
+    "design": "There are 3 parts to this change request.\n1) Modification of tails system reduce possibility of line blockage via\n a) Pump interlock modifications\n b) Valve trip condition modifications\n2) New failover sequence to trigger as required (TBD)\n\n1A - PUMP INTERLOCK MODIFCATIONS\nCreate two new sequences which when activated will automatically flush and changeover from Tails Line A to Tails Line B (236-SEQ-677B) and from Tails Line B to Tails Line A (236-SEQ-678B).\nAs Part of New sequences, Pump and Valve interlocks will be modified as per below (Modifications in BOLD):\n\nPump 1\nA) Start Permissives\n i) (Gland Flow Switch Healthy\n ii) AND Booster Pumps Running\n iii) OR Failover Sequence Running)\n iv) Suction Valve OR Flushing Valve Opened\n v) Suction Drain Valve Closed\nB) Process Interlocks\n i) Gland Flow Switch Trip Timeout not complete – Remove Interlock and Upgrade Trip alarm to Critical Severity\n ii) Tails Tank Level not Low\n iii) Suction Valve OR Flushing Valve Open Requested\n iv) Suction Drain Valve Close Requested\n v) Pump 2 Running (with startup masking)\n vi) RIO Comms Fault – Remove\n vii) Module Comms Fault – Remove\nC) Critical Interlocks\n i) No Changes\n\nPump 2\nA) Start Permissives\n i) (Gland Flow Switch Healthy\n ii) AND Booster Pumps Running)\n iii) OR Failover Sequence Running\n iv) Opposite Line Discharge Valve Closing- Closed\n v) Discharge Valve Opened\nB) Process Interlocks\n i) Pump 1 Running\n ii) Gland Flow Switch Trip Timeout not complete – Remove and Upgrade Trip alarm to Critical Severity\n iii) Tails Pressure not High High – Remove\n iv) Gland Water Booster Pumps Running – Remove\n v) Discharge Valve Open Requested\n vi) Opposite Line discharge valve Close requested\n vii) Tails Discharge Pressure Transmitter not out of range – Remove\n viii) RIO Comms Fault – Remove\n ix) Module Comms Fault (x2) – Remove\nC) Critical Interlocks\n i) No Changes\n\n1B - VALVE TRIP CONDITION MODIFICATIONS\nLine A and Line B flushing valves will have following trip open condition added to existing:\n Line in service AND Tails Tank Level Low Alarm Active\nLine A and Line B suction valves will have following trip closed condition added to existing:\n Line in service AND Tails Tank Level Low Alarm Active\n\n2 - FAILOVER SEQUENCE\n*Given the reason for this change unless otherwise stated, sequence transitions on valve positions will look at a confirmation of move away from current position, rather than confirmed required position state (i.e. Close Discharge Valve is assumed successful when open position proxy is lost).\n*Local line flushing will not take place during sequence shutdown of failed line due to line pressurization priority.\n\nUpon failure trigger (i.e. when pumps 1A & 1B or 2A & 2B have stopped) sequence will take following actions:\n1) Action: Simultaneously operate failed line valves\n a) Close Suction Valve\n b) Open Suction Drain Valve\n c) Close Gland Water Valves on both failed line pumps\n d) Close Discharge Valve\n Transition: Actions from a) initiated AND Positive confirmation of discharge valve closed OR 45s (TBC) after loss of discharge valve open proxy\n2) Action: Start Gland Water Booster Pump\n Transition: Gland water booster pump start requested\n3) Action: Simultaneously operate standby line valves\n a) Close suction drain valve\n b) Open flushing valve\n d) Open Gland Water Valves on both pumps\n Transition: Suction and Flushing Valve positions have changed state and open is requested for gland water valves\n4) Action: Set Pump 1 Speed to Startup Speed Setpoint (TBC)\n Transition: SP Confirmed\n5) Action: Start Pump 1\n Transition: Pump 1 running\n6) Action: Open Discharge Valve\n Transition: Discharge Valve opened confirmed\n7) Action: Set Pump 1 Power Controller to Auto at Startup Power Setpoint (TBC)\n Transition: SP Confirmed\n8) Action: Set Pump 2 Flow Controller to Auto Startup Speed Setpoint (TBC)\n Transition: SP Confirmed\n9) Action: Start Pump 2\n Transition: Pump 2 running\n10) Action: Start Flushing Timer (TBC)\n Transition: Timer Completed\n11) Action: Open Suction Valve\n Transition: Suction Valve Opened feedback\n12) Action: Close Flush Valve\n Transition: Flush Valve Closed feedback\n\n[Text taken from the scanned 'Implemented' PDF; bold formatting of modifications is not preserved – check the source document]",
+    "impact": "On total pump failure on one tails line, the system flushes and switches to the standby line automatically. CROs cannot start the sequence manually.",
+    "maintenanceApprover": "Brett Bowbridge, Jay Mills",
+    "productionApprover": "Johnny Le, Michael Phillips",
+    "reviewers": "Anthony Bertram",
+    "fFunctionality": "Yes",
+    "fAlarms": "Yes"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: Testing)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: Testing)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-622 - PLO - Tails Line Auto Failover Sequence - Implemented.pdf"
     }
   ],
-  "created": "2025-10-15T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Jason Ly",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

@@ -1,38 +1,50 @@
 {
   "id": "PCSCR-488",
   "type": "change",
-  "title": "Split Con Blank / Unblank Sequence",
+  "title": "Split Con blank/unblank sequence",
   "status": "In Development",
   "fields": {
     "priority": "3 – Next Fortnight",
     "component": "Spod Dressing",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "251-CY-604, HP-607, PU-723/724, LIC-4065B, PIC-4088, XV-4072 to XV-4087",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "In Development",
     "dateSubmitted": "2025-03-12",
     "approver": "Pierre Bille",
-    "actionOwner": "PTS",
-    "latestPosition": "Parked until time allows. Genies edited to show note status, to be deployed and reviewed by PTS. Cancellation proposed 04/09 in favour of a substitute genie modification.",
-    "nextAction": "PTS to confirm whether cancellation is acceptable (raised 18/09).",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "Parked until time allows Update Genie to indicate note status? PCS 21/08 Cancelled for substitue genie modification 04/09. PTS to confirm if cancel OK. 18/09",
+    "nextAction": "PTS to confirm cancellation",
+    "statusConflict": "Register 'In Development' vs meeting action 'Cancelled'; Form has no risk ranking",
     "reporter": "Pierre Bille",
-    "assignee": ""
+    "assignee": "",
+    "why": "The new split con cyclones (251-CY-604) have 4 blanks installed in the cluster in cyclones 2, 6, 10, 14 as noted in Citect. The process to swap into the blanked configuration now can be quite time-consuming and required multiple actions from the CRO’s. As this will typically occur during a ramp down & ramp up (when the CRO’s are the busiest), there is the opportunity to create a sequence to automate it and save the CRO some time.",
+    "design": "Create a level controller LIC-4065B for HP-607 so that the pumps Pu-723/724 can run to level control when blanked and as part of the sequence. Add a selector to be able to swap between that steady state PIC-4088 or that LIC (similar to what we have in place on Pu-59 to run in level control when the bypass valve is open).\n\nCreate a Cyclone Count Target Input (initial value = 10) so that the sequence knows how many cyclones to open as part of the un-blanking process. Minimum value = 4, Maximum value = 12.\n\nBlanking sequence:\n- Prior to start the sequence, ensure all 16 valves are in auto, and ensure that SP of LIC-4065B is higher than the SP of LIC-4065 to run minimal flow\n- Prior to start the sequence, ensure all 16 proxies are healthy, and that the 4 blanked cyclones are closed (XV-4073, 4077, 4081, 4085)\n- Prior to start the sequence, ensure Pu-723 or Pu-724 is running\n- Start of the sequence\n- Switch selector from PIC-4088 to LIC-4065B for the pump to run in level control\n- Open XV-4073 - once open proxy is active, move to next step\n- If XV-4074 is open, close it – once close proxy is active, move to next step\n- If XV-4075 is open, close it – once close proxy is active, move to next step\n- If XV-4076 is open, close it – once close proxy is active, move to next step\n- Open XV-4077 - once open proxy is active, move to next step\n- If XV-4078 is open, close it – once close proxy is active, move to next step\n- If XV-4079 is open, close it – once close proxy is active, move to next step\n- If XV-4080 is open, close it – once close proxy is active, move to next step\n- Open XV-4081 - once open proxy is active, move to next step\n- If XV-4082 is open, close it – once close proxy is active, move to next step\n- If XV-4083 is open, close it – once close proxy is active, move to next step\n- If XV-4084 is open, close it – once close proxy is active, move to next step\n- Open XV-4085 - once open proxy is active, move to next step\n- If XV-4086 is open, close it – once close proxy is active, move to next step\n- If XV-4087 is open, close it – once close proxy is active, move to next step\n- If XV-4072 is open, close it – once close proxy is active, move to next step\n- Confirm XV-4073, 4077, 4081, 4085 are open and that the cyclone count is 4\n- Sequence complete\n\nUn-blanking sequence:\n- Prior to start the sequence, ensure all 16 valves are in auto, and ensure that SP of PIC-4088 is as per met target\n- Prior to start the sequence, ensure all 16 proxies are healthy, and that the 4 blanked cyclones are open (XV-4073, 4077, 4081, 4085)\n- Prior to start the sequence, ensure Pu-723 or Pu-724 is running\n- Prior to start the sequence, ensure there are enough cyclones not OOS to reach to Cyclone Count Input target with all un-blanked cyclones\n- Start of the sequence\n- If XV-4074 OOS, move to next step, else open XV-4074 – once open proxy is active, move to next step\n- If XV-4075 OOS, move to next step, else open XV-4075 – once open proxy is active, move to next step\n- If cyclone count current # valves open >4 move to next step, else If XV-4076 OOS, move to next step, else open XV-4076 – once open proxy is active, move to next step\n- Close XV-4077 - once close proxy is active, move to next step\n- If XV-4078 OOS, move to next step, else open XV-4078 – once open proxy is active, move to next step\n- If XV-4079 OOS, move to next step, else open XV-4079 – once open proxy is active, move to next step\n- If cyclone count current # valves open >4 move to next step, else If XV-4080 OOS, move to next step, else open XV-4080 – once open proxy is active, move to next step\n- Close XV-4081 - once close proxy is active, move to next step\n- If XV-4082 OOS, move to next step, else open XV-4082 – once open proxy is active, move to next step\n- If XV-4083 OOS, move to next step, else open XV-4083 – once open proxy is active, move to next step\n- If cyclone count current # valves open >4 move to next step, else If XV-4084 OOS, move to next step, else open XV-4084 – once open proxy is active, move to next step\n- Close XV-4085 - once close proxy is active, move to next step\n- If XV-4086 OOS, move to next step, else open XV-4086 – once open proxy is active, move to next step\n- If XV-4087 OOS, move to next step, else open XV-4087 – once open proxy is active, move to next step\n- If cyclone count current # valves open >4 move to next step, else If XV-4072 OOS, move to next step, else open XV-4072 – once open proxy is active, move to next step\n- Close XV-4073 - once close proxy is active, move to next step\n- Check # open (should be between 4 and 8 at that point of the sequence) vs target, if not enough open, open one of the remaining available ones that are not open (XV-4076, then XV-4080, then XV-4084, then XV-4072) and move to next step once # open = target. If too much open, close open cyclones one at a time until # open = target.\n- Confirm XV-4073, 4077, 4081, 4085 are close and that the cyclone count is = target count\n- Switch selector from LIC-4065B to PIC-4088 for the pump to run in pressure control\n- Sequence complete",
+    "impact": "CROs run one sequence to blank/un-blank instead of operating 16 valves manually.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fFunctionality": "Yes"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: In Development)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-488 - Split Con blank & unblank sequence.docx"
     }
   ],
   "created": "2025-03-12T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Pierre Bille",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

@@ -7,32 +7,46 @@
     "priority": "2 – Next Week",
     "component": "HPGR",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "222-FE-010, 222-FE-510, HPGR 1, HPGR 2, COS feeders",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "On Hold",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "PTS",
-    "latestPosition": "Awaiting Pierre review and approval (Kayne 04/08/2025). Proposed for cancellation due to alarm noise – a better front-end inventory controller is to be implemented to mitigate CV-005 stoppages (TJ 31/07/2026).",
-    "nextAction": "Formally cancel and reference the inventory controller change.",
+    "actionOwner": "",
+    "latestPosition": "Awaiting Pierre review and approval - Kayne 04/08/2025 - Cancel due to alarm noise. better front end inventory controller to be implimented to mitigate stoppages on CV-005 - TJ 31/07/2026",
+    "nextAction": "Formally cancel; reference the inventory controller change",
     "statusConflict": "",
     "reporter": "Jerome Silveira",
-    "assignee": ""
+    "assignee": "",
+    "why": "There are many instances of COS feeder trips that occur due to high bin levels. As a result, this will cause a reduction in the throughput for extended periods of time.",
+    "design": "If both 222-FE-010/510, HPGR 1, and HPGR 2 are running, and all the COS feeders trips, audible alarm to engage. Alarm to state that all COS feeders are off with plant feed running.\n\nAlarm is to be a short horn sound if possible. Happy to amend this if there are better suggestions to avoid excessive audibles – could also factor in throughput deviation from SP.",
+    "impact": "CROs get an audible prompt when all COS feeders stop while the plant is still fed.",
+    "maintenanceApprover": "Matthew Collins",
+    "productionApprover": "Dylan Capell",
+    "reviewers": "Tim Johns",
+    "fAlarms": "Yes",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: On Hold)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-592 - COS Feeder Trip Audible Alarm.docx (form risk ranking 1E)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Jerome Silveira",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

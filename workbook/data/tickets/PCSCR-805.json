@@ -10,41 +10,41 @@
     "equipment": "160-FE-0481, 160-FE-0497, 160-LIC-0470, 160-LIC-0472",
     "fixVersion": "",
     "site": "Pilgangoora",
-    "registerStatus": "New PCSCR drafted",
+    "registerStatus": "Not in register",
     "dateSubmitted": "",
     "approver": "",
     "actionOwner": "",
-    "latestPosition": "Draft form created in the In Development folder on 18/09.",
-    "nextAction": "Add to register, assign priority and approver.",
+    "latestPosition": "New draft form 18/09 – not yet in register.",
+    "nextAction": "Add to register; assign priority and approver",
     "statusConflict": "Not yet in register",
     "reporter": "Casey Ellis",
     "assignee": "",
-    "why": "DMS feeders can be started with the classifier dart plugs in manual at 0%. This has led to classifier overfilling events and could bog the classifiers.",
-    "design": "- Add a process interlock preventing feed to the DMS classifiers while the dart plug is closed\n- 160-FE-0481: 160-LIC-0470 Classifier Controller in Auto or Manual > 5%\n- 160-FE-0497: 160-LIC-0472 Classifier Controller in Auto or Manual > 5%",
+    "why": "DMS Feeders can be started with the classifier dart plugs in manual and 0%\nThis has led to classifier overfilling events and has potential to bog classifiers.",
+    "design": "Addition of a process interlock that prevents feed being introduced to the DMS classifiers whilst the dart plug is close to the following assets:\n- 160-FE-0481: 160-LIC-0470 Classifier Controller in Manual >5% or Auto\n- 160-FE-0497: 160-LIC-0472 Classifier Controller in Manual >5% or Auto",
     "impact": "DMS feeders will not start unless the classifier level controller is in Auto or Manual above 5%.",
-    "fFunctionality": "Yes",
     "maintenanceApprover": "",
     "productionApprover": "",
-    "reviewers": ""
+    "reviewers": "",
+    "fFunctionality": "Yes"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from In Development (Word Docs) folder (register status: New PCSCR drafted)"
+      "action": "imported from In Development (Word Docs) folder (register status: Not in register)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-805 NLO - DMS Feeder Interlock Classifier Status.docx"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-805 NLO - DMS Feeder Interlock Classifier Status.docx"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Casey Ellis",
   "imported": true,
-  "importSource": "1. In Development (Word Docs) folder"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

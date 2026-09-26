@@ -1,38 +1,53 @@
 {
   "id": "PCSCR-704",
   "type": "change",
-  "title": "GDC / FDC Auto Close / Open Pop-up",
+  "title": "GDC/FDC Auto Close/Open Pop up",
   "status": "Draft",
   "fields": {
     "priority": "2 – Next Week",
     "component": "Grinding & Gravity",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "233-CY-011, 234-LT-0430, 234-LIC-0430A, FE-010/510",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "DOC In Development",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "PCS",
-    "latestPosition": "P2. PTS to review whether the PCSCR is still required (14/08).",
-    "nextAction": "PCS to finish development and implement so testing can be co-ordinated (04/09).",
+    "actionOwner": "",
+    "latestPosition": "P2 Review if PCSCR still required - PTS 14/08. PCS to finish Dev and implement KS so testing can be co-ordinated. 04/09",
+    "nextAction": "PCS to finish development and implement so testing can be co-ordinated",
     "statusConflict": "",
     "reporter": "Casey Ellis",
-    "assignee": "Miguel Borquez"
+    "assignee": "",
+    "why": "Currently the methodology for adjusting cyclones is to monitor hopper levels and water additions and manually adjust, this can result in sub optimal water balancing. The goal of this change is to clearly state cyclone opening and closing parameters.\nThere is already auto logic which selects an available cyclone to open, this will tie in with that sequence\n- This is a precursor to automation of the cyclone circuit\n- Assist in the water balance of the circuit – cyclones are used to manage total volumetric flow through the circuit – optimal cyclone management results in optimal cut points and circuit stability.\n- Prevention of hoppers from overflowing or cavitating\n- Maintain circuit steady state",
+    "design": "For Gravity Deslime Cyclones:\n\nOpen Request:\n- Addition of Cyclone Open Value linked to 234-LT-0430 (This will be used as the open request setpoint) – Initial Value 90%\n- Addition of Cyclone Open Value Countdown Timer (This is the countdown value when = 0 will initiate popup) – Initial Value 1 minute\n- Countdown timer starts If 234-LT-0430-SCLD-N > Cyclone Open Value\n- If 234-LT-0430-SCLD-N > Cyclone Open Value AND Countdown timer = 0, initiate Temporary popup \"GDC Hopper High – Open 1x GDC cyclone?\"\n - IF \"Yes\" – Links to 233-CY-011 Open button and Opens 1x GDC and resets countdown timer\n - IF \"No\" – Does not open gravity deslime cyclone: Logic wont activate again until 234-LT-0430 < Cyclone Open Value.\n\nClose Request:\nThis one will require 2 conditions to be met to close a cyclone.\n- Addition of 1st Cyclone Close Value Linked to 234-LIC-0430A-CV (This will be used as the close request setpoint) – Initial Value 40%\n- Addition of Cyclone Close Value Countdown Timer (This is the countdown value when = 0 will initiate popup) – Initial Value 2 minutes\n- Countdown Timer starts - IF 234-LIC-0430A-CV > Cyclone Close Value AND 234-LT-0430-SW-Hi Not Active\n- If 234-LIC-0430A-CV > Cyclone Close Value AND 234-LT-0430-SW-HI Not Active AND Countdown timer = 0, initiate Temporary popup \"GDC Water Addition Hi – Close 1x GDC cyclone?\"\n - IF \"Yes\" – Links to 233-CY-011 Close button and closes 1x GDC and resets countdown timer\n - IF \"No\" – Does not close gravity deslime cyclone: resets countdown timer 234-LIC-0430A-CV < Cyclone Close Value\n\nOpen/Close requests will be only applicable to valves currently in Auto mode (as per current auto open/close logic).\n\nAdd in counters for operator Yes No input for each open and close suggestion. Assess these counters after 6 weeks of implementation. If suggestions prove to be helpful and accurate, PCSCR will be edited to automatically open and close cyclones.\n\nEnabling/Disabling of the New Auto Open/Close feature will become the required operator input.\nAn enable popup will be generated when (These are TBC):\n- If FE-010/510 off for > 1 hour And Mill Feed active for 1 hour (FE-010 + FE-510 on for 1 hour) ELSE Activate on FE-010/510 start up\nAuto control will be automatically disabled when:\n- Feed to Mill Off for 40 mins (FE-010 + FE-510 off for 40 mins instead?) This will line up with Mill grind out procedure, after this time CRO will have control to be able to shutdown the plant",
+    "impact": "CROs get prompts to open or close a gravity deslime cyclone; their responses are counted to decide on full automation.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "severity": "Slight",
+    "likelihood": "Unlikely"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: DOC In Development)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-704 GDC Auto Close-Open Pop up.docx (form risk ranking 1D)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Casey Ellis",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

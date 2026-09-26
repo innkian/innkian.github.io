@@ -1,7 +1,7 @@
 {
   "id": "PCSCR-802",
   "type": "change",
-  "title": "Primary Ore Sorter PSD Upgrade",
+  "title": "Primary ore sorter PSD upgrade",
   "status": "Draft",
   "fields": {
     "priority": "1 – Next 48 Hours",
@@ -13,41 +13,41 @@
     "registerStatus": "DOC In Development",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "SO-811 Modbus comms upgraded to provide D10/D50/D90. Planned Modbus upgrade complete; tie-in works required.",
-    "nextAction": "Check feed-stopped status returns to plant once tie-in is done.",
+    "actionOwner": "",
+    "latestPosition": "Planned Modbus upgraded completed tie in works required. Check Feed stopped status back to plant once done.",
+    "nextAction": "Complete tie-in; check feed-stopped status returns to plant",
     "statusConflict": "",
     "reporter": "Oscar Freeman",
     "assignee": "Ben Ratcliffe",
-    "why": "SO-811 Primary Ore Sorter Modbus comms have been upgraded to provide PSD measurements (D10, D50, D90). Displaying and trending them improves visibility of sorter feed size and lets the team monitor crushing circuit performance and ore presentation.",
-    "design": "- Modify the SO-811 SCADA faceplate to display D10, D50 and D90\n- Add historian tags and trending for the new PSD values\n- No control logic changes at this stage",
+    "why": "- SO-811 Primary Ore Sorter MODBUS communications have been upgraded to provide PSD measurements (D10, D50 and D90).\n- Displaying and trending PSD data will improve visibility of feed size distribution to the sorter.\n- PSD data can be used to monitor crushing circuit performance and identify changes in ore presentation.",
+    "design": "- Modify the SO-811 SCADA faceplate to display D10, D50 and D90 PSD measurements.\n- Add historian tags and trending for the new PSD values.\n- No control logic changes are required yet.\n[Image in form – see source document] (SO-811 SCADA page mock-up with 'SO-811 PSD' D10/D50/D90 box)",
     "impact": "CROs and metallurgists can see and trend SO-811 feed PSD, helping spot screen panel, grizzly and crusher wear.",
-    "fTags": "Yes",
-    "fFunctionality": "No",
-    "likelihood": "Rare",
-    "severity": "Slight",
     "maintenanceApprover": "",
     "productionApprover": "",
-    "reviewers": ""
+    "reviewers": "",
+    "fTags": "Yes",
+    "fFunctionality": "No",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: DOC In Development)"
     },
     {
-      "at": "2026-09-25T12:03:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-802 Primary Ore Sorter PSD upgrade.docx (form risk ranking 1E)"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-802 Primary Ore Sorter PSD upgrade.docx (form risk ranking 1E)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T12:03:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Oscar Freeman",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

@@ -13,26 +13,32 @@
     "registerStatus": "DOC In Development",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "PCS",
-    "latestPosition": "PCSCR not signed as at 28/08.",
-    "nextAction": "PCS to follow up signature (04/09).",
-    "statusConflict": "",
+    "actionOwner": "",
+    "latestPosition": "PCSCR Not signed. 28/08 PCS to follow up 04/09",
+    "nextAction": "PCS to follow up signature with Renier",
+    "statusConflict": "No PCSCR form found in In Development or Approved (Scan)",
     "reporter": "Renier Van De Merwe",
-    "assignee": ""
+    "assignee": "",
+    "why": "",
+    "design": "",
+    "impact": "",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": ""
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: DOC In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: DOC In Development)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Renier Van De Merwe",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

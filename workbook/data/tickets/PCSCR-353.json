@@ -1,38 +1,54 @@
 {
   "id": "PCSCR-353",
   "type": "change",
-  "title": "NLO – Deslime and Mill Cyclone Valve Change",
+  "title": "NLO - Deslime and Mill Cyclone Valve Change",
   "status": "On Hold",
   "fields": {
     "priority": "3 – Next Fortnight",
     "component": "NLO",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "410-XV-1245D, 410-XV-1245E, 410-XV-1245F, 410-XV-1280D, 410-XV-1280E",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "On Hold",
-    "dateSubmitted": "2024-09-03",
+    "dateSubmitted": "2024-08-30",
     "approver": "Tim Wakeham",
-    "actionOwner": "PTS",
-    "latestPosition": "Not to be submitted until the work order is planned.",
-    "nextAction": "Confirm WO planning window.",
+    "actionOwner": "",
+    "latestPosition": "Not submitted until WO planned",
+    "nextAction": "Confirm WO planning window",
     "statusConflict": "",
     "reporter": "Luke Fortuna",
-    "assignee": ""
+    "assignee": "",
+    "why": "The proposed operations change is to replace the manual valves on the deslime and mill cyclone cluster to pneumatic actuated valves. Changing to all pneumatic actuated valves allows NLO to fully automate cyclones to open and close for future control philosophy changes (e.g. switching from pressure to density cyclone control). Cyclones will be able to switch on/off to maintain stability and constant feed density through the flotation circuit. It also allows the ability to track all cyclone run hours leading to preventative maintenance scheduling.",
+    "design": "As part of the OCM, the following manual valves will need to added into CITECT as they will be pneumatic actuated valves:\n- 410-XV-1245D\n- 410-XV-1245F\n- 410-XV-1245E\n- 410-XV-1280D\n- 410-XV-1280E\n\nVavles should have a similar interface in CITECT to the image below, allowing the CRO to open, close and view the open/close permissives etc.\n[Image in form – see source document]\n\nRun hours for each auto valves should be added in historian similar to the existing auto valves.",
+    "impact": "CROs will be able to open/close these cyclone valves from CITECT instead of manually in the field.",
+    "maintenanceApprover": "",
+    "productionApprover": "",
+    "reviewers": "",
+    "fTags": "Yes",
+    "fIO": "Yes",
+    "severity": "Minor",
+    "likelihood": "Unlikely",
+    "scheduleNote": "PCSCR not submitted until the valve installation work order is planned."
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: On Hold)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: On Hold)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-353 Deslime and Mill Cyclone Valve Change.docx (form risk ranking 2D)"
     }
   ],
-  "created": "2024-09-03T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2024-08-30T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Luke Fortuna",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

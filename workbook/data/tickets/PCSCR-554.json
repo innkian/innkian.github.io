@@ -1,38 +1,58 @@
 {
   "id": "PCSCR-554",
   "type": "change",
-  "title": "HPGR 1 & 2 Shutdown Alarm Indication",
+  "title": "Mill 2 Discharge Pump 606 and 607 Suction Valve Delay Timer (Debounce)",
   "status": "In Development",
   "fields": {
     "priority": "3 – Next Fortnight",
     "component": "HPGR",
     "department": "PCS",
-    "equipment": "",
+    "equipment": "234-PU-606, 234-PU-607, 234-XV-3059, 234-XV-3063, 234-HP-601",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "In Development",
     "dateSubmitted": "",
     "approver": "",
-    "actionOwner": "Ben Ratcliffe",
-    "latestPosition": "Under review by BR since 14/08; meeting action list records it as cancelled.",
-    "nextAction": "Confirm cancel vs proceed and correct the register.",
-    "statusConflict": "Register 'In Development' vs meeting action 'Cancelled'",
+    "actionOwner": "",
+    "latestPosition": "Review BR 04/09",
+    "nextAction": "Confirm which change owns PCSCR-554 and renumber the other",
+    "statusConflict": "Register 'In Development' vs meeting action 'Cancelled'; Register title 'HPGR 1 & 2 Shutdown Alarm Indication' (Benjamin Ratcliffe) does not match the signed PCSCR-554 form (Michael Phillips, Level 1 signed 30/05/2025) – possible duplicate PCSCR number; form area ticks Flotation although equipment is Mill 2",
     "reporter": "Benjamin Ratcliffe",
-    "assignee": "Ben Ratcliffe"
+    "assignee": "Ben",
+    "why": "Mill 2 discharge pumps 606/607 suction valves are passing when showing closed causing excessive spillage on the floor.\n[Image in form – see source document] (SCADA screenshot with the two suction valves arrowed)",
+    "design": "Introduce a debounce of 10s (or until fully closed in the field) to ensure the suction valves are closed.\n\nThe suction valves requiring the delay timer:\n- 234-XV-3059\n- 234-XV-3063",
+    "impact": "Suction valves will only report closed once fully closed in the field, reducing spillage around the Mill 2 discharge pumps.",
+    "maintenanceApprover": "Max Elliott",
+    "productionApprover": "J. Le, Oscar Freeman",
+    "reviewers": "",
+    "fSetpoints": "Yes",
+    "fFunctionality": "Yes",
+    "severity": "Minor",
+    "likelihood": "Unlikely"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: In Development)"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "title changed from register 'HPGR1 & 2 Shutdown Alarm Indication' to match the signed form"
+    },
+    {
+      "at": "2026-09-26T11:03:00+08:00",
+      "by": "Import",
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR - 554 - Mill 2 discharge pump 606 and 607 suction valve delay timer .pdf (form risk ranking 2D)"
     }
   ],
-  "created": "2026-09-25T09:00:00+08:00",
-  "updated": "2026-09-25T09:00:00+08:00",
+  "created": "2026-09-26T11:03:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Benjamin Ratcliffe",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }

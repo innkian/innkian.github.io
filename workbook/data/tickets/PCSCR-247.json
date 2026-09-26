@@ -1,52 +1,52 @@
 {
   "id": "PCSCR-247",
   "type": "change",
-  "title": "NLO – Flocculant Dosing Pump Stoppage Alarm",
+  "title": "NLO - Flocculant dosing alarms",
   "status": "In Development",
   "fields": {
     "priority": "2 – Next Week",
     "component": "NLO",
     "department": "PCS",
-    "equipment": "810-ZM-2295E, 810-ZM-2295F, 810-ZM-2295G, 140-WIT-0255 (CV-0250), NLO HPGR, PLC2, PLC4, SCADA",
+    "equipment": "810-ZM-2295E, 810-ZM-2295F, 810-ZM-2295G, 140-WIT-0255 (CV-0250), PLC2, PLC4, SCADA",
     "fixVersion": "",
     "site": "Pilgangoora",
     "registerStatus": "In Development",
-    "dateSubmitted": "2023-12-29",
+    "dateSubmitted": "2024-01-07",
     "approver": "Tim Wakeham",
-    "actionOwner": "PCS",
-    "latestPosition": "Clarification requested from PTS; PTS to review and confirm (14/08).",
-    "nextAction": "Check in CITECT whether the alarms exist; if so, close out as implemented (form signed and accepted by PCS engineer 25/01/24).",
-    "statusConflict": "The signed PDF filed as PCSCR-247 carries form number 241 – the change appears to have been renumbered 241→247; form fully signed at Level 1 (07/01/24) and accepted by the control system engineer with test/backup ticked (25/01/24), but the register still shows In Development after ~1,000 days; form priority 3 – Within 1 Fortnight vs register 2 – Next Week",
+    "actionOwner": "",
+    "latestPosition": "Clarifiaction requested - PTS to review and confirm 14/08 PCS to review and close/implement 04/09",
+    "nextAction": "Check the alarms exist in CITECT and close out if present (PCS)",
+    "statusConflict": "Signed PDF filed as 247 carries form number 241; Level 1 signed 07/01/24 and PCS engineer accepted 25/01/24 with test/backup ticked – likely already implemented; form priority 3 – Within 1 Fortnight",
     "reporter": "Casey Ellis",
     "assignee": "",
-    "why": "A fault stopped the NLO flotation tailings thickener flocculant pump and it was not picked up, leading to poor thickener performance and poor process water quality.",
-    "design": "- Add a CITECT alarm for each flocculant dosing pump: 810-ZM-2295E, 810-ZM-2295F, 810-ZM-2295G\n- Trigger a RED alarm naming the pump when it stops while the HPGR is still running (can link to HPGR power) or while the CV-0250 weightometer 140-WIT-0255 reads zero for 1 hour\n- PLCs: PLC2, PLC4 and SCADA",
-    "fAlarms": "Yes",
+    "why": "The stoppage of the flotation tailings thickener flocculant pump was not captured when a fault occurred with the pump, resulting in poor thickener performance and poor process water quality.",
+    "design": "Add an alarm in CITECH for each flocculant dosing pump.\n- 810-ZM-2295E\n- 810-ZM-2295F\n- 810-ZM-2295G\n\nSo that if one of the flocculant pumps stop and the HPGR is still running (can link to HPGR power) or the CV 0250 conveyor weightometer (140-WIT-0255) reads zero for 1 hour, then RED alarm activates to alert the CRO that the specific flocculant pump has stopped",
     "impact": "CROs get a red alarm identifying which flocculant dosing pump has stopped while the plant is running.",
-    "severity": "Slight",
-    "likelihood": "Rare",
-    "reviewers": "",
+    "maintenanceApprover": "Craig Bailes",
     "productionApprover": "Shane Thorne, Tim Wakeham",
-    "maintenanceApprover": "Craig Bailes"
+    "reviewers": "",
+    "fAlarms": "Yes",
+    "severity": "Slight",
+    "likelihood": "Rare"
   },
   "comments": [],
   "attachments": [],
   "worklog": [],
   "history": [
     {
-      "at": "2026-09-25T09:00:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "imported from Pilgangoora PCS Change Request Log (18.09.2026) (register status: In Development)"
+      "action": "imported from Pilgangoora PCS Change Request Log (25.09.2026) (register status: In Development)"
     },
     {
-      "at": "2026-09-25T13:08:00+08:00",
+      "at": "2026-09-26T11:03:00+08:00",
       "by": "Import",
-      "action": "enriched from PCSCR form: PCSCR-247 - NLO - Flocculant dosing pump alarm - Signed.pdf (form numbered 241; risk ranking 1E; Level 1 signed 07/01/24; PCS engineer Benjamin Ratcliffe 25/01/24)"
+      "action": "Change Request / Change Design copied from PCSCR form (Reason for Change / Brief Description of Proposed Change): PCSCR-247 - NLO - Flocculant dosing pump alarm - Signed.pdf (form risk ranking 1E)"
     }
   ],
-  "created": "2023-12-29T09:00:00+08:00",
-  "updated": "2026-09-25T13:08:00+08:00",
+  "created": "2024-01-07T09:00:00+08:00",
+  "updated": "2026-09-26T11:03:00+08:00",
   "createdBy": "Casey Ellis",
   "imported": true,
-  "importSource": "Pilgangoora PCS Change Request Log (18.09.2026)"
+  "importSource": "Pilgangoora PCS Change Request Log (25.09.2026)"
 }
