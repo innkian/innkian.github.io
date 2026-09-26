@@ -470,7 +470,7 @@
         <section class="card">
           <div class="grid">
             <div class="field wide"><label for="f_title">Summary<span class="req">*</span></label>
-              <input id="f_title" name="title" type="text" value="${esc(title)}" placeholder="${type === "bridge" ? "e.g. CVR102 BRK001 release timer extension" : type === "service" ? "e.g. FDR531 not ramping on startup" : "e.g. Implement multiple under-speed detection methods for CV-809"}" autocomplete="off"></div>
+              <input id="f_title" name="title" type="text" value="${esc(title)}" placeholder="${type === "bridge" ? "e.g. CV-809 BRK001 release timer extension" : type === "service" ? "e.g. CV-809 not ramping on startup" : "e.g. Implement multiple under-speed detection methods for CV-809"}" autocomplete="off"></div>
             ${t ? `<div class="field"><label for="f_status">Status</label><select id="f_status" name="status">${stateOpts.map((s) => `<option${s === status ? " selected" : ""}>${esc(s)}</option>`).join("")}</select></div>` : ""}
           </div>
         </section>
